@@ -9,15 +9,44 @@
 namespace app\controllers;
 
 
+use Yii;
+use app\models\LoginForm;
 use yii\web\Controller;
 
 class LoginController extends Controller
 {
     public $layout = 'login';
 
+    /**
+     * Login action.
+     *
+     * @return string
+     */
     public function actionLogin()
     {
-        return $this->render('login');
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        }
+        return $this->render('login', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Logout action.
+     *
+     * @return string
+     */
+    public function actionLogout()
+    {
+        Yii::$app->user->logout();
+
+        return $this->goHome();
     }
 
     public function actionRegister()
