@@ -118,7 +118,8 @@ $this->title = 'MainPage';
                 </a>
             </div>
             <div class="bottompane">
-                <a href="login.html">
+<!--                下面的href我在测试过程中不知道为什么没法跳转过去-->
+                <a href="../login/login">
                     <span><img align="absmiddle" src="img/ios7-compose-outline.png" class="pic_icon"/></span>
                 </a>
             </div>

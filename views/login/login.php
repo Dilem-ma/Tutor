@@ -81,9 +81,12 @@ $this->title = 'Login';
 <div class="login_bg">
     <div id="logo">
         <!--<img src="/img/logo.png" alt=""/>-->
-        <a style="color: #fff; font-family: 'Microsoft YaHei'; font-size: 4em; width: 3em;">Tutor</a>
+        <a style="color: #fff; font-family: 'Microsoft YaHei'; font-size: 4em; width: 3em;">
+<!--      请修改这里，我之前改这里是为了测试显示结果需要。下面这句话可以得到需要的response结果，是一个json字符串，包括user信息和success值。弱失败会显示error信息     -->
+            <?= isset($response) ? $response : NULL ?>
+        </a>
     </div>
-    <form action="">
+    <form action="/api/login" method="post">
         <div class="userName">
             <span><img align="absmiddle" src="/img/user.png" class="pic_icon"/></span>
             <input type="text" name="name" placeholder="输入账号" pattern="[0-9A-Za-z]{6,16}" required/>
