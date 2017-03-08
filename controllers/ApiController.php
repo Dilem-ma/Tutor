@@ -9,7 +9,7 @@
 namespace app\controllers;
 
 use app\models\LoginForm;
-use yii\web\Controller;
+use yii\rest\Controller;
 
 class ApiController extends Controller
 {
@@ -39,12 +39,12 @@ class ApiController extends Controller
             $response["success"] = 1;
             $response["user"] = $user;
 
-            return $this->render('../site/index', ['response' => json_encode($response)]);
+            return json_encode($response);
         } else {
             $response = array();
             $response["success"] = 0;
             $response["error"] = $model->errors;
-            return $this->render('../site/index', ['response' => json_encode($response)]);
+            return json_encode($response);
         }
     }
 }
