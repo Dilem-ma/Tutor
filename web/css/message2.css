@@ -1,0 +1,145 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+.scTop{
+    width: 100%;
+    padding:8% 0 6%;
+    background: #64a9e9;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+.title{
+    font-family: "Microsoft YaHei";
+    font-size: 1.3em;
+    font-weight: 200;
+}
+.back{
+    position: absolute;
+    width: 0.85em;
+    height: auto;
+    left: 5%;
+    top: 45%;
+    color: #ffffff;
+}
+
+#send{
+    position:fixed;
+    z-index:999;
+    left:0em;
+    bottom: 0%;
+    width:100%;
+    line-height:1.2em;
+    height:4.5em;
+    background:#fff;
+    border-width: 0.1em 0 0  0;
+    border-style: solid;
+    border-color: rgba(144, 144, 144, 0.25);
+    font-size: 0.4em;
+}
+
+#send input{
+    margin-left: 14%;
+    padding: 0.5% 0 0.5% 0;
+    height:3em;
+    font-size: 2.5em;
+    font-family: "Microsoft YaHei";
+    background: transparent;
+    text-indent: 0.2em;
+    width: 85%;
+    border:none;
+}
+
+.plus{
+    height: 1.1em;
+    width: 1.1em;
+    padding: 7% 6%;
+}
+.message{
+    background: none;
+    width:85%;
+    float:left;
+    height:100%;
+}
+.message .icons b{
+    position: absolute;
+    width: 3.75%;
+    top: 30%;
+    left: 7%;
+}
+.icon{
+    height: 0.4em;
+    width: auto;
+}
+.btn-box {
+    width: 12%;
+    float: left;
+    padding: 1% 2% 1% 1%;
+}
+
+.submit{
+    height: 3em;
+    letter-spacing: 0.1em;
+    background: #fff;
+    border: 0;
+    font-size: 2.6em;
+    font-family: "YouYuan";
+    border-radius: 3px;
+    text-align: center;
+    padding-top: 6%;
+}
+
+.sender img{
+    height: 3em;
+    border-radius: 100%;
+    display: block;
+}
+.content{
+    width: 100%;
+    padding: 1em 0em 0 0;}
+
+.receive-content{
+    width:100%;
+    padding: 1em 0 0 1em;
+
+}
+
+.send-content{
+    float: left;
+    padding: 1em 1em 0 0;
+}
+.send{
+    width: 70%;
+    float: right;
+    padding: 4% 5%;
+    background: #64a9e9;
+    color:#fff;
+    line-height: 1.3em;
+    border-radius: 1.5em;
+}
+.portrait{
+    width:13%;
+    float: left;
+    margin-top: -0.5em;
+}
+.talk{
+    width: 66%;
+    float: left;
+    padding: 4% 5%;
+    background: #DEDEDE;
+    border-radius: 0em 1.5em 1.5em;
+}
+
+.talk p{
+    line-height: 1.3em;
+}
+
+.arrow{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border: solid 5px;
+    border-color: #DEDEDE #DEDEDE #fff #fff;
+    float: left;
+}

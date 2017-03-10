@@ -1,0 +1,144 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+.scTop{
+    width: 100%;
+    padding:8% 0 6%;
+    background: #64a9e9;
+    text-align: left;
+    color: #ffffff;
+    position: relative;
+
+}
+.title{
+    font-family: "Microsoft YaHei";
+    font-size: 1.3em;
+    font-weight: 200;
+}
+.loc{
+    position: absolute;
+    width: 0.8em;
+    height: auto;
+    left: 3%;
+}
+
+.loc-text{
+    color: #ffffff;
+    padding: 8% 8.5% 6%;
+    font-size: 1.1em;
+}
+
+
+#NotMoveDIV
+{
+    position:fixed;
+    z-index:999;
+    left:0em;
+    bottom: 7%;
+    width:100%;
+    line-height:1.2em;
+    height:1em;
+    background:#fff;
+    border-width: 0.1em 0 0  0;
+    border-style: solid;
+    border-color: rgba(144, 144, 144, 0.25);
+    font-size: 0.4em;
+}
+
+#logo {
+    text-align: center;
+    padding: 4em 0em;
+    border-width: 0 0 0.1em 0;
+    border-style: solid;
+    border-color: rgba(144, 144, 144, 0.25);
+}
+
+.icon-box{
+    float:left;
+    height:4em;
+    width:25%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0.6em;
+}
+.botm-icon{
+    height: 2em !important;
+    width: 2em !important;
+}
+.botm-icon-text{
+    font-family: "Microsoft YaHei";
+    letter-spacing:0.1em;
+    color:#4f4a46;
+}
+
+#IndexDIV{
+    left:0em;
+    width:100%;
+    line-height:2em;
+    height:24em;
+    background:#fff;
+    border-width: 0.1em 0 0.1em  0;
+    border-style: solid;
+    border-color: rgba(144, 144, 144, 0.25);
+    font-size: 0.5em;
+}
+.index-subgroup{
+    height:40%;
+    width:86%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 5%;
+}
+.index-box{
+    float:left;
+    width:33.333%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0.6em;
+}
+.index-icon{
+    height: 5em !important;
+    width: 5em !important;
+}
+.index-icon-text{
+    font-family: "Microsoft YaHei";
+    letter-spacing:0.1em;
+    color:#4f4a46;
+}
+
+.point{
+    padding: 6% 5%;
+}
+.content form input{
+    border: 0;
+    border-bottom: 1px solid #c3c3c5;
+}
+.content form{
+    width: 100%;
+    height: 35.21%;
+}
+.message{
+    background: #ffffff;
+    padding:2% 5% 0 5%;
+    position: relative;
+}
+.message input{
+    margin-left: 20%;
+    padding: 4% 0 4% 0;
+    font-size: 1em;
+    font-family: "Microsoft YaHei";
+    background: transparent;
+    text-indent: 0.2em;
+}
+.message .icons b{
+    position: absolute;
+    width: 3.75%;
+    top: 30%;
+    left: 7%;
+}
+.message .icons b:nth-child(2){
+    width: 5%;
+    top: 26%;
+    left: 6%;
+}
