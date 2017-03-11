@@ -27,8 +27,8 @@ body{
 #send{
     position:fixed;
     z-index:999;
-    left:0em;
-    bottom: 0%;
+    left:0;
+    bottom: 0;
     width:100%;
     line-height:1.2em;
     height:4.5em;
@@ -97,7 +97,7 @@ body{
 }
 .content{
     width: 100%;
-    padding: 1em 0em 0 0;}
+    padding: 1em 0 0 0;}
 
 .receive-content{
     width:100%;
@@ -128,7 +128,7 @@ body{
     float: left;
     padding: 4% 5%;
     background: #DEDEDE;
-    border-radius: 0em 1.5em 1.5em;
+    border-radius: 0 1.5em 1.5em;
 }
 
 .talk p{
