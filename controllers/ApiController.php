@@ -10,41 +10,25 @@ namespace app\controllers;
 
 use app\models\LoginForm;
 use yii\rest\Controller;
+use yii\web\ForbiddenHttpException;
 
 class ApiController extends Controller
 {
-    public $enableCsrfValidation = false;
-
     public function actionLogin(){
+        $post = \Yii::$app->request->post();
+        $form = new LoginForm();
 
-        $username = isset($_POST['name']) ? $_POST['name'] : NULL;
-        $password = isset($_POST['password']) ? $_POST['password'] : NULL;
-
-        $model = new LoginForm();
-        $model->username = $username;
-        $model->password = $password;
-
-        if ($model->login())
-        {
-            $user = $model->getUser();
-            $data = array();
-            $data["id"] = $user["id"];
-            $data["username"] = $user["username"];
-            $data["password"] = $user["password"];
-            $data["url"] = $user["url"];
-            $data["authKey"] = $user["authKey"];
-            $data["accessToken"] = $user["accessToken"];
-
-            $response = array();
-            $response["success"] = 1;
-            $response["user"] = $user;
-
-            return json_encode($response);
+        if ($form->load($post, '') && $form->login()) {
+            return [
+                'success' => true,
+                'message' => '登陆成功',
+            ];
         } else {
-            $response = array();
-            $response["success"] = 0;
-            $response["error"] = $model->errors;
-            return json_encode($response);
+            throw new ForbiddenHttpException(json_encode([
+                'success' => false,
+                'message' => '登录失败',
+                'errors' => $form->errors,
+            ]));
         }
     }
 }
