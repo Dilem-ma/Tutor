@@ -4,12 +4,6 @@ use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 class User extends ActiveRecord implements IdentityInterface
 {
-    public $id;
-    public $username;
-    public $password;
-    public $url;
-    public $authKey;
-    public $accessToken;
 
     public static function tableName()
     {
@@ -20,7 +14,8 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             [['username', 'password'], 'required'],
-            [['username', 'password'], 'string', 'max' => 11]
+            [['username', 'password'], 'string', 'max' => 11],
+            [['username'], 'unique'],
         ];
     }
 

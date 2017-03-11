@@ -9,6 +9,7 @@
 namespace app\controllers;
 
 use app\models\LoginForm;
+use app\models\User;
 use yii\rest\Controller;
 
 class ApiController extends Controller
@@ -27,6 +28,24 @@ class ApiController extends Controller
                 'success' => false,
                 'message' => '登录失败',
                 'errors' => $form->errors,
+            ];
+        }
+    }
+
+    public function actionRegister(){
+        $post = \Yii::$app->request->post();
+        $user = new User();
+
+        if ($user->load($post, '') && $user->save()) {
+            return [
+                'success' => true,
+                'message' => '注册成功',
+            ];
+        } else {
+            return [
+                'success' => false,
+                'message' => '注册失败',
+                'errors' => $user->errors,
             ];
         }
     }
