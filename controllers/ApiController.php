@@ -10,7 +10,6 @@ namespace app\controllers;
 
 use app\models\LoginForm;
 use yii\rest\Controller;
-use yii\web\ForbiddenHttpException;
 
 class ApiController extends Controller
 {
@@ -24,11 +23,11 @@ class ApiController extends Controller
                 'message' => '登陆成功',
             ];
         } else {
-            throw new ForbiddenHttpException(json_encode([
+            return [
                 'success' => false,
                 'message' => '登录失败',
                 'errors' => $form->errors,
-            ]));
+            ];
         }
     }
 }
