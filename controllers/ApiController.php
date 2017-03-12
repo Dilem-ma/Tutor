@@ -27,7 +27,7 @@ class ApiController extends Controller
             return [
                 'success' => false,
                 'message' => '登录失败',
-                'errors' => $form->errors,
+                'errors' => $form->getFirstError('password'),
             ];
         }
     }
@@ -45,7 +45,7 @@ class ApiController extends Controller
             return [
                 'success' => false,
                 'message' => '注册失败',
-                'errors' => $user->errors,
+                'errors' => $user->getFirstError('username'),
             ];
         }
     }

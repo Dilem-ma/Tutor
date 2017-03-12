@@ -34,7 +34,7 @@ class LoginForm extends Model
                 'targetAttribute' => 'username'],
             ['password', 'validatePassword', 'when' => function ($model) {
                 /** @var self $model */
-                return !is_null(User::getUser($model->username));
+                return !is_null(User::getUser($model));
             }],
         ];
     }
@@ -51,7 +51,7 @@ class LoginForm extends Model
         if (!$this->hasErrors()) {
             $user = $this->getUser();
             if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, 'Incorrect password.');
+                $this->addError('password', 'Password Invalid.');
             }
         }
     }

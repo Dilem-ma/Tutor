@@ -4,7 +4,6 @@ namespace app\models;
 use yii\behaviors\AttributeBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
-use yii\web\NotFoundHttpException;
 
 class User extends ActiveRecord implements IdentityInterface
 {
@@ -137,16 +136,12 @@ class User extends ActiveRecord implements IdentityInterface
         return \Yii::$app->security->validatePassword($pw, $this->password);
     }
 
-    public static function getUser($id)
+    public static function getUser($model)
     {
         $user = null;
-        if (is_int($id)){
-            $user = self::findIdentity($id);
-        } else {
-            $user = self::findByUsername($id);
-        }
+        $user = self::findByUsername($model->username);
         if (is_null($user)){
-            throw new NotFoundHttpException('Please enter the correct phone number.');
+            $model->addError('password', 'Username does not exist.');
         }
         return $user;
     }
