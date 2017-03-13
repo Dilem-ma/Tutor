@@ -14,7 +14,7 @@ $this->title = 'search';
 <div class="shortcut1">
     <div class="srchTop">
         <div class="srchSpan">
-            <div class="back"><a href="login.html"><img src="/img/android-arrow-back.png" class="back"/></a></div>
+            <div class="back"><a href="index"><img src="/img/android-arrow-back.png" class="back"/></a></div>
             <div class="message"><form class="search"><input type="text" placeholder="请输入搜索内容"></form></div>
             <div class="btn-box"><a class="select">筛选</a></div>
         </div>
