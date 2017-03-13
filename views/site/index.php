@@ -110,44 +110,21 @@ $this->title = 'MainPage';
     <!--obj.src = "img/ios7-compose.png"; //改变图像地址-->
     <!--}-->
     <!--</script>-->
-    <div>
-        <div class="bottom">
-            <div class="bottompane">
-                <a href="login.html">
-                    <span><img align="absmiddle" src="img/ios7-home.png" class="pic_icon"/></span>
-                </a>
-            </div>
-            <div class="bottompane">
-<!--                下面的href我在测试过程中不知道为什么没法跳转过去-->
-                <a href="../login/login">
-                    <span><img align="absmiddle" src="img/ios7-compose-outline.png" class="pic_icon"/></span>
-                </a>
-            </div>
-            <div class="bottompane">
-                <a href="login.html">
-                    <span><img align="absmiddle" src="img/ios7-bell-outline.png" class="pic_icon"/></span>
-                </a>
-            </div>
-            <div class="bottompane">
-                <a href="login.html">
-                    <span><img align="absmiddle" src="img/ios7-person-outline.png" class="pic_icon"/></span>
-                </a>
-            </div>
-            <div class="bottomtext">
-                <div class="bottompane">
-                    <span class="title">主页</span>
-                </div>
-                <div class="bottompane">
-                    <span class="title">课程</span>
-                </div>
-                <div class="bottompane">
-                    <span class="title">消息</span>
-                </div>
-                <div class="bottompane">
-                    <span class="title">我的</span>
-                </div>
 
-            </div>
+    <div id="NotMoveDIV">
+        <div class="icon-box">
+            <a href="" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br />主页</a>
+        </div>
+        <div class="icon-box">
+            <a href="" class="botm-icon-text"><img src="/img/ios7-compose.png" class="botm-icon"/><br />课程</a>
+        </div>
+        <div class="icon-box">
+            <a href="" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br />消息</a>
+
+        </div>
+        <div class="icon-box">
+            <a href="" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br />我的</a>
+
         </div>
     </div>
 </div>

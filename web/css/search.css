@@ -1,20 +1,23 @@
-body{
+body {
     width: 100%;
     height: 100%;
 }
-.srchTop{
+
+.srchTop {
     border-bottom: 0.1em solid #D3D3D3;
     width: 100%;
-    padding:8% 0 6%;
+    padding: 8% 0 6%;
     background: #fff;
     position: relative;
     overflow: auto;
 }
-.srchspan{
+
+.srchspan {
     width: 100%;
     overflow: auto;
 }
-.back{
+
+.back {
     width: 10%;
     height: 10%;
     left: 5%;
@@ -24,28 +27,33 @@ body{
     padding: 3% 0% 3% 4%;
 }
 
-.back img{
+.back img {
     width: 1em;
     height: 1em;
 }
-.message{
+
+.message {
     width: 70%;
     float: left;
     height: 100%;
 }
-.btn-box{
+
+.btn-box {
     float: left;
     overflow: auto;
-    height: 1em;
     width: 14%;
-    padding: 3% 0% 2.1% 2%;
     font-size: 1.2em;
+    margin-top: 0.5em;
+    height: 1.5em;
+    margin-left: 0.3em;
 }
-.search{
+
+.search {
     text-decoration: none;
     position: relative;
 
 }
+
 .search:before {
     color: #aaaaaa;
     content: '\f002';
@@ -58,7 +66,8 @@ body{
     top: 0;
     width: 2.5em;
 }
-.search input{
+
+.search input {
     padding-left: 2.5em;
     border: none;
     color: #646464;
@@ -72,65 +81,69 @@ body{
     width: 85%;
     text-decoration: none;
 }
+
 .search input:focus {
     border: 1px solid rgba(160, 160, 160, 0.3);
 }
-.select{
-    color:#4f4a46;
+
+.select {
+    color: #4f4a46;
 }
 
-.select-content{
+.select-content {
     overflow: auto;
     width: 90%;
     padding: 5% 5% 0 1%;
 }
 
-.select-content a{
+.select-content a {
     font-family: "Microsoft YaHei";
-    padding: 3% 4%;
+    padding: 3% 4% 0 4%;
     font-size: 1.1em;
     color: #4f4a46;
 }
 
-.portrait img{
-
+.portrait img {
     height: 3em;
     border-radius: 100%;
     display: block;
 }
+
 .portrait {
     width: 13%;
     float: left;
-    padding:2% 0 0 2%;
+    padding: 2% 0 0 2%;
 }
-.need-content{
+
+.need-content {
     float: left;
     padding: 0 0% 2% 2%;
     width: 82%;
 }
 
-.need-content h1{
+.need-content h1 {
     padding: 3% 3% 1% 3%;;
     font-size: 1em;
 }
 
-.need-content p{
+.need-content p {
     font-size: 0.8em;
     padding: 1% 1.5% 1% 3%;
     line-height: 1.4em;
 }
 
-.label{
+.label {
 
 }
-.label span{
+
+.label span {
     padding: 7% 7% 4% 3%;
     font-size: 0.6em;
 }
 
-.need{
+.need {
     overflow: auto;
-    border-width: 0 0 0.1em  0;
+    border-width: 0 0 0.1em 0;
     border-style: solid;
     border-color: rgba(144, 144, 144, 0.25);
     padding: 2%;
@@ -138,37 +151,38 @@ body{
 
 /*notmovedive*/
 
-#NotMoveDIV
-{
-    position:fixed;
-    z-index:999;
-    left:0em;
-    bottom: 6.5%;
-    width:100%;
-    line-height:1.2em;
-    height:1em;
-    background:#fff;
-    border-width: 0.1em 0 0  0;
+#NotMoveDIV {
+    position: fixed;
+    z-index: 999;
+    left: 0em;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.2em;
+    height: 4.5em;
+    background: #fff;
+    border-width: 0.1em 0 0 0;
     border-style: solid;
     border-color: rgba(144, 144, 144, 0.25);
     font-size: 0.4em;
 }
 
-.icon-box{
-    float:left;
-    height:4em;
-    width:25%;
+.icon-box {
+    float: left;
+    height: 4em;
+    width: 25%;
     margin: 0 auto;
     text-align: center;
     padding-top: 0.6em;
-    background:#fff;
+    background: #fff;
 }
-.botm-icon{
+
+.botm-icon {
     height: 2em !important;
     width: 2em !important;
 }
-.botm-icon-text{
+
+.botm-icon-text {
     font-family: "Microsoft YaHei";
-    letter-spacing:0.1em;
-    color:#4f4a46;
+    letter-spacing: 0.1em;
+    color: #4f4a46;
 }
