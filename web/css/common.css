@@ -15,5 +15,10 @@ a{
 input{
     outline: none;
 }
+.shortcut1{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
 
 

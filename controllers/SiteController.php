@@ -40,4 +40,9 @@ class SiteController extends Controller
     {
         return $this->render('talk');
     }
+    public function actionSearch()
+    {
+        return $this->render('search');
+    }
 }
+
