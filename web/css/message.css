@@ -1,0 +1,111 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+.thehead{
+    width: 100%;
+    padding:8% 0 6%;
+    background: #64a9e9;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+.pane1{
+    width: 100%;
+    height:6.5em;
+    border-style: none none solid none;
+    border-width: 0.2ex;
+    border-color: #E8E8E8;
+}
+.pane1-1{
+    width: 94%;
+    text-align: right;
+    color: #B8B8B8;
+    margin: 0% 5% 0% 0%;
+    padding-top:2%;
+
+}
+.time{
+    font-size:0.1em;
+    font-weight: 100;
+}
+.pane1-2{
+    float:left;
+    width:5%;
+    height:100%;
+}
+.pane1-3{
+    float:left;
+    background: 	#686868;
+    border-radius: 50%;
+    width:4em;
+    height: 4em;
+}
+
+.pane1-4-1{
+    float:left;
+    width:68%;
+    margin: 0% 0% 0% 5%;
+}
+.username{
+    font-size:1.2em;
+    color:#0066cc;
+}
+.text1{
+    font-size:0.8em;
+}
+.btn{
+    position: absolute;
+    top: 0%;
+    right: -5em;
+    text-align: center;
+    background: #f7483b;
+    color: #fff;
+    width: 21%;
+    height:4.1em;
+    padding-top:2.5em;
+}
+.list-ul{
+    overflow: hidden
+}
+.list-li{
+    line-height: 100%;
+    position:relative;
+    color: #666;
+    -webkit-transform: translateX(0px);
+}
+#NotMoveDIV {
+    position: fixed;
+    z-index: 999;
+    left: 0em;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.2em;
+    height: 4.5em;
+    background: #fff;
+    border-width: 0.1em 0 0 0;
+    border-style: solid;
+    border-color: rgba(144, 144, 144, 0.25);
+    font-size: 0.4em;
+}
+
+.icon-box {
+    float: left;
+    height: 4em;
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0.6em;
+    background: #fff;
+}
+
+.botm-icon {
+    height: 2em !important;
+    width: 2em !important;
+}
+
+.botm-icon-text {
+    font-family: "Microsoft YaHei";
+    letter-spacing: 0.1em;
+    color: #4f4a46;
+}

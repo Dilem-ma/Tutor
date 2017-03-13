@@ -15,7 +15,7 @@ $this->title = 'talk';
 <div class="shortcut1">
     <div class="scTop">
         <span class="title">zzxqq</span>
-        <a href=""><img src="/img/back.png" class="back"/></a>
+        <a href="/site/message"><img src="/img/back.png" class="back"/></a>
     </div>
 
     <div class="content">
