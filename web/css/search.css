@@ -10,16 +10,26 @@ body{
     position: relative;
     overflow: auto;
 }
+.srchspan{
+    width: 100%;
+    overflow: auto;
+}
 .back{
-    width: 1em;
-    height: 1em;
+    width: 10%;
+    height: 10%;
     left: 5%;
     top: 45%;
     color: #ffffff;
     float: left;
-    padding: 3% 4%;}
+    padding: 3% 0% 3% 4%;
+}
+
+.back img{
+    width: 1em;
+    height: 1em;
+}
 .message{
-    width: 73%;
+    width: 70%;
     float: left;
     height: 100%;
 }
@@ -27,7 +37,8 @@ body{
     float: left;
     overflow: auto;
     height: 1em;
-    padding: 2.1% 2%;
+    width: 14%;
+    padding: 3% 0% 2.1% 2%;
     font-size: 1.2em;
 }
 .search{
@@ -76,7 +87,7 @@ body{
 
 .select-content a{
     font-family: "Microsoft YaHei";
-    padding: 3% 6%;
+    padding: 3% 4%;
     font-size: 1.1em;
     color: #4f4a46;
 }
@@ -132,7 +143,7 @@ body{
     position:fixed;
     z-index:999;
     left:0em;
-    bottom: 7%;
+    bottom: 6.5%;
     width:100%;
     line-height:1.2em;
     height:1em;
