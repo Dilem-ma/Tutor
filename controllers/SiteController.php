@@ -40,4 +40,8 @@ class SiteController extends Controller
     {
         return $this->render('talk');
     }
+    public function actionMessage()
+    {
+        return $this->render('message');
+    }
 }
