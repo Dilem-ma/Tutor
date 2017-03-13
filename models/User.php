@@ -1,15 +1,27 @@
 <?php
 namespace app\models;
+
+use yii\behaviors\AttributeBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
+
 class User extends ActiveRecord implements IdentityInterface
 {
-    public $id;
-    public $username;
-    public $password;
-    public $url;
-    public $authKey;
-    public $accessToken;
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => AttributeBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => 'password',
+                    ActiveRecord::EVENT_BEFORE_UPDATE => 'password',
+                ],
+                'value' => function ($event) {
+                    return \Yii::$app->security->generatePasswordHash($this->password);
+                },
+            ],
+        ];
+    }
 
     public static function tableName()
     {
@@ -20,7 +32,9 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             [['username', 'password'], 'required'],
-            [['username', 'password'], 'string', 'max' => 11]
+            [['username'], 'string', 'max' => 20],
+            [['password'], 'string', 'max' => 64],
+            [['username'], 'unique'],
         ];
     }
 
@@ -32,7 +46,7 @@ class User extends ActiveRecord implements IdentityInterface
             'password' => 'Password',
             'url' => 'Url',
             'authKey' => 'Auth Key',
-            'accessToken' => 'Access Token'
+            'accessToken' => 'Access Token',
         ];
     }
 
@@ -114,11 +128,26 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * Validates password
      *
-     * @param string $password password to validate
+     * @param string $pw password to validate
      * @return bool if password provided is valid for current user
      */
-    public function validatePassword($password)
+    public function validatePassword($pw)
     {
-        return $this->password === $password;
+        return \Yii::$app->security->validatePassword($pw, $this->password);
+    }
+
+    public static function getUser($model)
+    {
+        $user = null;
+        $user = self::findByUsername($model->username);
+        if (is_null($user)){
+            $model->addError('password', 'Username does not exist.');
+        }
+        return $user;
+    }
+
+    public function login($duration = 0)
+    {
+        return \Yii::$app->user->login($this, $duration);
     }
 }

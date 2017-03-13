@@ -10,6 +10,9 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '7#veRC5wTWlrXGv#aiFkQ%CtPj*el$iX$zKS9Do3G@p6oT*f*T3Ahi74^BzI5cpl2zlD%g1wIl3F^y72',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',

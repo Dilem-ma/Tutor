@@ -44,10 +44,6 @@ $this->title = 'Login';
         color: #ffffff;
     }
 
-    img {
-        width: 100%;
-    }
-
     form {
         width: 80%;
         margin: 5em auto;
@@ -78,23 +74,23 @@ $this->title = 'Login';
 
 </style>
 <div id="login"></div>
-<div class="login_bg">
+<div class="login_bg" ng-controller="LoginCtrl">
     <div id="logo">
         <!--<img src="/img/logo.png" alt=""/>-->
         <a style="color: #fff; font-family: 'Microsoft YaHei'; font-size: 4em; width: 3em;">
             Tutor
         </a>
     </div>
-    <form action="/api/login" method="post">
+    <form>
         <div class="userName">
-            <span><img align="absmiddle" src="/img/user.png" class="pic_icon"/></span>
-            <input type="text" name="name" placeholder="输入账号" pattern="[0-9A-Za-z]{6,16}" required/>
+            <span><img width="100%" align="absmiddle" src="/img/user.png" class="pic_icon"/></span>
+            <input type="text" name="name" ng-model="name" placeholder="输入账号" pattern="[0-9A-Za-z]{6,16}" required/>
         </div>
         <div class="passWord">
-            <span><img align="absmiddle" src="/img/pwd.png" class="pic_icon" style="margin-left: 0.3em;margin-right: 0.3em;"/></span>
-            <input type="password" name="password" placeholder="输入密码" pattern="[0-9A-Za-z]{6,25}" required/>
+            <span><img width="100%" align="absmiddle" src="/img/pwd.png" class="pic_icon" style="margin-left: 0.3em;margin-right: 0.3em;"/></span>
+            <input type="password" name="password" ng-model="pwd" placeholder="输入密码" pattern="[0-9A-Za-z]{6,25}" required/>
         </div>
-        <button class="login_btn" type="submit">登&nbsp;&nbsp;录</button>
+        <button class="login_btn" type="submit" ng-click="login(name,pwd)">登&nbsp;&nbsp;录</button>
         <div class="choose_box">
             <div>
                 <a href="newpassword" class="forget_pwd">忘记密码？</a>

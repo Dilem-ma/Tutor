@@ -24,8 +24,8 @@ class m170306_075156_init_User_table extends Migration
             'User',
             [
                 'id' => 1,
-                'username' => 'admin',
-                'password' => '11111',
+                'username' => '13052395586',
+                'password' => '961922',
                 'url' => '',
                 'authKey' => 'test001key',
                 'accessToken' => '001-token'

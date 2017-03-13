@@ -12,7 +12,7 @@ $this->title = 'talk';
 ?>
 
 
-<div class="shortcut">
+<div class="shortcut1">
     <div class="scTop">
         <span class="title">zzxqq</span>
         <a href=""><img src="/img/back.png" class="back"/></a>

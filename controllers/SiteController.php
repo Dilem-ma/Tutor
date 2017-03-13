@@ -44,4 +44,9 @@ class SiteController extends Controller
     {
         return $this->render('message');
     }
+    public function actionSearch()
+    {
+        return $this->render('search');
+    }
 }
+
