@@ -71,17 +71,17 @@ $this->title = 'search';
 
 <div id="NotMoveDIV">
     <div class="icon-box">
-        <a href="" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br />主页</a>
+        <a href="index" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br />主页</a>
     </div>
     <div class="icon-box">
         <a href="" class="botm-icon-text"><img src="/img/ios7-compose.png" class="botm-icon"/><br />课程</a>
     </div>
     <div class="icon-box">
-        <a href="" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br />消息</a>
+        <a href="message" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br />消息</a>
 
     </div>
     <div class="icon-box">
-        <a href="" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br />我的</a>
+        <a href="mine" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br />我的</a>
 
     </div>
 </div>
