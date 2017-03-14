@@ -50,5 +50,9 @@ class SiteController extends Controller
     {
         return $this->render('search');
     }
+    public function actionMine()
+    {
+        return $this->render('mine');
+    }
 }
 
