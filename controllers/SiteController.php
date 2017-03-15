@@ -54,5 +54,10 @@ class SiteController extends Controller
     {
         return $this->render('mine');
     }
+    public function actionAuthentication()
+    {
+        return $this->render('Authentication');
+    }
+
 }
 

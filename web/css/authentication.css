@@ -1,0 +1,143 @@
+.scTop{
+    width: 100%;
+    padding:8% 0 6% 12%;
+    background: #64a9e9;
+    text-align: left;
+    color: #ffffff;
+    position: relative;
+}
+.title{
+    font-family: "Microsoft YaHei";
+    font-size: 1.3em;
+    font-weight: 200;
+}
+.back{
+    position: absolute;
+    width: 0.85em;
+    height: auto;
+    left: 5%;
+    top: 45%;
+    color: #ffffff;
+}
+.pane1{
+    padding-top:5%;
+    width:100%;
+    background:#F0F0F0;
+    height:30em;
+}
+.pane1-1{
+    padding:5% 0% 5%;
+    width:100%;
+    background:#FFFFFF;
+    height:5em;
+}
+.pane1-1-1 {
+    margin-left:5%;
+    float:left;
+    position: relative;
+    width: 5em;
+    height: 5em;
+    float:left;
+}
+.pane1-1-2 {
+    margin-left:5%;
+    float:left;
+    position: relative;
+    height: 5em;
+    width:60%;
+    float:left;
+    text-align: left;
+}
+.pane1-1-2-1 {
+    margin:2% 0% 0% 0%;
+    position: relative;
+    height: 2em;
+    width:100%;
+    text-align: left;
+}
+.name{
+    font-family: "Microsoft YaHei";
+    font-size: 1.3em;
+    font-weight: 100;
+}
+.tel{
+    font-family: "Microsoft YaHei";
+    font-size: 0.8em;
+    font-weight: 100;
+}
+.pane1-2{
+    margin-top:2%;
+    padding:5% 0% 0% 7%;
+    width:100%;
+    background:#FFFFFF;
+    height:3em;
+}
+.student{
+    font-family: "Microsoft YaHei";
+    font-size: 1em;
+    font-weight: 100;
+}
+.red{
+    font-family: "Microsoft YaHei";
+    font-size: 1em;
+    font-weight: 100;
+    color:	#900000;
+}
+.green{
+    font-family: "Microsoft YaHei";
+    font-size: 1em;
+    font-weight: 100;
+    color:	#003300;
+}
+.pane1-2 a{
+    padding:0.2em 0.2em;
+    font-size:0.6em;
+}
+.pane1-3{
+    margin-top:2%;
+    padding:5% 0% 0% 7%;
+    width:100%;
+    background:#FFFFFF;
+    height:11em;
+}
+.text{
+    font-family: "Microsoft YaHei";
+    font-size: 0.9em;
+    font-weight: 100;
+    color:	#505050;
+}
+#NotMoveDIV {
+    position: fixed;
+    z-index: 999;
+    left: 0em;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.2em;
+    height: 4.5em;
+    background: #fff;
+    border-width: 0.1em 0 0 0;
+    border-style: solid;
+    border-color: rgba(144, 144, 144, 0.25);
+    font-size: 0.4em;
+}
+
+.icon-box {
+    float: left;
+    height: 4em;
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0.6em;
+    background: #fff;
+}
+
+.botm-icon {
+    height: 2em !important;
+    width: 2em !important;
+}
+
+.botm-icon-text {
+    font-family: "Microsoft YaHei";
+    letter-spacing: 0.1em;
+    color: #4f4a46;
+}

@@ -45,12 +45,14 @@ $this->title = 'MinePage';
             </div>
         </div>
         <div class="pane2-2">
+            <a href="authentication">
             <div class="image1">
                 <img align="absmiddle" src="/img/mailopened.png" class="pic_icon" height="30" width="30"/>
             </div>
             <div class="text3">
                 <span class="text4">认证信息</span>
             </div>
+            </a>
         </div>
     </div>
     <div class="pane2-1">
