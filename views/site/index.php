@@ -8,7 +8,8 @@ $this->title = 'MainPage';
 <div class="index2">
     <div class="thehead">
         <div class="text">
-            <i class="fa fa-tint fa-1g fa-rotate-180"></i>
+            <img align="absmiddle" src="/img/android-location.png"  height="20" width="15"/>
+
             <span class="title">地区</span>
         </div>
     </div>
