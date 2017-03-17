@@ -8,88 +8,42 @@
 
 namespace app\controllers;
 
-use app\models\LoginForm;
-use app\models\Student;
-use app\models\User;
+use app\actions\ChangePasswordAction;
+use app\actions\IdentityAction;
+use app\actions\LoginAction;
+use app\actions\RegisterAction;
+use yii\filters\AccessControl;
 use yii\rest\Controller;
 
 class ApiController extends Controller
 {
-    public function actionLogin(){
-        $post = \Yii::$app->request->post();
-        $form = new LoginForm();
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
 
-        if ($form->load($post, '') && $form->login()) {
-            return [
-                'success' => true,
-                'message' => '登陆成功',
-            ];
-        } else {
-            return [
-                'success' => false,
-                'message' => '登录失败',
-                'errors' => $form->getFirstError('password'),
-            ];
-        }
+        unset($behaviors['contentNegotiator']['formats']['application/xml']);
+
+        $behaviors['access'] = [
+            'class' => AccessControl::className(),
+            'rules' => [
+                [
+                    'allow' => true,
+                    'actions' => ['login', 'register', 'change_password', 'student_identity'],
+                    'verbs' => ['POST'],
+                ],
+            ],
+        ];
+
+        return $behaviors;
     }
 
-    public function actionRegister(){
-        $post = \Yii::$app->request->post();
-        $user = new User();
-
-        if ($user->load($post, '') && $user->save()) {
-            return [
-                'success' => true,
-                'message' => '注册成功',
-            ];
-        } else {
-            return [
-                'success' => false,
-                'message' => '注册失败',
-                'errors' => $user->getFirstError('username'),
-            ];
-        }
-    }
-
-    public function actionChange(){
-
-        $user = User::findOne(['username' => \Yii::$app->request->post('username')]);
-        $user->password = \Yii::$app->request->post('password');
-
-        if ($user->save()) {
-            return [
-                'success' => true,
-                'message' => '修改成功',
-                'username' => $user,
-            ];
-        } else {
-            return [
-                'success' => false,
-                'message' => '修改失败',
-                'errors' => $user->getFirstError('username'),
-            ];
-        }
-    }
-
-    public function actionIdentity(){
-        $stu = new Student();
-        $stu->load(\Yii::$app->request->post(), '');
-        $user = User::findByUsername(\Yii::$app->request->post('phone'));
-        $stu->u_id = $user->getId();
-
-        if ($stu->save()) {
-            return [
-                'success' => true,
-                'message' => '操作成功',
-            ];
-        } else {
-            return [
-                'success' => false,
-                'message' => '操作失败',
-                'errors' => $stu->errors,
-                'user' => $user,
-                'stu' => $stu,
-            ];
-        }
+    public function actions()
+    {
+        return [
+            'login' => LoginAction::className(),
+            'register' => RegisterAction::className(),
+            'change_password' => ChangePasswordAction::className(),
+            'student_identity' => IdentityAction::className(),
+        ];
     }
 }
