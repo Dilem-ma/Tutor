@@ -16,7 +16,7 @@ $this->title = 'talk';
         <a href="login.html"><img src="/img/back.png" class="back"/></a>
     </div>
     <div class="content">
-        <form action="">
+        <div class="form">
             <div class="message">
                 <div class="border">
                     <div class="name"><span>学校</span></div>
@@ -36,12 +36,12 @@ $this->title = 'talk';
                 </div>
             </div>
             <div class="message">
-                <div class="border">
+                <div class="lastborder">
                     <div class="name"><span>卡号</span></div>
                     <div class="ctnt"><input type="text" placeholder="请输入校园卡卡号"></div>
                 </div>
             </div>
-        </form>
+        </div>
         <button class="submit" type="submit">认证</button>
     </div>
 </div>
