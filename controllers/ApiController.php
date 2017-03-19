@@ -11,6 +11,7 @@ namespace app\controllers;
 use app\actions\ChangePasswordAction;
 use app\actions\GetStudentAction;
 use app\actions\StudentIdentityAction;
+use app\actions\TeacherIdentityAction;
 use app\actions\LoginAction;
 use app\actions\RegisterAction;
 use yii\filters\AccessControl;
@@ -29,7 +30,7 @@ class ApiController extends Controller
             'rules' => [
                 [
                     'allow' => true,
-                    'actions' => ['login', 'student_identity', 'get_student'],
+                    'actions' => ['login', 'student_identity', 'teacher_identity','get_student'],
                     'verbs' => ['POST'],
                 ],
                 [
@@ -62,6 +63,7 @@ class ApiController extends Controller
 //            'change_password' => ChangePasswordAction::className(),
 //            'student_identity' => StudentIdentityAction::className(),
 //            'get_student' => GetStudentAction::className(),
+            'teacher_identity' => TeacherIdentityAction::className(),
         ];
     }
 
