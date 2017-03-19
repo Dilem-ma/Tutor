@@ -56,12 +56,17 @@ class SiteController extends Controller
     }
     public function actionAuthentication()
     {
-        return $this->render('Authentication');
+        return $this->render('authentication');
     }
 
     public function actionCourse()
     {
         return $this->render('course');
+    }
+
+    public function actionStuauthen()
+    {
+        return $this->render('stuauthen');
     }
 }
 
