@@ -13,7 +13,6 @@ use app\actions\GetStudentAction;
 use app\actions\StudentIdentityAction;
 use app\actions\LoginAction;
 use app\actions\RegisterAction;
-use app\actions\TeacherIdentityAction;
 use yii\filters\AccessControl;
 use yii\rest\Controller;
 
@@ -30,7 +29,23 @@ class ApiController extends Controller
             'rules' => [
                 [
                     'allow' => true,
-                    'actions' => ['login', 'register', 'change_password', 'student_identity', 'get_student'],
+                    'actions' => ['login', 'student_identity', 'get_student'],
+                    'verbs' => ['POST'],
+                ],
+                [
+                    'allow' => true,
+                    'actions' => ['register', 'change_password'],
+                    'verbs' => ['POST'],
+                ],
+                [
+                    'allow' => true,
+                    'actions' => ['current_user'],
+                    'verbs' => ['GET'],
+                ],
+                [
+                    'allow' => true,
+                    'actions' => ['logout'],
+                    'roles' => ['@'],
                     'verbs' => ['POST'],
                 ],
             ],
@@ -43,10 +58,19 @@ class ApiController extends Controller
     {
         return [
             'login' => LoginAction::className(),
-            'register' => RegisterAction::className(),
-            'change_password' => ChangePasswordAction::className(),
-            'student_identity' => StudentIdentityAction::className(),
-            'get_student' => GetStudentAction::className(),
+//            'register' => RegisterAction::className(),
+//            'change_password' => ChangePasswordAction::className(),
+//            'student_identity' => StudentIdentityAction::className(),
+//            'get_student' => GetStudentAction::className(),
         ];
+    }
+
+    public function actionCurrentUser()
+    {
+        return \Yii::$app->user->isGuest ? false : \Yii::$app->user->identity->username;
+    }
+
+    public function logout(){
+        return \Yii::$app->user->logout();
     }
 }
