@@ -6,7 +6,7 @@ $this->title = 'MinePage';
 \app\assets\MineAsset::register($this);
 ?>
 <div class="thehead">
-    <span class="title">消息</span>
+    <span class="title">我的</span>
 </div>
 <div class="pane1">
     <div class="pane1-1">
