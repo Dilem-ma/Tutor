@@ -21,7 +21,7 @@ class Student extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'phone', 'gender', 'grade'], 'required'],
+            [['name', 'phone', ], 'required'],
             [['name', 'phone'], 'unique'],
             [['name'], 'string', 'max' => 10],
             [['phone'], 'string', 'max' => 20],

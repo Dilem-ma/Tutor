@@ -13,7 +13,7 @@ use app\models\Student;
 use app\models\User;
 use yii\base\Action;
 
-class IdentityAction extends Action
+class StudentIdentityAction extends Action
 {
     public function run(){
         $stu = new Student();
@@ -30,7 +30,7 @@ class IdentityAction extends Action
             return [
                 'success' => false,
                 'message' => '操作失败',
-                'errors' => $stu->errors,
+                'errors' => 'You have already been identified as a student.',
             ];
         }
     }
