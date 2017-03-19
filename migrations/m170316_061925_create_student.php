@@ -11,6 +11,8 @@ class m170316_061925_create_student extends Migration
             'u_id' => $this->integer()->unique()->notNull(),
             'name' => $this->string(10)->unique()->notNull(),
             'phone' => $this->string(20)->unique()->notNull(),
+            'birthday' => $this->date()->notNull(),
+            'describe' => $this->string(200),
         ]);
 
         $this->addColumn('student', 'gender', "ENUM('male', 'female', 'secret') NOT NULL default 'male'");

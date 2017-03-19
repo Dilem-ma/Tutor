@@ -21,13 +21,15 @@ class Student extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'phone', ], 'required'],
+            [['name', 'phone', 'birthday'], 'required'],
             [['name', 'phone'], 'unique'],
             [['name'], 'string', 'max' => 10],
             [['phone'], 'string', 'max' => 20],
+            [['birthday'], 'string', 'max' => 10],
             [['grade'], 'integer'],
             [['gender'], 'integer'],
             [['area'], 'integer'],
+            [['describe'], 'string', 'max' => 200],
         ];
     }
 
@@ -37,9 +39,11 @@ class Student extends ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'phone' => 'Phone',
+            'birthday' => 'Birthday',
             'gender' => 'Gender',
             'grade' => 'Grade',
             'area' => 'Area',
+            'describe' => 'Describe',
         ];
     }
 
