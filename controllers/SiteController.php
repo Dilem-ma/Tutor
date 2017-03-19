@@ -68,5 +68,10 @@ class SiteController extends Controller
     {
         return $this->render('stuauthen');
     }
+
+    public function actionTeacherauthen()
+    {
+        return $this->render('teacherauthen');
+    }
 }
 
