@@ -5,7 +5,7 @@
 $this->title = 'MainPage';
 \app\assets\MainAsset::register($this);
 ?>
-<div class="index2">
+<div class="index2" ng-controller="MainCtrl">
     <div class="thehead">
         <div class="text">
             <img align="absmiddle" src="/img/android-location.png"  height="20" width="15"/>
@@ -64,20 +64,11 @@ $this->title = 'MainPage';
         <div class="pane3-1">
             <span class="title3">优质教师推荐</span>
         </div>
-        <div class="pane3-2">
-            <div class="circle2">
+        <div ng-repeat="a in teachers">
+            <div class="pane3-2">
+                <img class="circle2" ng-src="{{a.image}}"/>
+                <a class="title4">优质教师: {{a.name}}</a>
             </div>
-            <a class="title4">优质教师推荐a</a>
-        </div>
-        <div class="pane3-2">
-            <div class="circle2">
-            </div>
-            <a class="title4">优质教师推荐b</a>
-        </div>
-        <div class="pane3-2">
-            <div class="circle2">
-            </div>
-            <a class="title4">优质教师推荐c</a>
         </div>
     </div>
     <div class="pane4">

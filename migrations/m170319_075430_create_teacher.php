@@ -14,7 +14,7 @@ class m170319_075430_create_teacher extends Migration
             'major' => $this->string(20)->notNull(),
             'birthday' => $this->date()->notNull(),
             'describe' => $this->string(200),
-            'image' => $this->string(200)->notNull(),
+            'image' => $this->string(200),
             'star' => $this->integer()->defaultValue(0),
         ]);
 

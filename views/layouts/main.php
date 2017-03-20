@@ -8,7 +8,7 @@ use yii\helpers\Html;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>" ng-app>
+<html lang="<?= Yii::$app->language ?>" ng-app="tutorApp">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>

@@ -18,10 +18,20 @@ class Teacher extends ActiveRecord
         return 'teacher';
     }
 
+    public function fields()
+    {
+        return [
+            'id',
+            'name',
+            'star',
+            'image',
+        ];
+    }
+
     public function rules()
     {
         return [
-            [['name', 'phone', ], 'required'],
+            [['name', 'phone', 'image'], 'required'],
             [['name', 'phone'], 'unique'],
             [['name'], 'string', 'max' => 10],
             [['phone'], 'string', 'max' => 20],
@@ -31,6 +41,7 @@ class Teacher extends ActiveRecord
             [['gender'], 'integer'],
             // [['area'], 'integer'],
             [['describe'], 'string', 'max' => 200],
+            [['image'], 'string', 'max' => 200],
         ];
     }
 
