@@ -10,7 +10,7 @@ namespace app\controllers;
 
 use app\actions\ChangePasswordAction;
 use app\actions\GetStudentAction;
-use app\actions\GetTopTeacherAction;
+use app\actions\GetTopTeachersAction;
 use app\actions\StudentIdentityAction;
 use app\actions\LoginAction;
 use app\actions\RegisterAction;
@@ -36,7 +36,7 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['top_teacher'],
+                    'actions' => ['top_teachers'],
                     'verbs' => ['GET'],
                 ],
 //                [
@@ -65,7 +65,7 @@ class ApiController extends Controller
     {
         return [
             'login' => LoginAction::className(),
-            'top_teacher' => GetTopTeacherAction::className(),
+            'top_teachers' => GetTopTeachersAction::className(),
             'teacher_identity' => TeacherIdentityAction::className(),
 //            'register' => RegisterAction::className(),
 //            'change_password' => ChangePasswordAction::className(),

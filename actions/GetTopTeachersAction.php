@@ -12,7 +12,7 @@ namespace app\actions;
 use app\models\Teacher;
 use yii\base\Action;
 
-class GetTopTeacherAction extends Action
+class GetTopTeachersAction extends Action
 {
     public function run(){
         return Teacher::find()
