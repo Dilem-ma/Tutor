@@ -19,6 +19,7 @@ class SelectOrdersAction extends Action
             ->filterWhere(['gender' => $post['gender'], 'area' => $post['area']])
             ->andFilterCompare('technique', $post['technique'], 'like')
             ->andFilterCompare('keyword', $post['keyword'], 'like')
+            ->andFilterCompare('title', $post['text'],'like')
             ->all();
     }
 }
