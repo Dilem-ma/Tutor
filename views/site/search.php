@@ -14,9 +14,9 @@ $this->title = 'search';
 <div class="shortcut1">
     <div class="srchTop">
         <div class="srchSpan">
-            <div class="back"><a href="index"><img src="/img/android-arrow-back.png" class="back"/></a></div>
+            <div class="back"><a href="course"><img src="/img/android-arrow-back.png" class="back"/></a></div>
             <div class="message"><form class="search"><input type="text" placeholder="请输入搜索内容"></form></div>
-            <div class="btn-box"><a class="select">筛选</a></div>
+            <div class="btn-box"><a href="filter" class="select">筛选</a></div>
         </div>
         <div class="select-content"><a>女</a><span class="pipe">|</span><a>java</a><span class="pipe">|</span><a>华师大</a><span class="pipe">|</span><a>普陀区</a></div>
     </div>

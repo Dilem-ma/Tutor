@@ -1,0 +1,96 @@
+.scTop{
+    width: 100%;
+    padding:8% 0 6% 0%;
+    background: #F0F0F0;
+    text-align: center;
+    color: #000000;
+    position: relative;
+}
+.title{
+    font-family: "Microsoft YaHei";
+    font-size: 1.3em;
+    font-weight: 200;
+}
+.back{
+    position: absolute;
+    width: 0.85em;
+    height: auto;
+    left: 5%;
+    top: 45%;
+    color: #ffffff;
+}
+.lastborder{
+    width: 92%;
+    margin: 0% 4%;
+    overflow: auto;
+    height: 100%;
+    border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+}
+.content{
+    overflow: auto;
+    height:30.5em;
+}
+.form{
+    width: 100%;
+    height: 50%;
+    background-color: #fafafa;
+    margin-top: 1em;
+}
+
+.message{
+    background: none;
+    position: relative;
+    width:100%;
+    height: 3em;
+}
+.border{
+    border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+    width: 92%;
+    margin: 0% 4%;
+    overflow: auto;
+    height: 100%;
+}
+.message .name{
+    padding-top: 1em;
+    float:left;
+    width:30%;
+}
+
+.message .ctnt{
+    float: left;
+    width: 70%;
+    height: 90%;
+    margin-top: 0.9%;
+}
+select{
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+    color: #909093;
+    border: solid 1px #909093;
+    font-family: "Microsoft YaHei";
+    border: 0; background: transparent;
+}
+.message input{
+    border: none;
+    color: #646464;
+    background-color: #fafafa;
+    height: 99%;
+    font-size: 1em;
+    font-family: "Microsoft YaHei";
+    text-indent: 0.2em;
+    display: block;
+    outline: 0;
+    width: 70%;
+    text-decoration: none;
+}
+.bottom{
+    bottom: 0;
+    background: #64a9e9;
+    height:1.6em;
+    width:100%;
+    padding:5% 0% 5%;
+    text-align: center;
+    color:#ffffff;
+    font-size:130%;
+}
