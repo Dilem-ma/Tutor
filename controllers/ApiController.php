@@ -8,12 +8,9 @@
 
 namespace app\controllers;
 
-use app\actions\ChangePasswordAction;
-use app\actions\GetStudentAction;
+use app\actions\AddOrderAction;
 use app\actions\GetTopTeachersAction;
-use app\actions\StudentIdentityAction;
 use app\actions\LoginAction;
-use app\actions\RegisterAction;
 use app\actions\TeacherIdentityAction;
 use yii\filters\AccessControl;
 use yii\rest\Controller;
@@ -31,7 +28,7 @@ class ApiController extends Controller
             'rules' => [
                 [
                     'allow' => true,
-                    'actions' => ['login', 'teacher_identity'],
+                    'actions' => ['login', 'teacher_identity', 'add_order'],
                     'verbs' => ['POST'],
                 ],
                 [
@@ -67,6 +64,8 @@ class ApiController extends Controller
             'login' => LoginAction::className(),
             'top_teachers' => GetTopTeachersAction::className(),
             'teacher_identity' => TeacherIdentityAction::className(),
+            'add_order' => AddOrderAction::className(),
+//            'current_user' => $this->actionCurrentUser(),
 //            'register' => RegisterAction::className(),
 //            'change_password' => ChangePasswordAction::className(),
 //            'student_identity' => StudentIdentityAction::className(),
@@ -77,4 +76,8 @@ class ApiController extends Controller
     public function logout(){
         return \Yii::$app->user->logout();
     }
+
+//    public function actionCurrentUser(){
+//        return \Yii::$app->user->isGuest ? null : \Yii::$app->user->identity->getId();
+//    }
 }

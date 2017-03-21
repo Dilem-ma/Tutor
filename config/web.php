@@ -49,6 +49,7 @@ $config = [
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'student'],
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'teacher'],
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'order'],
             ],
         ],
     ],
