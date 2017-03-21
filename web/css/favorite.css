@@ -33,58 +33,15 @@ body{
     overflow: auto;
 }
 
- .order{
-    width: 100%;
-    height: 35.21%;
-    background-color: #fafafa;
-     margin-top: 2em;
+ .favorite{
+     border-bottom: 0.1em solid rgba(160, 160, 160, 0.3);
+     width: 100%;
+     height: 6.5em;
+     background-color: #fafafa;
+     border-top: 0.1em solid rgba(160, 160, 160, 0.3);
 }
 
- .message{
-     background: none;
-     position: relative;
-     width:100%;
-     height: 3em;
- }
- .lastborder{
-     width: 92%;
-     margin: 0% 4%;
-     overflow: auto;
-     height: 100%;
 
- }
-.border{
-    border-bottom: 1px solid rgba(160, 160, 160, 0.3);
-    width: 92%;
-    margin: 0% 4%;
-    overflow: auto;
-    height: 100%;
-}
-.message input{
-    border: none;
-    color: #646464;
-    background-color: #fafafa;
-    height: 99%;
-    font-size: 1em;
-    font-family: "Microsoft YaHei";
-    text-indent: 0.2em;
-    display: block;
-    outline: 0;
-    width: 70%;
-    text-decoration: none;
-}
-
-.message .name{
-    padding-top: 1em;
-    float:left;
-    width:30%;
-}
-
-.message .ctnt{
-    float: left;
-    width: 70%;
-    padding-top: 1em;
-}
 
 select{
     height: 100%;
@@ -109,6 +66,8 @@ select{
     border-radius: 3px;
     text-align: center;
 }
+
+
 #NotMoveDIV {
     position: fixed;
     z-index: 999;
@@ -151,9 +110,36 @@ select{
     width: 100%;
 }
 .content{
-    margin-top: 16%;
+    margin-top: 25%;
     z-index: -1111111;
     position: relative;
 }
 
 
+.user img{
+    height: 4.5em;
+    border-radius: 100%;
+    display: block;
+}
+
+.portrait{
+    width: 20%;
+    float: left;
+    margin-left: 1em;
+    margin-top: 1em;
+
+}
+
+.info{
+    float: left;
+    padding: 1.5em 1em;
+}
+
+.info h1{
+    font-size: 1.3em;
+    font-family: inherit;
+}
+.info p1{
+    line-height: 2em;
+    font-size: 1em;
+}

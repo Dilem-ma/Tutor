@@ -78,17 +78,9 @@ class SiteController extends Controller
     {
         return $this->render('order');
     }
-    public function actionStudenttask()
+    public function actionFavorite()
     {
-        return $this->render('studenttask');
-    }
-    public function actionFilter()
-    {
-        return $this->render('filter');
-    }
-    public function actionCoursedetail()
-    {
-        return $this->render('coursedetail');
+        return $this->render('favorite');
     }
     public function actionStudenttask()
     {
@@ -102,5 +94,6 @@ class SiteController extends Controller
     {
         return $this->render('coursedetail');
     }
+
 }
 
