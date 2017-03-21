@@ -24,7 +24,6 @@ class Student extends ActiveRecord
         return [
             'id',
             'name',
-            'phone',
             'gender',
             'area',
             'grade',
@@ -34,10 +33,10 @@ class Student extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'phone', 'birthday'], 'required'],
-            [['name', 'phone'], 'unique'],
+            [['name', 'birthday'], 'required'],
+            [['name'], 'unique'],
             [['name'], 'string', 'max' => 10],
-            [['phone'], 'string', 'max' => 20],
+//            [['phone'], 'string', 'max' => 20],
             [['birthday'], 'string', 'max' => 10],
             [['grade'], 'integer'],
             [['gender'], 'integer'],
@@ -87,17 +86,17 @@ class Student extends ActiveRecord
         return null;
     }
 
-    public static function findByPhone($phone){
-        $stu = Student::find()
-            ->where(['phone' => $phone])
-            ->asArray()
-            ->one();
-
-        if ($stu) {
-            return new static($stu);
-        }
-
-        return null;
-    }
+//    public static function findByPhone($phone){
+//        $stu = Student::find()
+//            ->where(['phone' => $phone])
+//            ->asArray()
+//            ->one();
+//
+//        if ($stu) {
+//            return new static($stu);
+//        }
+//
+//        return null;
+//    }
 
 }

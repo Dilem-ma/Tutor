@@ -18,7 +18,7 @@ class SelectOrdersAction extends Action
         return Order::find()
             ->filterWhere(['gender' => $post['gender'], 'area' => $post['area']])
             ->andFilterCompare('technique', $post['technique'], 'like')
-            ->andFilterCompare('keyword', $post['keyword'], 'like')
+//            ->andFilterCompare('keyword', $post['keyword'], 'like')
             ->andFilterCompare('title', $post['text'],'like')
             ->all();
     }

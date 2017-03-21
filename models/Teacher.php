@@ -31,10 +31,10 @@ class Teacher extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'phone', 'image'], 'required'],
-            [['name', 'phone'], 'unique'],
+            [['name', 'image'], 'required'],
+            [['name'], 'unique'],
             [['name'], 'string', 'max' => 10],
-            [['phone'], 'string', 'max' => 20],
+//            [['phone'], 'string', 'max' => 20],
             [['birthday'], 'string', 'max' => 10],
             [['major'], 'string', 'max' => 10],
             //[['grade'], 'integer'],
@@ -50,7 +50,7 @@ class Teacher extends ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
-            'phone' => 'Phone',
+//            'phone' => 'Phone',
             'gender' => 'Gender',
             //'grade' => 'Grade',
             // 'area' => 'Area',
@@ -87,17 +87,17 @@ class Teacher extends ActiveRecord
         return null;
     }
 
-    public static function findByPhone($phone){
-        $tea = Teacher::find()
-            ->where(['phone' => $phone])
-            ->asArray()
-            ->one();
-
-        if ($tea) {
-            return new static($tea);
-        }
-
-        return null;
-    }
+//    public static function findByPhone($phone){
+//        $tea = Teacher::find()
+//            ->where(['phone' => $phone])
+//            ->asArray()
+//            ->one();
+//
+//        if ($tea) {
+//            return new static($tea);
+//        }
+//
+//        return null;
+//    }
 
 }
