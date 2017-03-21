@@ -31,7 +31,7 @@ $this->title = 'search';
             <div class="need-content">
                 <h1><a>{{x.title}}</a></h1>
                 <p>{{x.description}}</p>
-                <div class="label"><span>{{x.area}}</span><span ng-if="x.gender == 'male'">需要：男性</span><span ng-if="x.gender == 'female'">需要：女性</span><span>价格：{{x.price}}/h</span></div>
+                <div class="label"><span>{{x.area}}</span><span>{{x.technique}}</span><span ng-if="x.gender == 'male'">需要：男性</span><span ng-if="x.gender == 'female'">需要：女性</span><span>价格：{{x.price}}/h</span></div>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@ $this->title = 'search';
             <div class="need-content">
                 <h1><a>{{x.title}}</a></h1>
                 <p>{{x.description}}</p>
-                <div class="label"><span>{{x.area}}</span><span ng-if="x.gender == 'male'">需要：男性</span><span ng-if="x.gender == 'female'">需要：女性</span><span>价格：{{x.price}}/h</span></div>
+                <div class="label"><span>{{x.area}}</span><span>{{x.technique}}</span><span ng-if="x.gender == 'male'">需要：男性</span><span ng-if="x.gender == 'female'">需要：女性</span><span>价格：{{x.price}}/h</span></div>
             </div>
         </div>
     </div>
