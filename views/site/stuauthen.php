@@ -7,7 +7,7 @@
  */
 /* @var $this yii\web\View */
 
-$this->title = 'talk';
+$this->title = 'stuauthen';
 \app\assets\StuauthenAsset::register($this);
 ?>
 <div class="shortcut">
@@ -15,6 +15,7 @@ $this->title = 'talk';
         <span class="title">学生认证</span>
         <a href="login.html"><img src="/img/back.png" class="back"/></a>
     </div>
+</div>
     <div class="content">
         <div class="form">
             <div class="message">
@@ -43,5 +44,20 @@ $this->title = 'talk';
             </div>
         </div>
         <button class="submit" type="submit">认证</button>
+    </div>
+<div id="NotMoveDIV">
+    <div class="icon-box">
+        <a href="/site/index" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br/>主页</a>
+    </div>
+    <div class="icon-box">
+        <a href="/site/course" class="botm-icon-text"><img src="/img/ios7-compose-outline.png" class="botm-icon"/><br/>课程</a>
+    </div>
+    <div class="icon-box">
+        <a href="" class="botm-icon-text"><img src="/img/ios7-bell.png"
+                                               class="botm-icon"/><br/>消息</a>
+    </div>
+    <div class="icon-box">
+        <a href="/site/mine" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br/>我的</a>
+
     </div>
 </div>

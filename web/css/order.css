@@ -4,6 +4,7 @@ body{
     height: 100%;
 }
 
+
 .scTop{
     width: 100%;
     padding:8% 0 6%;
@@ -32,11 +33,11 @@ body{
     overflow: auto;
 }
 
- .form{
+ .order{
     width: 100%;
     height: 35.21%;
     background-color: #fafafa;
-     margin-top: 1em;
+     margin-top: 2em;
 }
 
  .message{
@@ -82,8 +83,7 @@ body{
 .message .ctnt{
     float: left;
     width: 70%;
-    height: 90%;
-    margin-top: 0.9%;
+    padding-top: 1em;
 }
 
 select{
@@ -109,7 +109,6 @@ select{
     border-radius: 3px;
     text-align: center;
 }
-
 #NotMoveDIV {
     position: fixed;
     z-index: 999;
@@ -146,5 +145,14 @@ select{
     color: #4f4a46;
 }
 
-
+.shortcut1{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
+.content{
+    margin-top: 16%;
+    z-index: -1111111;
+    position: relative;
+}
 
