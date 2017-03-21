@@ -14,11 +14,11 @@ $this->title = 'search';
     <div class="shortcut1">
         <div class="srchTop">
             <div class="srchSpan">
-                <div class="back"><a href="course"><img src="/img/android-arrow-back.png" class="back"/></a></div>
+                <div class="back"><a href="course" target="_self"><img src="/img/android-arrow-back.png" class="back"/></a></div>
                 <div class="message">
                     <form class="search"><input type="text" placeholder="请输入搜索内容"></form>
                 </div>
-                <div class="btn-box"><a href="filter" class="select">筛选</a></div>
+                <div class="btn-box"><a href="filter" target="_self" class="select">筛选</a></div>
             </div>
             <div class="select-content" ng-hide="(gender==undefined || gender == '') && (tech==undefined || tech == '') &&(price==undefined || price == '') &&(area==undefined || area == '')"><a>{{gender}}</a><span class="pipe">|</span><a>{{tech}}</a><span
                     class="pipe">|</span><a>{{price}}</a><span class="pipe">|</span><a>{{area}}</a></div>
@@ -31,7 +31,7 @@ $this->title = 'search';
             <div class="need-content">
                 <h1><a>{{x.title}}</a></h1>
                 <p>{{x.description}}</p>
-                <div class="label"><span>{{x.area}}</span><span ng-if="x.gender == 'male'">需要：男性</span><span ng-if="x.gender == 'female'">需要：女性</span><span>价格：{{x.price}}/h</span></div>
+                <div class="label"><span>{{x.area}}</span><span>{{x.technique}}</span><span ng-if="x.gender == 'male'">需要：男性</span><span ng-if="x.gender == 'female'">需要：女性</span><span>价格：{{x.price}}/h</span></div>
             </div>
         </div>
     </div>
@@ -41,24 +41,23 @@ $this->title = 'search';
             <div class="need-content">
                 <h1><a>{{x.title}}</a></h1>
                 <p>{{x.description}}</p>
-                <div class="label"><span>{{x.area}}</span><span ng-if="x.gender == 'male'">需要：男性</span><span ng-if="x.gender == 'female'">需要：女性</span><span>价格：{{x.price}}/h</span></div>
+                <div class="label"><span>{{x.area}}</span><span>{{x.technique}}</span><span ng-if="x.gender == 'male'">需要：男性</span><span ng-if="x.gender == 'female'">需要：女性</span><span>价格：{{x.price}}/h</span></div>
             </div>
         </div>
     </div>
     <div id="NotMoveDIV">
         <div class="icon-box">
-            <a href="index" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br/>主页</a>
+            <a href="index" target="_self" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br/>主页</a>
         </div>
         <div class="icon-box">
-            <a href="" class="botm-icon-text"><img src="/img/ios7-compose.png" class="botm-icon"/><br/>课程</a>
+            <a href="" target="_self" class="botm-icon-text"><img src="/img/ios7-compose.png" class="botm-icon"/><br/>课程</a>
         </div>
         <div class="icon-box">
-            <a href="message" class="botm-icon-text"><img src="/img/ios7-bell-outline.png"
+            <a href="message" target="_self" class="botm-icon-text"><img src="/img/ios7-bell-outline.png"
                                                           class="botm-icon"/><br/>消息</a>
-
         </div>
         <div class="icon-box">
-            <a href="mine" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br/>我的</a>
+            <a href="mine" target="_self" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br/>我的</a>
 
         </div>
     </div>
