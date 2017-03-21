@@ -11,6 +11,7 @@ namespace app\controllers;
 use app\actions\AddOrderAction;
 use app\actions\GetTopTeachersAction;
 use app\actions\LoginAction;
+use app\actions\SelectOrdersAction;
 use app\actions\TeacherIdentityAction;
 use yii\filters\AccessControl;
 use yii\rest\Controller;
@@ -28,7 +29,7 @@ class ApiController extends Controller
             'rules' => [
                 [
                     'allow' => true,
-                    'actions' => ['login', 'teacher_identity', 'add_order'],
+                    'actions' => ['login', 'teacher_identity', 'add_order', 'select_orders'],
                     'verbs' => ['POST'],
                 ],
                 [
@@ -65,6 +66,7 @@ class ApiController extends Controller
             'top_teachers' => GetTopTeachersAction::className(),
             'teacher_identity' => TeacherIdentityAction::className(),
             'add_order' => AddOrderAction::className(),
+            'select_orders' => SelectOrdersAction::className(),
 //            'current_user' => $this->actionCurrentUser(),
 //            'register' => RegisterAction::className(),
 //            'change_password' => ChangePasswordAction::className(),
