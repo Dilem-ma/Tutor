@@ -20,6 +20,7 @@ class FilterAsset extends AssetBundle
         'css/filter.css'
     ];
     public $js = [
+        'js/controllers/FilterCtrl.js'
 
     ];
     public $depends = [

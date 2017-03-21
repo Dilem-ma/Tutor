@@ -20,6 +20,7 @@ class SearchAsset extends  AssetBundle
         'css/common.css'
     ];
     public $js = [
+        'js/controllers/SearchCtrl.js'
 
     ];
     public $depends = [
