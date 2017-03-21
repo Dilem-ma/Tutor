@@ -28,7 +28,17 @@ class Order extends ActiveRecord
             'description',
 //            'keyword',
             'gender',
-            'price'
+            'price',
+            'status' => function($model){
+                if ($model->status == -1){
+                    return "等待接单";
+                } else {
+                    return "已有".$model->status."人接单";
+                }
+            },
+            't_id' => function($model){
+                return explode(',', $model->t_id);
+            }
         ];
     }
 
