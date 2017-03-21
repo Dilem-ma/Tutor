@@ -16,10 +16,13 @@ class MainAsset extends AssetBundle
     public $baseUrl = '@web';
 
     public $css = [
+        'css/jquery.toastmessage.css',
         'css/common.css',
         'css/index2.css'
     ];
     public $js = [
+        'js/jquery.toastmessage.js',
+        'js/controllers/MainCtrl.js'
 
     ];
     public $depends = [

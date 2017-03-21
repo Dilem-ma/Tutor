@@ -8,45 +8,80 @@
 
 namespace app\controllers;
 
-use app\models\LoginForm;
-use app\models\User;
+use app\actions\AddOrderAction;
+use app\actions\ChangePasswordAction;
+use app\actions\GetTopTeachersAction;
+use app\actions\LoginAction;
+use app\actions\RegisterAction;
+use app\actions\SelectOrdersAction;
+use app\actions\TeacherIdentityAction;
+use yii\filters\AccessControl;
 use yii\rest\Controller;
 
 class ApiController extends Controller
 {
-    public function actionLogin(){
-        $post = \Yii::$app->request->post();
-        $form = new LoginForm();
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
 
-        if ($form->load($post, '') && $form->login()) {
-            return [
-                'success' => true,
-                'message' => '登陆成功',
-            ];
-        } else {
-            return [
-                'success' => false,
-                'message' => '登录失败',
-                'errors' => $form->getFirstError('password'),
-            ];
-        }
+        unset($behaviors['contentNegotiator']['formats']['application/xml']);
+
+        $behaviors['access'] = [
+            'class' => AccessControl::className(),
+            'rules' => [
+                [
+                    'allow' => true,
+                    'actions' => ['login', 'teacher_identity', 'add_order', 'select_orders'],
+                    'verbs' => ['POST'],
+                ],
+                [
+                    'allow' => true,
+                    'actions' => ['top_teachers'],
+                    'verbs' => ['GET'],
+                ],
+                [
+                    'allow' => true,
+                    'actions' => ['register', 'change_password'],
+                    'verbs' => ['POST'],
+                ],
+//                [
+//                    'allow' => true,
+//                    'actions' => ['current_user'],
+//                    'verbs' => ['GET'],
+//                ],
+//                [
+//                    'allow' => true,
+//                    'actions' => ['logout'],
+////                    'roles' => ['@'],
+//                    'verbs' => ['POST'],
+//                ],
+            ],
+        ];
+
+        return $behaviors;
     }
 
-    public function actionRegister(){
-        $post = \Yii::$app->request->post();
-        $user = new User();
-
-        if ($user->load($post, '') && $user->save()) {
-            return [
-                'success' => true,
-                'message' => '注册成功',
-            ];
-        } else {
-            return [
-                'success' => false,
-                'message' => '注册失败',
-                'errors' => $user->getFirstError('username'),
-            ];
-        }
+    public function actions()
+    {
+        return [
+            'login' => LoginAction::className(),
+            'top_teachers' => GetTopTeachersAction::className(),
+            'teacher_identity' => TeacherIdentityAction::className(),
+            'add_order' => AddOrderAction::className(),
+            'select_orders' => SelectOrdersAction::className(),
+//            'current_user' => $this->actionCurrentUser(),
+            'register' => RegisterAction::className(),
+            'change_password' => ChangePasswordAction::className(),
+//            'student_identity' => StudentIdentityAction::className(),
+//            'get_student' => GetStudentAction::className(),
+        ];
     }
+
+    public function logout(){
+        return \Yii::$app->user->logout();
+    }
+
+//    public function actionCurrentUser(){
+//        return \Yii::$app->user->isGuest ? null : \Yii::$app->user->identity->getId();
+//    }
 }

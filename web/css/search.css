@@ -92,6 +92,7 @@ body {
     top: 20%;
     margin-bottom: 13%;
     z-index: -11111;
+    width: 100%;
 }
 
 .select {

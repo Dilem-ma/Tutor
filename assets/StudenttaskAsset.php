@@ -1,26 +1,25 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: cuiyuxuan
- * Date: 2017/3/13
- * Time: 下午9:34
+ * User: Dilemma丶
+ * Date: 2017/3/2
+ * Time: 9:40
  */
 
 namespace app\assets;
 
 use yii\web\AssetBundle;
 
-class SearchAsset extends  AssetBundle
+class StudenttaskAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
 
     public $css = [
-        'css/search.css',
-        'css/common.css'
+        'css/common.css',
+        'css/Studenttask.css'
     ];
     public $js = [
-        'js/controllers/SearchCtrl.js'
 
     ];
     public $depends = [
