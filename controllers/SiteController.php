@@ -50,10 +50,12 @@ class SiteController extends Controller
     {
         return $this->render('search');
     }
+
     public function actionMine()
     {
         return $this->render('mine');
     }
+
     public function actionAuthentication()
     {
         return $this->render('authentication');
@@ -78,39 +80,40 @@ class SiteController extends Controller
     {
         return $this->render('order');
     }
+
     public function actionFavorite()
     {
         return $this->render('favorite');
     }
+
     public function actionStudenttask()
     {
         return $this->render('studenttask');
     }
+
     public function actionFilter()
     {
         return $this->render('filter');
     }
+
     public function actionCoursedetail()
     {
         return $this->render('coursedetail');
     }
+
     public function actionPersonaldata()
     {
         return $this->render('personaldata');
-    }    public function actionWallet()
-{
-    return $this->render('wallet');
-}
+    }
+
+    public function actionWallet()
+    {
+        return $this->render('wallet');
+    }
+
     public function actionIntro()
     {
         return $this->render('intro');
     }
-    public function actionPersonaldata()
-    {
-        return $this->render('personaldata');
-    }    public function actionWallet()
-{
-    return $this->render('wallet');
-}
 }
 
