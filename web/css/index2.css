@@ -5,13 +5,19 @@ body {
 
 .thehead {
     width: 100%;
-    padding: 6% 0 4%;
+    padding:8% 0 6%;
     background: #64a9e9;
     text-align: left;
     color: #ffffff;
     position: relative;
+
 }
 
+.shortcut1{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
 .text {
     position: relative;
     left: 2ex;
@@ -52,8 +58,14 @@ body {
     letter-spacing: 0.1em;
     color: #4f4a46;
 }
+.content{
+    overflow: auto;
+    z-index: -1111111;
+    position: relative;
+}
 
 .pane {
+    margin-top: 5em;
     width: 100%;
     padding: 14% 0 14%;
     background: #ffffff;
