@@ -8,16 +8,20 @@
 
 namespace app\actions;
 
-
-use app\models\Teacher;
 use yii\base\Action;
+use yii\db\Query;
 
 class GetTopTeachersAction extends Action
 {
     public function run(){
-        return Teacher::find()
-            ->orderBy('star desc')
-            ->limit(3)
-            ->all();
+
+        $rows = (new Query())
+            ->select(['user.id', 'name', 'url', 'star'])
+            ->from(['user', 'teacher'])
+            ->where('user.id = teacher.u_id')
+            ->orderBy('star DESC')
+            ->limit(3);
+
+        return $rows->all();
     }
 }

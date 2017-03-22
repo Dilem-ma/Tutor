@@ -41,11 +41,11 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             'id',
-            'username',
             'name',
             'birthday',
             'gender',
             'area',
+            'url',
         ];
     }
 

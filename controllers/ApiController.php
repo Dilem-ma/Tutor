@@ -10,6 +10,7 @@ namespace app\controllers;
 
 use app\actions\AddOrderAction;
 use app\actions\ChangePasswordAction;
+use app\actions\GetCurrentUserAction;
 use app\actions\GetIdentityAction;
 use app\actions\GetTopTeachersAction;
 use app\actions\LoginAction;
@@ -38,7 +39,7 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['top_teachers', 'get_identity'],
+                    'actions' => ['top_teachers', 'get_identity', 'get_current_user'],
                     'verbs' => ['GET'],
                 ],
                 [
@@ -76,6 +77,7 @@ class ApiController extends Controller
             'register' => RegisterAction::className(),
             'change_password' => ChangePasswordAction::className(),
             'student_identity' => StudentIdentityAction::className(),
+            'get_current_user' => GetCurrentUserAction::className(),
         ];
     }
 
