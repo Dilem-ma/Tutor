@@ -26,7 +26,6 @@ class Order extends ActiveRecord
             'area',
             'title',
             'description',
-//            'keyword',
             'gender',
             'price',
             'status' => function($model){
@@ -51,7 +50,6 @@ class Order extends ActiveRecord
             [['area'], 'string', 'max' => 20],
             [['title'], 'string', 'max' => 20],
             [['description'], 'string', 'max' => 100],
-//            [['keyword'], 'string', 'max' => 20],
             [['gender'], 'integer'],
         ];
     }

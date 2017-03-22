@@ -15,6 +15,7 @@ use app\actions\GetTopTeachersAction;
 use app\actions\LoginAction;
 use app\actions\RegisterAction;
 use app\actions\SelectOrdersAction;
+use app\actions\StudentIdentityAction;
 use app\actions\TeacherIdentityAction;
 use yii\filters\AccessControl;
 use yii\rest\Controller;
@@ -32,7 +33,7 @@ class ApiController extends Controller
             'rules' => [
                 [
                     'allow' => true,
-                    'actions' => ['login', 'teacher_identity', 'add_order', 'select_orders'],
+                    'actions' => ['login', 'teacher_identity', 'student_identity', 'add_order', 'select_orders'],
                     'verbs' => ['POST'],
                 ],
                 [
@@ -74,8 +75,7 @@ class ApiController extends Controller
 //            'current_user' => $this->actionCurrentUser(),
             'register' => RegisterAction::className(),
             'change_password' => ChangePasswordAction::className(),
-//            'student_identity' => StudentIdentityAction::className(),
-//            'get_student' => GetStudentAction::className(),
+            'student_identity' => StudentIdentityAction::className(),
         ];
     }
 

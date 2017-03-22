@@ -15,6 +15,7 @@ class m170322_092633_refactor_tutor_db extends Migration
         $this->dropColumn('teacher', 'image');
         $this->dropColumn('teacher', 'gender');
         $this->dropColumn('teacher', 'area');
+        $this->addColumn('teacher', 'education', "ENUM('高中', '专科', '本科', '硕士', '博士')");
         $this->addColumn('user', 'name', $this->string(20)->unique());
         $this->addColumn('user', 'birthday', $this->date());
         $this->addColumn('user', 'gender', "ENUM('male', 'female')");
