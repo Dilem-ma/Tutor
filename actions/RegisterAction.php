@@ -24,10 +24,11 @@ class RegisterAction extends Action
                 'message' => '注册成功',
             ];
         } else {
+            $error = $user->getFirstError('username') ? $user->getFirstError('username') : $user->getFirstError('password');
             return [
                 'success' => false,
                 'message' => '注册失败',
-                'errors' => $user->getFirstError('username'),
+                'errors' => $error,
             ];
         }
     }
