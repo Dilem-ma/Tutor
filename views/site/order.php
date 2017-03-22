@@ -14,7 +14,7 @@ $this->title = 'order';
 <div class="shortcut1">
     <div class="scTop">
         <span class="title">课程管理</span>
-        <a><img src="/img/back.png" class="back"/></a>
+        <a href="mine"><img src="/img/back.png" class="back"/></a>
     </div>
 </div>
 

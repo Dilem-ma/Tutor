@@ -22,26 +22,22 @@ class Teacher extends ActiveRecord
     {
         return [
             'id',
-            'name',
             'star',
-            'image',
+            'major',
+            'education',
+            'describe',
         ];
     }
 
     public function rules()
     {
         return [
-            [['name', 'image'], 'required'],
-            [['name'], 'unique'],
-            [['name'], 'string', 'max' => 10],
-//            [['phone'], 'string', 'max' => 20],
-            [['birthday'], 'string', 'max' => 10],
-            [['major'], 'string', 'max' => 10],
-            //[['grade'], 'integer'],
-            [['gender'], 'integer'],
-            // [['area'], 'integer'],
+            [['major'] ,'string', 'max' => 10],
             [['describe'], 'string', 'max' => 200],
-            [['image'], 'string', 'max' => 200],
+            [['star'], 'integer'],
+            [['education'], 'integer'],
+            [['u_id'], 'integer'],
+            [['major', 'education', 'u_id'], 'required'],
         ];
     }
 
@@ -49,14 +45,11 @@ class Teacher extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-//            'phone' => 'Phone',
-            'gender' => 'Gender',
-            //'grade' => 'Grade',
-            // 'area' => 'Area',
-            'birthday' => 'Birthday',
+            'u_id' => 'User ID',
             'describe' => 'Describe',
-
+            'major' => 'Major',
+            'star' => 'Star',
+            'education' => 'Education',
         ];
     }
 
@@ -64,19 +57,6 @@ class Teacher extends ActiveRecord
     {
         $tea = Teacher::find()
             ->where(['id' => $id])
-            ->asArray()
-            ->one();
-
-        if ($tea) {
-            return new static($tea);
-        }
-
-        return null;
-    }
-
-    public static function findByUsername($username){
-        $tea = Teacher::find()
-            ->where(['name' => $username])
             ->asArray()
             ->one();
 

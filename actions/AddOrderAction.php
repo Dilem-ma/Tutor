@@ -19,7 +19,7 @@ class AddOrderAction extends Action
         $order = new Order();
         $post = \Yii::$app->request->post();
         $order->load($post, '');
-        $order->s_id = Student::findByUsername($post['name'])->getPrimaryKey();
+//        $order->s_id = Student::findByUsername($post['name'])->getPrimaryKey();
 
         if ($order->save()) {
             return [

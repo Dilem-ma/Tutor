@@ -32,8 +32,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             [['username', 'password'], 'required'],
-            [['username'], 'string', 'max' => 20],
-            [['password'], 'string', 'max' => 64],
+            [['username', 'password'], 'string'],
             [['username'], 'unique'],
         ];
     }
@@ -43,6 +42,10 @@ class User extends ActiveRecord implements IdentityInterface
         return [
             'id',
             'username',
+            'name',
+            'birthday',
+            'gender',
+            'area',
         ];
     }
 

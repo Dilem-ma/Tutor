@@ -10,6 +10,7 @@ namespace app\actions;
 
 
 use app\models\LoginForm;
+use app\models\User;
 use yii\base\Action;
 
 class LoginAction extends Action
@@ -17,11 +18,19 @@ class LoginAction extends Action
     public function run(){
         $post = \Yii::$app->request->post();
         $form = new LoginForm();
+        $form->load($post, '');
+        $token = \Yii::$app->security->generateRandomString();
 
-        if ($form->load($post, '') && $form->login()) {
+        $user = User::findOne(['username' => $post['username']]);
+        $user->password = $post['password'];
+        $user->accessToken = $token;
+
+        if ($form->login()) {
+            $user->save();
             return [
                 'success' => true,
                 'message' => '登陆成功',
+                'token' => $token,
             ];
         } else {
             return [

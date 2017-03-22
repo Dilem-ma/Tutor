@@ -18,8 +18,6 @@ class TeacherIdentityAction extends Action
     public function run(){
         $tea = new Teacher();
         $tea->load(\Yii::$app->request->post(), '');
-        $user = User::findByUsername(\Yii::$app->request->post('phone'));
-        $tea->u_id = $user->getId();
 
         if ($tea->save()) {
             return [

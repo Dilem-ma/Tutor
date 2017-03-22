@@ -1,8 +1,8 @@
 .scTop{
-    width: 88%;
-    padding:8% 0 6% 12%;
+    width: 100%;
+    padding:8% 0 6% 0%;
     background: #64a9e9;
-    text-align: left;
+    text-align: center;
     color: #ffffff;
     position: relative;
 }
@@ -68,7 +68,7 @@
 .pane1-2{
     margin-top:2%;
     padding:5% 0% 0% 7%;
-    width:100%;
+    width:93%;
     background:#FFFFFF;
     height:3em;
 }
@@ -96,7 +96,7 @@
 .pane1-3{
     margin-top:2%;
     padding:5% 0% 0% 7%;
-    width:100%;
+    width:93%;
     background:#FFFFFF;
     height:11em;
 }

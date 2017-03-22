@@ -18,8 +18,6 @@ class StudentIdentityAction extends Action
     public function run(){
         $stu = new Student();
         $stu->load(\Yii::$app->request->post(), '');
-        $user = User::findByUsername(\Yii::$app->request->post('phone'));
-        $stu->u_id = $user->getId();
 
         if ($stu->save()) {
             return [

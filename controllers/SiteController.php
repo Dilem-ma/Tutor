@@ -94,6 +94,12 @@ class SiteController extends Controller
     {
         return $this->render('coursedetail');
     }
-
+    public function actionPersonaldata()
+    {
+        return $this->render('personaldata');
+    }    public function actionWallet()
+{
+    return $this->render('wallet');
+}
 }
 

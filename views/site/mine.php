@@ -29,75 +29,83 @@ $this->title = 'MinePage';
 <div class="pane2">
     <div class="pane2-1">
         <div class="pane2-2">
-            <div class="image1">
-                <img align="absmiddle" src="/img/person.png" class="pic_icon" height="30" width="30"/>
-            </div>
-            <div class="text3">
-                <span class="text4">个人资料</span>
-            </div>
+            <a href="personaldata">
+                <div class="image1">
+                    <img align="absmiddle" src="/img/person.png" class="pic_icon" height="30" width="30"/>
+                </div>
+                <div class="text3">
+                    <span class="text4">个人资料</span>
+                </div>
+            </a>
         </div>
         <div class="pane2-2">
-            <div class="image1">
-                <img align="absmiddle" src="/img/social-usd.png" class="pic_icon" height="30" width="30"/>
-            </div>
-            <div class="text3">
-                <span class="text4">我的钱包</span>
-            </div>
+            <a href="wallet">
+                <div class="image1">
+                    <img align="absmiddle" src="/img/social-usd.png" class="pic_icon" height="30" width="30"/>
+                </div>
+                <div class="text3">
+                    <span class="text4">我的钱包</span>
+                </div>
+            </a>
         </div>
         <div class="pane2-2">
             <a href="authentication">
-            <div class="image1">
-                <img align="absmiddle" src="/img/mailopened.png" class="pic_icon" height="30" width="30"/>
-            </div>
-            <div class="text3">
-                <span class="text4">认证信息</span>
-            </div>
+                <div class="image1">
+                    <img align="absmiddle" src="/img/mailopened.png" class="pic_icon" height="30" width="30"/>
+                </div>
+                <div class="text3">
+                    <span class="text4">认证信息</span>
+                </div>
             </a>
         </div>
     </div>
     <div class="pane2-1">
-        <div class="pane2-2">
-            <div class="image1">
-                <img align="absmiddle" src="/img/calendar .png" class="pic_icon" height="30" width="30"/>
-            </div>
-            <div class="text3">
-                <span class="text4">课程管理</span>
-            </div>
-        </div>
-        <div class="pane2-2">
+        <a href="order">
+            <div class="pane2-2">
+                <div class="image1">
+                    <img align="absmiddle" src="/img/calendar .png" class="pic_icon" height="30" width="30"/>
+                </div>
+                <div class="text3">
+                    <span class="text4">课程管理</span>
+                </div>
+        </a>
+    </div>
+    <div class="pane2-2">
+        <a href="favorite">
             <div class="image1">
                 <img align="absmiddle" src="/img/android-folder.png" class="pic_icon" height="30" width="30"/>
             </div>
             <div class="text3">
                 <span class="text4">我的收藏</span>
             </div>
+        </a>
+    </div>
+</div>
+<div class="pane2-1">
+    <div class="pane2-2">
+        <div class="image1">
+            <img align="absmiddle" src="/img/gear-b.png" class="pic_icon" height="30" width="30"/>
+        </div>
+        <div class="text3">
+            <span class="text4">设置</span>
         </div>
     </div>
-    <div class="pane2-1">
-        <div class="pane2-2">
-            <div class="image1">
-                <img align="absmiddle" src="/img/gear-b.png" class="pic_icon" height="30" width="30"/>
-            </div>
-            <div class="text3">
-                <span class="text4">设置</span>
-            </div>
-        </div>
-    </div>
+</div>
 
 </div>
 <div id="NotMoveDIV">
     <div class="icon-box">
-        <a href="index" class="botm-icon-text" ><img src="/img/ios7-home-outline.png" class="botm-icon"/><br />主页</a>
+        <a href="index" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br/>主页</a>
     </div>
     <div class="icon-box">
-        <a href="course" class="botm-icon-text"><img src="/img/ios7-compose-outline.png" class="botm-icon"/><br />课程</a>
+        <a href="course" class="botm-icon-text"><img src="/img/ios7-compose-outline.png" class="botm-icon"/><br/>课程</a>
     </div>
     <div class="icon-box">
-        <a href="message" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br />消息</a>
+        <a href="message" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br/>消息</a>
 
     </div>
     <div class="icon-box">
-        <a href="" class="botm-icon-text"><img src="/img/ios7-person.png" class="botm-icon"/><br />我的</a>
+        <a href="" class="botm-icon-text"><img src="/img/ios7-person.png" class="botm-icon"/><br/>我的</a>
 
     </div>
 </div>
