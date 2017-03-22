@@ -1,3 +1,7 @@
+body{
+    background: #F0F0F0;
+}
+
 .scTop{
     width: 100%;
     padding:8% 0 6% 0%;
@@ -23,7 +27,6 @@
     padding-top:5%;
     width:100%;
     background:#F0F0F0;
-    height:32em;
 }
 .pane1-1{
     padding:5% 0% 5%;
@@ -95,11 +98,11 @@
 }
 .pane1-3{
     margin-top:2%;
-    padding:5% 0% 0% 7%;
+    padding:5% 7%;
     width:93%;
     background:#FFFFFF;
-    height:11em;
 }
+
 .text{
     font-family: "Microsoft YaHei";
     font-size: 0.9em;

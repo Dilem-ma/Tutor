@@ -7,7 +7,7 @@ tutorApp = angular.module('tutorApp', []);
 
 storage = window.localStorage;
 
-tutorApp.controller('LoginCtrl', function ($scope, $http, $window) {
+tutorApp.controller('LoginCtrl', function ($scope, $http, $window, $location) {
 
     $scope.login = function (username, pwd) {
         var p;
@@ -26,6 +26,11 @@ tutorApp.controller('LoginCtrl', function ($scope, $http, $window) {
             };
             $http(p).then(function (d) {
                 if (d.data.success === true) {
+                    var search = $location.search();
+                    var access_token = search['token'];
+                    if (access_token != null) {
+                        localStorage.setItem(storage, access_token);
+                    }
                     return $window.location.href = "../site/index";
                 } else {
                     return $().toastmessage('showToast', {
@@ -48,11 +53,4 @@ tutorApp.controller('LoginCtrl', function ($scope, $http, $window) {
             return false;
         }
     };
-
-    // search = $location.search();
-    // token = search['access_token'];
-    // if (token != null) {
-    //     localStorage.setItem(storage, token);
-    //     return $window.location.href = "main.html";
-    // }
 });

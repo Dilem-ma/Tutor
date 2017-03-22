@@ -20,7 +20,7 @@ class AuthenticationAsset extends  AssetBundle
         'css/common.css'
     ];
     public $js = [
-
+        'js/controllers/AuthenCtrl.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',
