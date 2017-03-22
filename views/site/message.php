@@ -19,12 +19,13 @@ $this->title = 'MessagePage';
 
                 </div>
                 <div class="pane1-3">
+                    <img src="/img/portrait2.png" >
                 </div>
                 <div class="pane1-4-1">
-                    <span class="username">Anna Blum</span>
+                    <span class="username">朱远青</span>
                 </div>
                 <div class="pane1-4-1">
-                    <span class="text1">This sounded nonsense to Alice,so she said nothing,</span>
+                    <span class="text1">没有，快滚</span>
                 </div>
             </div>
             <div class="btn">删除</div>

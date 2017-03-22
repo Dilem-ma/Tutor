@@ -9,6 +9,18 @@ body{
     text-align: center;
     color: #ffffff;
     position: relative;
+    font-size: 1.3em;
+}
+.shortcut1{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
+.content{
+    overflow: auto;
+    z-index: -1111111;
+    position: relative;
+    margin-top: 20%;
 }
 .pane1{
     width:100%;
@@ -34,6 +46,10 @@ body{
     position: relative;
     width: 5em;
     height: 5em;
+}
+.circle img{
+    border-radius: 50%;
+
 }
 .text1{
     font-family: "Microsoft YaHei";
