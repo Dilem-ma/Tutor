@@ -28,7 +28,7 @@ class GetIdentityAction extends Action
             ];
         } else {
             return [
-                "未找到该用户"
+                'error' => "未找到该用户",
             ];
         }
     }
