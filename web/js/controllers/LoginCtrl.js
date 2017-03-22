@@ -26,8 +26,7 @@ tutorApp.controller('LoginCtrl', function ($scope, $http, $window, $location) {
             };
             $http(p).then(function (d) {
                 if (d.data.success === true) {
-                    var search = $location.search();
-                    var access_token = search['token'];
+                    var access_token = d.data.token;
                     if (access_token != null) {
                         localStorage.setItem(storage, access_token);
                     }
