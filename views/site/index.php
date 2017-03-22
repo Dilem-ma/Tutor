@@ -6,6 +6,7 @@ $this->title = 'MainPage';
 \app\assets\MainAsset::register($this);
 ?>
 <div class="index2" ng-controller="MainCtrl">
+    <div class="shortcut1">
     <div class="thehead">
         <div class="text">
             <img align="absmiddle" src="/img/android-location.png"  height="20" width="15"/>
@@ -13,6 +14,8 @@ $this->title = 'MainPage';
             <span class="title">地区</span>
         </div>
     </div>
+    </div>
+    <div class="content">
     <div class="pane">
         <span class="title2">TUTOR</span>
     </div>
@@ -93,6 +96,7 @@ $this->title = 'MainPage';
 
     </div>
     <div class="pane5">
+    </div>
     </div>
     <!--<SCRIPT LANGUAGE="JavaScript">-->
     <!--function changeSrc(obj) {-->

@@ -1,0 +1,215 @@
+body{
+    background: #F2F2F2;
+    width: 100%;
+    height: 100%;
+}
+
+.scTop{
+    width: 100%;
+    padding:8% 0 6%;
+    background: #64a9e9;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+
+.title{
+    font-family: "Microsoft YaHei";
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+.back{
+    position: absolute;
+    width: 0.85em;
+    height: auto;
+    left: 5%;
+    top: 45%;
+    color: #ffffff;
+}
+
+
+
+ .form{
+    width: 100%;
+    height: 35.21%;
+    background-color: #fafafa;
+     margin-top: 1em;
+}
+
+ .message{
+     background: none;
+     position: relative;
+     width:100%;
+     height: 3em;
+ }
+ .lastborder{
+     width: 92%;
+     margin: 0% 4%;
+     overflow: auto;
+     height: 100%;
+
+ }
+.border{
+    border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+    width: 92%;
+    margin: 0% 4%;
+    overflow: auto;
+    height: 100%;
+}
+.message input{
+    border: none;
+    color: #646464;
+    background-color: #fafafa;
+    height: 99%;
+    font-size: 1em;
+    font-family: "Microsoft YaHei";
+    text-indent: 0.2em;
+    display: block;
+    outline: 0;
+    width: 70%;
+    text-decoration: none;
+}
+
+.message .name{
+    padding-top: 1em;
+    float:left;
+    width:30%;
+}
+
+
+
+select{
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+    color: #909093;
+    border: solid 1px #909093;
+    font-family: "Microsoft YaHei";
+    border: 0; background: transparent;
+}
+
+.submit{
+    width: 84%;
+    height: 3em;
+    margin: 7% 8%;
+    background: #64a9e9;
+    color: #ffffff;
+    border: 0;
+    padding: 3.25% 0;
+    font-size: 1em;
+    font-family: "YouYuan";
+    border-radius: 3px;
+    text-align: center;
+}
+
+#NotMoveDIV {
+    position: fixed;
+    z-index: 999;
+    left: 0em;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.2em;
+    height: 3.5em;
+    background: #F2F2F2;
+    border-width: 0.1em 0 0 0;
+    border-style: solid;
+    border-color: #F2F2F2;
+    font-size: 1em;
+}
+
+.icon-box {
+    float: left;
+    height: 4em;
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0.6em;
+    background: #fff;
+}
+
+.botm-icon {
+    height: 2em !important;
+    width: 2em !important;
+}
+
+.botm-icon-text {
+    font-family: "Microsoft YaHei";
+    letter-spacing: 0.1em;
+    color: #4f4a46;
+}
+
+.portrait img{
+    width:100%;
+    border-radius: 100%;
+    display: block;
+}
+
+.portrait{
+    width: 25%;
+    margin-left: 37.5%;
+    margin-top: 2em;
+
+}
+.back{
+    margin-top: -2em;
+}
+.intro{
+    font-family: "Microsoft YaHei";
+    margin-top: 1em;
+}
+.intro h1{
+    font-size: 1.3em;
+    font-family: inherit;
+}
+.intro p1{
+    line-height: 2em;
+    font-size: 1em;
+}
+.ctnt {
+    float: left;
+    width: 70%;
+    padding-top: 1em;
+}
+
+.shortcut1{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
+.content{
+    overflow: auto;
+    margin-top: 67%;
+    margin-bottom: 17%;
+    z-index: -1111111;
+    position: relative;
+}
+.btn-left{
+    float: left;
+    margin: 2% 2% 2% 4%;;
+    width: 44%;
+    height: 2.5em;
+    background: #fafafa;
+    color: #6E6E6E;
+    border: #D1D1D1 solid 0.1em;
+    font-size: 1em;
+    font-family: "YouYuan";
+    border-radius: 3px;
+    text-align: center;
+}
+.btn-right{
+    float: left;
+    margin: 2% 3% 2% 2%;
+    width: 44%;
+    height: 2.5em;
+    background: #fafafa;
+    color: #6E6E6E;
+    border: #D1D1D1 solid 0.1em;
+    font-size: 1em;
+    font-family: "YouYuan";
+    border-radius: 3px;
+    text-align: center;
+}
+
+
+

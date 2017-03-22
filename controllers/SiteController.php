@@ -101,5 +101,16 @@ class SiteController extends Controller
 {
     return $this->render('wallet');
 }
+    public function actionIntro()
+    {
+        return $this->render('intro');
+    }
+    public function actionPersonaldata()
+    {
+        return $this->render('personaldata');
+    }    public function actionWallet()
+{
+    return $this->render('wallet');
+}
 }
 
