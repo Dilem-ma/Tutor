@@ -29,20 +29,24 @@ $this->title = 'MinePage';
 <div class="pane2">
     <div class="pane2-1">
         <div class="pane2-2">
+            <a href="personaldata">
             <div class="image1">
                 <img align="absmiddle" src="/img/person.png" class="pic_icon" height="30" width="30"/>
             </div>
             <div class="text3">
                 <span class="text4">个人资料</span>
             </div>
+            </a>
         </div>
         <div class="pane2-2">
+            <a href="wallet">
             <div class="image1">
                 <img align="absmiddle" src="/img/social-usd.png" class="pic_icon" height="30" width="30"/>
             </div>
             <div class="text3">
                 <span class="text4">我的钱包</span>
             </div>
+            </a>
         </div>
         <div class="pane2-2">
             <a href="authentication">

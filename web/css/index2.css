@@ -1,20 +1,19 @@
-body {
+body{
     width: 100%;
     height: 100%;
 }
-
-.thehead {
+.thehead{
     width: 100%;
-    padding: 6% 0 4%;
+    padding:6% 0 4%;
     background: #64a9e9;
     text-align: left;
     color: #ffffff;
     position: relative;
 }
-
-.text {
+.text
+{
     position: relative;
-    left: 2ex;
+    left:2ex;
 }
 
 #NotMoveDIV {
@@ -53,181 +52,181 @@ body {
     color: #4f4a46;
 }
 
-.pane {
+
+.pane
+{
     width: 100%;
-    padding: 14% 0 14%;
+    padding:14% 0 14%;
     background: #ffffff;
     text-align: center;
-    color: #484848;
+    color: 		#484848;
     position: relative;
     border-style: none none solid none;
     border-width: 0.2ex;
     border-color: #E8E8E8;
 }
-
-.title2 {
+.title2
+{
     font-family: "Microsoft YaHei";
     font-size: 4em;
     font-weight: 100;
 }
-
-.pane2 {
+.pane2{
     width: 100%;
-    padding: 5% 0 70%;
+    padding:5% 0 70%;
     background: #ffffff;
     text-align: center;
-    color: #ececed;
+    color: 		#ececed;
     position: relative;
 
 }
-
-.smallpane {
+.smallpane{
     float: left;
     width: 29.9%;
-    padding: 1% 0 4%;
+    padding:1% 0 4%;
 }
-
-.circle {
+.circle
+{
     position: relative;
-    left: 30%;
-    background: #686868;
+    left:30%;
+    background: 	#686868;
     border-radius: 50%;
     width: 5em;
     height: 5em;
 }
-
-.text2 {
-    width: 9ex;
+.text2
+{
+    width:9ex;
     position: relative;
-    left: 4ex;
+    left:4ex;
     text-align: center;
     color: #303030;
 }
-
 .clear {
     clear: both;
 }
 
-.pane3 {
+.pane3
+{
     padding: 1%;
-    width: 100%;
+    width:100%;
     height: 12em;
     background: #D8D8D8;
     text-align: left;
-    color: #D8D8D8;
+    color: 		#D8D8D8;
     position: relative;
-    margin: 2% 0% 0% 0%;
+    margin : 2% 0% 0% 0%;
 }
-
-.pane3-1 {
-    width: 100%;
+.pane3-1
+{
+    width:100%;
     height: 2em;
     background: #D8D8D8;
     text-align: center;
-    color: #989898;
+    color: 		#989898;
     position: relative;
     margin-bottom: 1em;
 }
-
-.title3 {
+.title3
+{
     font-family: "Microsoft YaHei";
     font-size: 1.5em;
     font-weight: 100;
 }
-
-.title4 {
+.title4
+{
     font-family: "Microsoft YaHei";
     font-size: 0.5em;
     font-weight: 100;
 }
-
-.pane3-2 {
-    float: left;
+.pane3-2
+{
+    float:left;
     position: relative;
     text-align: center;
-    width: 30%;
-    height: 77%;
-    margin: 1% 1% 1% 1.5%;
+    width:30%;
+    height:77%;
+    margin : 1% 1% 1% 1.5%;
     background: #E8E8E8;
-    color: #404040;
+    color: 		#404040;
 }
-
-.circle2 {
+.circle2
+{
     position: relative;
-    margin: 15% 15% 8% 23%;
-    background: #D8D8D8;
+    margin : 15% 15% 8% 23%;
+    background: 	#D8D8D8;
     border-radius: 50%;
     width: 4em;
     height: 4em;
 }
-
-.pane4 {
-    position: relative;
-    background: #D8D8D8;
-    width: 90%;
-    height: 8em;
-    margin: 6% 15% 2.5% 5%;
+.pane4
+{
+    position:relative;
+    background: 	#D8D8D8;
+    width:90%;
+    height:8em;
+    margin : 6% 15% 2.5% 5%;
 }
-
-.pane4text {
-    float: left;
+.pane4text
+{
+    float:left;
     position: relative;
     padding-top: 5%;
-    width: 64%;
-    height: 10%;
+    width:64%;
+    height:10%;
     text-align: right;
-    color: #404040;
+    color:#404040;
 }
-
-.pane4circle {
-    float: left;
+.pane4circle
+{
+    float:left;
     position: relative;
-    margin: 7% 5% 5% 5%;
-    width: 26%;
-    height: 8em;
+    margin : 7% 5% 5% 5%;
+    width:26%;
+    height:8em;
 }
-
-.pane4circle2 {
-    float: left;
+.pane4circle2
+{
+    float:left;
     position: relative;
-    margin: 2% 5% 5% 5%;
-    width: 26%;
-    height: 8em;
+    margin : 2% 5% 5% 5%;
+    width:26%;
+    height:8em;
 }
-
-.title5 {
+.title5
+{
     font-family: "Microsoft YaHei";
     font-size: 240%;
     font-weight: 100;
 }
-
-.title6 {
+.title6
+{
     font-family: "Microsoft YaHei";
     font-size: 140%;
     font-weight: 100;
 }
-
-.pane4text2 {
-    float: left;
+.pane4text2
+{
+    float:left;
     position: relative;
-    width: 64%;
-    height: 10%;
+    width:64%;
+    height:10%;
     text-align: left;
-    color: #404040;
+    color:#404040;
 }
-
-.circle3 {
-    float: left;
+.circle3
+{
+    float:left;
     position: relative;
-    background: #ffffff;
+    background: 	#ffffff;
     border-radius: 50%;
     width: 5em;
     height: 5em;
 }
-
-.pane5 {
+.pane5
+{
     width: 100%;
-    padding: 14% 0 9%;
+    padding:14% 0 9%;
     background: #ffffff;
     position: relative;
 }

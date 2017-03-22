@@ -6,7 +6,7 @@ $this->title = 'AuthenticationPage';
 \app\assets\AuthenticationAsset::register($this);
 ?>
 <div class="scTop">
-    <span class="title">注册账号</span>
+    <span class="title">认证信息</span>
     <a href="mine"><img src="/img/back.png" class="back"/></a>
 </div>
 <div class="pane1">

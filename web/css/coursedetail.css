@@ -69,7 +69,7 @@
 .pane1-2{
     margin-top:3%;
     padding:3% 0% 0% 5%;
-    width:100%;
+    width:95%;
     background:#FFFFFF;
     height:10em;
 }
@@ -114,11 +114,11 @@
 .pane1-4{
     margin-top:12%;
     padding:3% 0% 0% 5%;
-    width:100%;
+    width:95%;
     height:5em;
 }
 .but1{
-    margin:0% 1% 0% 0%;
+    margin:0% 5% 0% 0%;
     width:44%;
     background: #64a9e9;
     height:3.5em;
