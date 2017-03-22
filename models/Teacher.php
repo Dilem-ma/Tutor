@@ -22,8 +22,14 @@ class Teacher extends ActiveRecord
     {
         return [
             'id',
-            'name',
+//            'name',
             'star',
+//            'image',
+            'major',
+            'birthday',
+            'gender',
+            'area',
+            'education',
             'image',
         ];
     }
