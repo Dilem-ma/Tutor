@@ -56,7 +56,7 @@ class SiteController extends Controller
     }
     public function actionAuthentication()
     {
-        return $this->render('Authentication');
+        return $this->render('authentication');
     }
 
     public function actionCourse()
@@ -73,6 +73,15 @@ class SiteController extends Controller
     {
         return $this->render('teacherauthen');
     }
+
+    public function actionOrder()
+    {
+        return $this->render('order');
+    }
+    public function actionFavorite()
+    {
+        return $this->render('favorite');
+    }
     public function actionStudenttask()
     {
         return $this->render('studenttask');
@@ -84,6 +93,14 @@ class SiteController extends Controller
     public function actionCoursedetail()
     {
         return $this->render('coursedetail');
+    }
+    public function actionWallet()
+    {
+        return $this->render('wallet');
+    }
+    public function actionPersonaldata()
+    {
+        return $this->render('personaldata');
     }
 }
 
