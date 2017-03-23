@@ -33,7 +33,7 @@ tutorApp.controller('LoginCtrl', function ($scope, $http, $window, $location) {
                     return $window.location.href = "../site/index";
                 } else {
                     return $().toastmessage('showToast', {
-                        text: d.data.errors.password[0],
+                        text: d.data.errors,
                         sticky: false,
                         position: 'top-center',
                         type: 'error',
@@ -42,7 +42,7 @@ tutorApp.controller('LoginCtrl', function ($scope, $http, $window, $location) {
                 }
             },function (e) {
                 return $().toastmessage('showToast', {
-                    text: e.data.errors.password[0],
+                    text: 'Login failed..',
                     sticky: false,
                     position: 'top-center',
                     type: 'error',

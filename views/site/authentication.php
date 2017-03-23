@@ -18,10 +18,10 @@ $this->title = 'AuthenticationPage';
             </div>
             <div class="pane1-1-2">
                 <div class="pane1-1-2-1">
-                    <span class="name">姓名：张三</br></br></span>
+                    <span class="name">姓名：{{current_name}}</br></br></span>
                 </div>
                 <div class="pane1-1-2-1">
-                    <span class="tel">手机号：18966666666</span>
+                    <span class="tel">手机号：{{current_num}}</span>
                 </div>
             </div>
         </div>

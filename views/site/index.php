@@ -69,7 +69,7 @@ $this->title = 'MainPage';
         </div>
         <div ng-repeat="a in teachers">
             <div class="pane3-2">
-                <img class="circle2" ng-src="{{a.image}}"/>
+                <img class="circle2" ng-src="{{a.url}}"/>
                 <a class="title4">优质教师: {{a.name}}</a>
             </div>
         </div>
