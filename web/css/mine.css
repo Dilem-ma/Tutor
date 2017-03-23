@@ -18,7 +18,6 @@ body{
 }
 .content{
     overflow: auto;
-    z-index: -1111111;
     position: relative;
     margin-top: 20%;
 }

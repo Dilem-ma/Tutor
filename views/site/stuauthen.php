@@ -13,7 +13,7 @@ $this->title = 'stuauthen';
 <div class="shortcut">
     <div class="scTop">
         <span class="title">学生认证</span>
-        <a href="login.html"><img src="/img/back.png" class="back"/></a>
+        <a href="authentication"><img src="/img/back.png" class="back"/></a>
     </div>
 </div>
     <div class="content">

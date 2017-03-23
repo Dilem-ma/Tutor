@@ -23,6 +23,7 @@ tutorApp.controller('AuthenCtrl', function ($scope, $http) {
         }
     };
     $http(q).then(function (d) {
+        $scope.current_url = d.data.url;
         $scope.current_num = d.data.username;
         $scope.current_name = d.data.name;
     });

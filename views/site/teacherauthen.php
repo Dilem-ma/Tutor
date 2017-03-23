@@ -14,7 +14,7 @@ $this->title = 'teacher_authentication';
 <div class="shortcut">
     <div class="scTop">
         <span class="title">教师认证</span>
-        <a href="login.html"><img src="/img/back.png" class="back"/></a>
+        <a href="authentication"><img src="/img/back.png" class="back"/></a>
     </div>
     <div class="content">
         <div class="form">
