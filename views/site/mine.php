@@ -5,16 +5,19 @@
 $this->title = 'MinePage';
 \app\assets\MineAsset::register($this);
 ?>
+<div class="shortcut1">
 <div class="thehead">
     <span class="title">我的</span>
 </div>
+</div>
+<div class="content">
 <div class="pane1">
     <div class="pane1-1">
         <div class="circle">
-            <img align="absmiddle" src="/img/portrait.png" class="pic_icon" height="80" width="80"/>
+            <img align="absmiddle" src="/img/portrait2.png" class="pic_icon" height="80" width="80"/>
         </div>
         <div class="name">
-            <span class="text1">昵称</span>
+            <span class="text1">朱远青</span>
         </div>
     </div>
     <div class="pane1-2">
@@ -22,7 +25,7 @@ $this->title = 'MinePage';
             <span class="text2">积分  555</span>
         </div>
         <div class="pane1-2-1">
-            <span class="text2">余额  ￥50</span>
+            <span class="text2">余额  ￥59</span>
         </div>
     </div>
 </div>
@@ -90,6 +93,7 @@ $this->title = 'MinePage';
             <span class="text4">设置</span>
         </div>
     </div>
+</div>
 </div>
 
 </div>

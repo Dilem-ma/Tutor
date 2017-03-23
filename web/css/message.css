@@ -45,7 +45,7 @@ body{
 .pane1-4-1{
     float:left;
     width:68%;
-    margin: 0% 0% 0% 5%;
+    margin:0% 0% 2% 5%;;
 }
 .username{
     font-size:1.2em;
@@ -108,4 +108,10 @@ body{
     font-family: "Microsoft YaHei";
     letter-spacing: 0.1em;
     color: #4f4a46;
+}
+
+.pane1-3 img{
+    border-radius: 50%;
+    width: 4em;
+    height: 4em;
 }

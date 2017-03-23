@@ -1,7 +1,11 @@
+.shortcut1{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
 body{
     background: #F0F0F0;
 }
-
 .scTop{
     width: 100%;
     padding:8% 0 6% 0%;
@@ -26,13 +30,13 @@ body{
 .pane1{
     padding-top:5%;
     width:100%;
-    background:#F0F0F0;
 }
 .pane1-1{
-    padding:5% 0% 5%;
-    width:100%;
-    background:#FFFFFF;
-    height:5em;
+    overflow: auto;
+    margin-top: 2%;
+    padding: 5% 0% 5% 7%;
+    width: 93%;
+    background: #FFFFFF;
 }
 .pane1-1-1 {
     margin-left:5%;
@@ -69,11 +73,11 @@ body{
     font-weight: 100;
 }
 .pane1-2{
-    margin-top:2%;
-    padding:5% 0% 0% 7%;
-    width:93%;
-    background:#FFFFFF;
-    height:3em;
+    overflow: auto;
+    margin-top: 2%;
+    padding: 5% 0% 5% 7%;
+    width: 93%;
+    background: #FFFFFF;
 }
 .student{
     font-family: "Microsoft YaHei";
@@ -97,10 +101,12 @@ body{
     font-size:0.6em;
 }
 .pane1-3{
-    margin-top:2%;
-    padding:5% 7%;
-    width:93%;
-    background:#FFFFFF;
+    line-height: 1.5em;
+    overflow: auto;
+    margin-top: 2%;
+    padding: 5% 0% 5% 7%;
+    width: 93%;
+    background: #FFFFFF;
 }
 
 .text{
@@ -143,4 +149,16 @@ body{
     font-family: "Microsoft YaHei";
     letter-spacing: 0.1em;
     color: #4f4a46;
+}
+
+.content{
+    margin-top: 18%;
+    overflow: auto;
+    z-index: -1111111;
+    position: relative;
+}
+
+img{
+    border-radius: 50%;
+
 }
