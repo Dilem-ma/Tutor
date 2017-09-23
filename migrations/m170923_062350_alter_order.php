@@ -6,8 +6,6 @@ class m170923_062350_alter_order extends Migration
 {
     public function up()
     {
-        $this->dropColumn('order','teach_time');
-        $this->dropColumn('order','is_urgent');
         $this->addColumn('order','teach_time',$this->string());
         $this->addColumn('order','is_urgent', $this->boolean());
     }
