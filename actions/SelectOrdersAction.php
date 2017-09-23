@@ -20,7 +20,7 @@ class SelectOrdersAction extends Action
             ->andFilterCompare('technique', $post['technique'], 'like')
             ->andFilterCompare('title', $post['text'],'like')
             ->andFilterCompare('price', $post['price_min'], '>=')
-            ->andFilterCompare('price', $post['price_max'], '<')
+            ->andFilterCompare('price', $post['price_max'], '<=')
             ->all();
     }
 }

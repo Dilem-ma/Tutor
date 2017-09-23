@@ -60,4 +60,16 @@ class Student extends ActiveRecord
         return null;
     }
 
+    public static function findByUID($uid)
+    {
+        $stu = Student::find()
+            ->where(['u_id' => $uid])
+            ->asArray()
+            ->one();
+
+        if ($stu){
+            return new static($stu);
+        }
+    }
+
 }

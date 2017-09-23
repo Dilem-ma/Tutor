@@ -28,6 +28,8 @@ class Order extends ActiveRecord
             'description',
             'gender',
             'price',
+            'teach_time',
+            'is_urgent',
             'status' => function($model){
                 if ($model->status == -1){
                     return "等待接单";
@@ -44,13 +46,15 @@ class Order extends ActiveRecord
     public function rules()
     {
         return [
-            [['s_id', 'technique', 'area', 'title', 'description'], 'required'],
-            [['s_id'], 'integer'],
+            [['s_id', 'technique', 'area', 'title', 'description', 'is_urgent', 'teach_time', 'price'], 'required'],
+            [['s_id', 'price'], 'integer'],
             [['technique'], 'string', 'max' => 20],
             [['area'], 'string', 'max' => 20],
             [['title'], 'string', 'max' => 20],
             [['description'], 'string', 'max' => 100],
             [['gender'], 'integer'],
+            [['teach_time'], 'string'],
+            [['is_urgent'], 'boolean'],
         ];
     }
 
@@ -65,6 +69,9 @@ class Order extends ActiveRecord
             'description' => 'Description',
             'keyword' => 'Keyword',
             'gender' => 'Gender',
+            'teach_time' => 'Teach Time',
+            'is_urgent' => 'Is Urgent',
+            'price' => 'Price',
         ];
     }
 }

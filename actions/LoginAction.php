@@ -30,6 +30,7 @@ class LoginAction extends Action
             return [
                 'success' => true,
                 'message' => '登陆成功',
+                'identity' => $user->identity(),
                 'token' => $token,
             ];
         } else {

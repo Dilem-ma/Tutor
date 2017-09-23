@@ -8,7 +8,7 @@
 
 namespace app\controllers;
 
-use app\actions\AddOrderAction;
+use app\actions\StuAddOrderAction;
 use app\actions\ChangePasswordAction;
 use app\actions\GetCurrentUserAction;
 use app\actions\GetIdentityAction;
@@ -34,7 +34,7 @@ class ApiController extends Controller
             'rules' => [
                 [
                     'allow' => true,
-                    'actions' => ['login', 'teacher_identity', 'student_identity', 'add_order', 'select_orders'],
+                    'actions' => ['login', 'teacher_identity', 'student_identity', 'stu_add_order', 'select_orders'],
                     'verbs' => ['POST'],
                 ],
                 [
@@ -70,7 +70,7 @@ class ApiController extends Controller
             'login' => LoginAction::className(),
             'top_teachers' => GetTopTeachersAction::className(),
             'teacher_identity' => TeacherIdentityAction::className(),
-            'add_order' => AddOrderAction::className(),
+            'stu_add_order' => StuAddOrderAction::className(),
             'select_orders' => SelectOrdersAction::className(),
             'get_identity' => GetIdentityAction::className(),
 //            'current_user' => $this->actionCurrentUser(),

@@ -67,17 +67,17 @@ class Teacher extends ActiveRecord
         return null;
     }
 
-//    public static function findByPhone($phone){
-//        $tea = Teacher::find()
-//            ->where(['phone' => $phone])
-//            ->asArray()
-//            ->one();
-//
-//        if ($tea) {
-//            return new static($tea);
-//        }
-//
-//        return null;
-//    }
+    public static function findByUID($uid){
+        $tea = Teacher::find()
+            ->where(['u_id' => $uid])
+            ->asArray()
+            ->one();
+
+        if ($tea) {
+            return new static($tea);
+        }
+
+        return null;
+    }
 
 }

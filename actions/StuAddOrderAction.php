@@ -10,10 +10,9 @@ namespace app\actions;
 
 
 use app\models\Order;
-use app\models\Student;
 use yii\base\Action;
 
-class AddOrderAction extends Action
+class StuAddOrderAction extends Action
 {
     public function run(){
         $order = new Order();

@@ -162,4 +162,20 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return \Yii::$app->user->login($this, $duration);
     }
+
+    public function identity()
+    {
+        if (Student::findByUID($this->getId())){
+            if (Teacher::findByUID($this->getId())){
+                return 3;
+            }
+            return 1;
+        }
+
+        if (Teacher::findByUID($this->getId())){
+            return 2;
+        }
+
+        return 0;
+    }
 }
