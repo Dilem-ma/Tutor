@@ -166,9 +166,6 @@ class User extends ActiveRecord implements IdentityInterface
     public function identity()
     {
         if (Student::findByUID($this->getId())){
-            if (Teacher::findByUID($this->getId())){
-                return 3;
-            }
             return 1;
         }
 
@@ -176,6 +173,6 @@ class User extends ActiveRecord implements IdentityInterface
             return 2;
         }
 
-        return 0;
+        return 3;
     }
 }

@@ -22,8 +22,10 @@ class LoginAction extends Action
         $token = \Yii::$app->security->generateRandomString();
 
         $user = User::findOne(['username' => $post['username']]);
-        $user->password = $post['password'];
-        $user->accessToken = $token;
+        if ($user) {
+            $user->password = $post['password'];
+            $user->accessToken = $token;
+        }
 
         if ($form->login()) {
             $user->save();
@@ -38,6 +40,7 @@ class LoginAction extends Action
                 'success' => false,
                 'message' => '登录失败',
                 'errors' => $form->getFirstError('password'),
+                'identity' => 0,
             ];
         }
     }
