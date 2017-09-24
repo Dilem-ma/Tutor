@@ -115,5 +115,13 @@ class SiteController extends Controller
     {
         return $this->render('intro');
     }
+    public function actionOrdersearch()
+    {
+        return $this->render('ordersearch');
+    }
+    public function actionOrderlist()
+    {
+        return $this->render('orderlist');
+    }
 }
 

@@ -5,7 +5,7 @@ body {
 
 .thehead {
     width: 100%;
-    padding:8% 0 6%;
+    padding:8% 0 15%;
     background: #64a9e9;
     text-align: left;
     color: #ffffff;
@@ -21,8 +21,16 @@ body {
 .text {
     position: relative;
     left: 2ex;
+    width:38%;
+    padding: 2% 0 0%;
+    float: left;
 }
-
+.texth2 {
+    position: relative;
+    left: 2ex;
+    width:38%;
+    float: left;
+}
 #NotMoveDIV {
     position: fixed;
     z-index: 999;
@@ -85,7 +93,7 @@ body {
 
 .pane2 {
     width: 100%;
-    padding: 5% 0 70%;
+    padding: 28% 0 58%;
     background: #ffffff;
     text-align: center;
     color: #ececed;
@@ -95,7 +103,7 @@ body {
 
 .smallpane {
     float: left;
-    width: 29.9%;
+    width: 23%;
     padding: 1% 0 4%;
 }
 
@@ -104,14 +112,14 @@ body {
     left: 30%;
     background: #686868;
     border-radius: 50%;
-    width: 5em;
-    height: 5em;
+    width: 4em;
+    height: 4em;
 }
 
 .text2 {
     width: 9ex;
     position: relative;
-    left: 4ex;
+    left: 2.5ex;
     text-align: center;
     color: #303030;
 }
@@ -122,22 +130,24 @@ body {
 
 .pane3 {
     width: 100%;
-    height: 12em;
-    background: #D8D8D8;
+    height: 8em;
     text-align: left;
     color: #D8D8D8;
     position: relative;
-    margin: 2% 0% 0% 0%;
+    margin: 3% 0% 0% 0%;
+    border-style: solid none solid none;
+    border-width: 0.01ex;
+    border-color: #A0A0A0
 }
 
 .pane3-1 {
     width: 100%;
     height: 2em;
-    background: #D8D8D8;
     text-align: center;
     color: #989898;
     position: relative;
-    margin-bottom: 1em;
+    padding-top: 2%;
+
 }
 
 .title3 {
@@ -159,14 +169,12 @@ body {
     width: 30%;
     height: 77%;
     margin: 1% 1% 1% 1.5%;
-    background: #E8E8E8;
     color: #404040;
 }
 
 .circle2 {
     position: relative;
-    margin: 15% 15% 8% 23%;
-    background: #D8D8D8;
+    background: #E8E8E8;
     border-radius: 50%;
     width: 4em;
     height: 4em;
@@ -177,7 +185,7 @@ body {
     background: #D8D8D8;
     width: 90%;
     height: 8em;
-    margin: 6% 15% 2.5% 5%;
+    margin: 4% 15% 2.5% 5%;
 }
 
 .pane4text {

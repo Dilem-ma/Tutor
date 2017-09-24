@@ -31,9 +31,11 @@ tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
 
         $http(p).then(function (d) {
             $scope.orders = d.data;
+            console.log($scope.orders);
         });
 
     }
+
 
     if ($location.search().gender) {
         $scope.gender = $location.search().gender;

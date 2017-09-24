@@ -10,15 +10,18 @@ $this->title = 'MainPage';
     <div class="thehead">
         <div class="text">
             <img align="absmiddle" src="/img/android-location.png"  height="20" width="15"/>
-
             <span class="title">地区</span>
+        </div>
+        <div class="texth2">
+            <h2 class="title">tutor</h2>
+        </div>
+        <div class="texth2">
+            <img align="absmiddle" src="/img/2345_image_file_copy_1.jpg"  height="20" width="20"/>
         </div>
     </div>
     </div>
     <div class="content">
-    <div class="pane">
-        <span class="title2">TUTOR</span>
-    </div>
+
     <div class="pane2">
         <div class="smallpane">
             <div class="circle">
@@ -62,6 +65,21 @@ $this->title = 'MainPage';
                 <a class="title">索引1</a>
             </div>
         </div>
+        <div class="smallpane">
+            <div class="circle">
+            </div>
+            <div class="text2">
+                <a class="title">索引1</a>
+            </div>
+        </div>
+        <div class="smallpane">
+            <div class="circle">
+            </div>
+            <div class="text2">
+                <a class="title">索引1</a>
+            </div>
+        </div>
+
     </div>
     <div class="pane3">
         <div class="pane3-1">
@@ -70,9 +88,22 @@ $this->title = 'MainPage';
         <div ng-repeat="a in teachers">
             <div class="pane3-2">
                 <img class="circle2" ng-src="{{a.url}}"/>
-                <a class="title4">优质教师: {{a.name}}</a>
+<!--                <a class="title4">优质教师: {{a.name}}</a>-->
             </div>
         </div>
+        <div ng-repeat="a in teachers">
+            <div class="pane3-2">
+                <img class="circle2" ng-src="{{a.url}}"/>
+                <!--                <a class="title4">优质教师: {{a.name}}</a>-->
+            </div>
+        </div>
+        <div ng-repeat="a in teachers">
+            <div class="pane3-2">
+                <img class="circle2" ng-src="{{a.url}}"/>
+                <!--                <a class="title4">优质教师: {{a.name}}</a>-->
+            </div>
+        </div>
+
     </div>
     <div class="pane4">
         <div class="pane4text">
