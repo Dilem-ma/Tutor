@@ -19,7 +19,6 @@ class UpdatePersonDataAction extends Action
         $user = new User();
         $user->load($post, '');
 
-        $flag = true;
         $res = User::find()->where(['id' => $post['id']])->one();
         $res->name = $post['name'];
         $res->birthday = $post['birthday'];
