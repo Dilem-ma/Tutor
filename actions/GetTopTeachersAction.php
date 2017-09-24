@@ -16,7 +16,7 @@ class GetTopTeachersAction extends Action
     public function run(){
 
         $rows = (new Query())
-            ->select(['user.id', 'name', 'url', 'star', 'teacher.id'])
+            ->select(['user.id', 'name', 'url', 'star', 'gender', 'education', 'major', 'describe'])
             ->from(['user', 'teacher'])
             ->where('user.id = teacher.u_id')
             ->orderBy('star DESC')
