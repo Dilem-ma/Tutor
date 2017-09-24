@@ -9,7 +9,7 @@
 namespace app\actions;
 
 
-use yii\rest\Action;
+use yii\base\Action;
 use yii\db\Query;
 
 class GetTeacherListAction extends Action
