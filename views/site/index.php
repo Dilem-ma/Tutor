@@ -88,19 +88,7 @@ $this->title = 'MainPage';
         <div ng-repeat="a in teachers">
             <div class="pane3-2">
                 <img class="circle2" ng-src="{{a.url}}"/>
-<!--                <a class="title4">优质教师: {{a.name}}</a>-->
-            </div>
-        </div>
-        <div ng-repeat="a in teachers">
-            <div class="pane3-2">
-                <img class="circle2" ng-src="{{a.url}}"/>
-                <!--                <a class="title4">优质教师: {{a.name}}</a>-->
-            </div>
-        </div>
-        <div ng-repeat="a in teachers">
-            <div class="pane3-2">
-                <img class="circle2" ng-src="{{a.url}}"/>
-                <!--                <a class="title4">优质教师: {{a.name}}</a>-->
+                <a class="title4">{{a.name}}</a>
             </div>
         </div>
 

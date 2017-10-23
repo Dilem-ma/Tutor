@@ -123,5 +123,13 @@ class SiteController extends Controller
     {
         return $this->render('orderlist');
     }
+    public function actionFilterteacher()
+    {
+        return $this->render('filterteacher');
+    }
+    public function actionOthersdata()
+    {
+        return $this->render('Othersdata');
+    }
 }
 
