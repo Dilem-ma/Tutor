@@ -20,7 +20,7 @@ class MineAsset extends AssetBundle
         'css/mine.css'
     ];
     public $js = [
-
+        'js/controllers/MineCtrl.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',

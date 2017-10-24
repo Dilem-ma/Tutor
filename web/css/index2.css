@@ -28,8 +28,15 @@ body {
 .texth2 {
     position: relative;
     left: 2ex;
-    width:38%;
+    width:48%;
     float: left;
+}
+.texth3 {
+    position: relative;
+    left: 2ex;
+    width:10%;
+    float: left;
+    padding:2% 0% 0%;
 }
 #NotMoveDIV {
     position: fixed;

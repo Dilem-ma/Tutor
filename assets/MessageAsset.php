@@ -20,7 +20,6 @@ class MessageAsset extends AssetBundle
         'css/message.css'
     ];
     public $js = [
-        'js/message.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',

@@ -10,13 +10,13 @@ $this->title = 'MainPage';
     <div class="thehead">
         <div class="text">
             <img align="absmiddle" src="/img/android-location.png"  height="20" width="15"/>
-            <span class="title">地区</span>
+            <span class="title">{{user}}</span>
         </div>
         <div class="texth2">
             <h2 class="title">tutor</h2>
         </div>
-        <div class="texth2">
-            <img align="absmiddle" src="/img/2345_image_file_copy_1.jpg"  height="20" width="20"/>
+        <div class="texth3">
+            <a href="search" ><img align="absmiddle" src="/img/search.png"  height="20" width="20"/></a>
         </div>
     </div>
     </div>
@@ -85,18 +85,22 @@ $this->title = 'MainPage';
         <div class="pane3-1">
             <span class="title3">优质教师推荐</span>
         </div>
+        <a href="talk">
         <div ng-repeat="a in teachers">
-            <div class="pane3-2">
-                <img class="circle2" ng-src="{{a.url}}"/>
-                <a class="title4">{{a.name}}</a>
-            </div>
+
+                <div class="pane3-2">
+                        <img class="circle2" ng-src="{{a.url}}"/>
+                    <a class="title4">{{a.name}}</a>
+                </div>
+
         </div>
+        </a>
 
     </div>
     <div class="pane4">
         <div class="pane4text">
-            <a class="title5">我要悬赏</a></br>
-            <a class="title6">寻找合适的老师【</a>
+            <a href="teachersearch"><a class="title5">我要悬赏</a></a></br>
+            <a class="title6">寻找合适的老师</a>
         </div>
         <div class="pane4circle">
             <div class="circle3">
@@ -110,7 +114,7 @@ $this->title = 'MainPage';
         </div>
         <div class="pane4text2">
             <a class="title5">我要接单</a></br>
-            <a class="title6">寻找合适的学生【</a>
+            <a class="title6">寻找合适的学生</a>
         </div>
 
     </div>

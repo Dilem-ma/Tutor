@@ -115,10 +115,6 @@ class SiteController extends Controller
     {
         return $this->render('intro');
     }
-    public function actionOrdersearch()
-    {
-        return $this->render('ordersearch');
-    }
     public function actionOrderlist()
     {
         return $this->render('orderlist');
@@ -130,6 +126,10 @@ class SiteController extends Controller
     public function actionOthersdata()
     {
         return $this->render('Othersdata');
+    }
+    public function actionTeachersearch()
+    {
+        return $this->render('Teachersearch');
     }
 }
 
