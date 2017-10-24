@@ -1,27 +1,25 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Vam
- * Date: 2017/3/20
- * Time: 14:10
+ * User: yj
+ * Date: 2017/9/23
+ * Time: 17:46
  */
 
 namespace app\actions;
 
+
 use yii\base\Action;
 use yii\db\Query;
 
-class GetTopTeachersAction extends Action
+class GetTeacherListAction extends Action
 {
     public function run(){
 
         $rows = (new Query())
             ->select(['user.id', 'name', 'url', 'star', 'gender', 'education', 'major', 'describe'])
             ->from(['user', 'teacher'])
-            ->where('user.id = teacher.u_id')
-            ->orderBy('star DESC')
-            ->limit(3);
-
+            ->where('user.id = teacher.u_id');
         return $rows->all();
     }
 }

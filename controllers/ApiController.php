@@ -8,7 +8,6 @@
 
 namespace app\controllers;
 
-use app\actions\SmsSendAction;
 use app\actions\StuAddOrderAction;
 use app\actions\ChangePasswordAction;
 use app\actions\GetCurrentUserAction;
@@ -19,6 +18,8 @@ use app\actions\RegisterAction;
 use app\actions\SelectOrdersAction;
 use app\actions\StudentIdentityAction;
 use app\actions\TeacherIdentityAction;
+use app\actions\GetTeacherListAction;
+use app\actions\UpdatePersonDataAction;
 use yii\filters\AccessControl;
 use yii\rest\Controller;
 
@@ -35,12 +36,12 @@ class ApiController extends Controller
             'rules' => [
                 [
                     'allow' => true,
-                    'actions' => ['login', 'teacher_identity', 'student_identity', 'stu_add_order', 'select_orders', 'sms_send'],
+                    'actions' => ['login', 'teacher_identity', 'student_identity', 'stu_add_order', 'select_orders', 'update_person_data'],
                     'verbs' => ['POST'],
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['top_teachers', 'get_identity', 'get_current_user'],
+                    'actions' => ['top_teachers', 'get_identity', 'get_current_user','get_teacher_list'],
                     'verbs' => ['GET'],
                 ],
                 [
@@ -79,7 +80,8 @@ class ApiController extends Controller
             'change_password' => ChangePasswordAction::className(),
             'student_identity' => StudentIdentityAction::className(),
             'get_current_user' => GetCurrentUserAction::className(),
-            'sms_send' =>SmsSendAction::className(),
+            'get_teacher_list' => GetTeacherListAction::className(),
+            'update_person_data' => UpdatePersonDataAction::className(),
         ];
     }
 

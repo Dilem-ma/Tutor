@@ -22,6 +22,7 @@ class Student extends ActiveRecord
     {
         return [
             'id',
+            'u_id',
             'grade',
             'describe'
         ];
