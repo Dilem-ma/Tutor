@@ -22,7 +22,10 @@ class SmsSendAction extends Action
         $smsTest = $this->generate_code();
 
         $url="http://utf8.api.smschinese.cn/?Uid=".$uid."&Key=".$key."&smsMob=".$smsMob."&smsText=验证码：".$smsTest;
-        return $this->Get($url);
+        return [
+            'result' => $this->Get($url),
+            'verification code' => $smsTest,
+        ];
     }
 
     function generate_code($length = 6) {
