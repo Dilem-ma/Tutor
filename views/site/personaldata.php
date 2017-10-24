@@ -17,7 +17,7 @@ $this->title = 'PersonaldataPage';
                     <span class="text4">头像</span>
                 </div>
                 <div class="image1">
-                    <img align="absmiddle" src="/img/portrait.png" class="pic_icon" height="70" width="70"/>
+                    <img align="absmiddle" src="/img/portrait2.png" class="pic_icon" height="70" width="70"/>
                 </div>
             </div>
         </div>
