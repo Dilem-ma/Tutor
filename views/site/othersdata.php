@@ -2,14 +2,14 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'PersonaldataPage';
-\app\assets\PersonaldataAsset::register($this);
+$this->title = 'OthersdataPage';
+\app\assets\OthersdataAsset::register($this);
 ?>
-<div class="scTop" >
+<div class="scTop">
     <span class="title">个人资料</span>
     <a href="mine"><img src="/img/back.png" class="back"/></a>
-</div >
-<div class="pane2" ng-controller="MineCtrl">
+</div>
+<div class="pane2">
     <div class="pane2-1">
         <div class="pane2-4">
             <div class="pane2-5">
@@ -17,7 +17,7 @@ $this->title = 'PersonaldataPage';
                     <span class="text4">头像</span>
                 </div>
                 <div class="image1">
-                    <img align="absmiddle" src="{{current_url}}" class="pic_icon" height="70" width="70"/>
+                    <img align="absmiddle" src="/img/portrait2.png" class="pic_icon" height="70" width="70"/>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@ $this->title = 'PersonaldataPage';
                     <span class="text4">昵称</span>
                 </div>
                 <div class="text5">
-                    <span class="text4">{{current_name}}</span>
+                    <span class="text4">小明</span>
                 </div>
             </div>
         </div>
@@ -37,58 +37,60 @@ $this->title = 'PersonaldataPage';
                     <span class="text4">性别</span>
                 </div>
                 <div class="text5">
-                    <span class="text4">{{current_gender}}</span>
+                    <span class="text4">男</span>
                 </div>
             </div>
         </div>
         <div class="pane2-2">
             <div class="pane2-3">
                 <div class="text3">
-                    <span class="text4">手机号</span>
+                    <span class="text4">星级</span>
                 </div>
                 <div class="text5">
-                    <span class="text4">{{current_num}}</span>
+                    <span class="text4">三星</span>
                 </div>
             </div>
         </div>
         <div class="pane2-2">
             <div class="pane2-3">
                 <div class="text3">
-                    <span class="text4">地区</span>
+                    <span class="text4">教育等级</span>
                 </div>
                 <div class="text5">
-                    <span class="text4">{{current_area}}</span>
+                    <span class="text4">高中</span>
                 </div>
             </div>
         </div>
         <div class="pane2-2">
             <div class="pane2-3">
                 <div class="text3">
-                    <span class="text4">生日</span>
+                    <span class="text4">擅长科目</span>
                 </div>
                 <div class="text5">
-                    <span class="text4">{{current_birthday}}</span>
+                    <span class="text4">Java</span>
                 </div>
             </div>
         </div>
         <div class="pane2-2">
             <div class="pane2-3">
                 <div class="text3">
-                    <span class="text4">擅长领域</span>
+                    <span class="text4">个人描述</span>
                 </div>
                 <div class="text5">
-                    <span class="text4">Java，c++</span>
+                    <span class="text4">cool</span>
                 </div>
             </div>
         </div>
     </div>
     <div class="pane2-1">
-        <div class="pane2-2">
-            <div class="pane2-3">
-                <div class="text3">
-                    <span class="text4">修改密码</span>
+        <a href="talk">
+            <div class="pane2-2">
+                <div class="pane2-3">
+                    <div class="text3">
+                        <span class="text4">给他发消息</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>

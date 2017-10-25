@@ -11,6 +11,7 @@ $this->title = 'MessagePage';
 <section class="list">
     <ul class="list-ul">
         <li id="li" class="list-li">
+            <a href="talk">
             <div class="pane1">
                 <div class="pane1-1">
                     <h1 class="time">1:08 PM</h1>
@@ -28,22 +29,23 @@ $this->title = 'MessagePage';
                     <span class="text1">没有，快滚</span>
                 </div>
             </div>
+            </a>
             <div class="btn">删除</div>
         </li>
     </ul>
     <div id="NotMoveDIV">
         <div class="icon-box">
-            <a href="/site/index" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br/>主页</a>
+            <a href="index" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br/>主页</a>
         </div>
         <div class="icon-box">
-            <a href="/site/course" class="botm-icon-text"><img src="/img/ios7-compose-outline.png" class="botm-icon"/><br/>课程</a>
+            <a href="course" class="botm-icon-text"><img src="/img/ios7-compose-outline.png" class="botm-icon"/><br/>课程</a>
         </div>
         <div class="icon-box">
             <a href="" class="botm-icon-text"><img src="/img/ios7-bell.png"
                                                           class="botm-icon"/><br/>消息</a>
         </div>
         <div class="icon-box">
-            <a href="/site/mine" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br/>我的</a>
+            <a href="mine" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br/>我的</a>
 
         </div>
     </div>

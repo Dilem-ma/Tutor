@@ -37,7 +37,7 @@ class ApiController extends Controller
             'rules' => [
                 [
                     'allow' => true,
-                    'actions' => ['login', 'teacher_identity', 'student_identity', 'stu_add_issue', 'select_issues', 'update_person_data', 'sms_send'],
+                    'actions' => ['login', 'teacher_identity', 'student_identity', 'stu_add_order', 'select_orders', 'update_person_data', 'sms_send'],
                     'verbs' => ['POST'],
                 ],
                 [
@@ -73,8 +73,8 @@ class ApiController extends Controller
             'login' => LoginAction::className(),
             'top_teachers' => GetTopTeachersAction::className(),
             'teacher_identity' => TeacherIdentityAction::className(),
-            'stu_add_issue' => StuAddIssueAction::className(),
-            'select_issues' => SelectIssuesAction::className(),
+            'stu_add_order' => StuAddIssueAction::className(),
+            'select_orders' => SelectIssuesAction::className(),
             'get_identity' => GetIdentityAction::className(),
 //            'current_user' => $this->actionCurrentUser(),
             'register' => RegisterAction::className(),

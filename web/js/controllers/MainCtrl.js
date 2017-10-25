@@ -11,6 +11,7 @@ tutorApp = angular.module('tutorApp', []);
 // storage = window.localStorage;
 
 tutorApp.controller('MainCtrl', function ($scope, $http) {
+    $scope.user=localStorage.getItem(storage)
     var p = {
         method: 'get',
         url: '/api/top_teachers'

@@ -10,14 +10,14 @@ $this->title = 'MinePage';
         <span class="title">我的</span>
     </div>
 </div>
-<div class="content">
+<div class="content" ng-controller="MineCtrl">
     <div class="pane1">
         <div class="pane1-1">
             <div class="circle">
-                <img align="absmiddle" src="/img/portrait2.png" class="pic_icon" height="80" width="80"/>
+                <img align="absmiddle" src="{{current_url}}" class="pic_icon" height="80" width="80"/>
             </div>
             <div class="name">
-                <span class="text1">朱远青</span>
+                <span class="text1">{{current_name}}</span>
             </div>
         </div>
         <div class="pane1-2">
