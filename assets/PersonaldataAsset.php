@@ -20,7 +20,7 @@ class PersonaldataAsset extends AssetBundle
         'css/personaldata.css'
     ];
     public $js = [
-
+        'js/controllers/MineCtrl.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',
