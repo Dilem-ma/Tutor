@@ -1,21 +1,20 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Vam
- * Date: 2017/3/20
- * Time: 15:36
+ * User: №zero
+ * Date: 2017/10/25
+ * Time: 14:09
  */
 
 namespace app\models;
 
-
 use yii\db\ActiveRecord;
 
-class Order extends ActiveRecord
+class Issue extends ActiveRecord
 {
     public static function tableName()
     {
-        return 'order';
+        return 'issue';
     }
 
     public function fields()

@@ -2,20 +2,20 @@
 /**
  * Created by PhpStorm.
  * User: №zero
- * Date: 2017/3/21
- * Time: 14:33
+ * Date: 2017/10/25
+ * Time: 14:12
  */
 
 namespace app\actions;
 
-use app\models\Order;
+use app\models\Issue;
 use yii\base\Action;
 
-class SelectOrdersAction extends Action
+class SelectIssuesAction extends Action
 {
     public function run(){
         $post = \Yii::$app->request->post();
-        return Order::find()
+        return Issue::find()
             ->filterWhere(['gender' => $post['gender'], 'area' => $post['area']])
             ->andFilterCompare('technique', $post['technique'], 'like')
             ->andFilterCompare('title', $post['text'],'like')
