@@ -1,12 +1,13 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Vam
- * Date: 2017/3/20
- * Time: 17:14
+ * User: №zero
+ * Date: 2017/10/26
+ * Time: 15:25
  */
 
 namespace app\controllers;
+
 
 use yii\rest\ActiveController;
 
