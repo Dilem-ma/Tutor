@@ -17,7 +17,7 @@ tutorApp.config(['$locationProvider', function ($locationProvider) {
 }]);
 
 
-tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
+tutorApp.controller('TeachersearchCtrl', function ($scope, $location, $http) {
     var flag = 1;
     if ($location.search().tech) {
         $scope.tech = $location.search().tech;
@@ -26,7 +26,7 @@ tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
         flag = 0;
         var p = {
             method: 'get',
-            url: '/orders'
+            url: '/api/get_teacher_list'
         };
 
         $http(p).then(function (d) {
@@ -35,20 +35,32 @@ tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
         });
 
     }
-
-
-    if ($location.search().gender) {
-        $scope.gender = $location.search().gender;
+    if ($location.search().id) {
+        $scope.id = $location.search().id;
     }
-
+    if ($location.search().name) {
+        $scope.name = $location.search().name;
+    }
+    if ($location.search().url) {
+        $scope.url = $location.search().url;
+    }
     if ($location.search().area) {
         $scope.area = $location.search().area;
     }
-    if ($location.search().price) {
-        $scope.price = $location.search().price;
+    if ($location.search().star) {
+        $scope.star = $location.search().star;
     }
-    if ($location.search().text) {
-        $scope.text = $location.search().text;
+    if ($location.search().gender) {
+        $scope.gender = $location.search().gender;
+    }
+    if ($location.search().education) {
+        $scope.education = $location.search().education;
+    }
+    if ($location.search().major) {
+        $scope.major = $location.search().major;
+    }
+    if ($location.search().describe) {
+        $scope.describe = $location.search().describe;
     }
     if (flag) {
 
@@ -58,38 +70,18 @@ tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
             gen = "female";
         else
             gen = "";
-        if ($scope.area == "不限")
-            var are = "";
+        if ($scope.star == "不限")
+            var sta = "";
         else
-            are = $scope.area;
-        if ($scope.tech == "不限")
-            var tec = "";
+            sta = $scope.star;
+        if ($scope.education == "不限")
+            var edu = "";
         else
-            tec = $scope.tech;
-        if ($scope.price == "不限") {
-            var pri_min = "";
-            var pri_max = "";
-        }
-        else if ($scope.price == "50/h以下") {
-            pri_min = "";
-            pri_max = "50";
-        }
-        else if ($scope.price == "50/h-100/h") {
-            pri_min = "50";
-            pri_max = "100";
-        }
-        else if ($scope.price == "100/h-150/h") {
-            pri_min = "100";
-            pri_max = "150";
-        }
-        else {
-            pri_min = "150";
-            pri_max = "";
-        }
-        if ($scope.text == "undefined")
-            var te = "";
+            edu = $scope.education;
+        if ($scope.major == "不限")
+            var maj = "";
         else
-            te = $scope.text;
+            maj = $scope.major;
         var q = {
             method: 'post',
             url: '/api/select_orders',

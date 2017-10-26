@@ -1,26 +1,27 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Dilemma丶
- * Date: 2017/3/2
- * Time: 9:40
+ * User: cuiyuxuan
+ * Date: 2017/3/13
+ * Time: 下午9:34
  */
 
 namespace app\assets;
 
 use yii\web\AssetBundle;
 
-class MineAsset extends AssetBundle
+class OrderlistAsset extends  AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
 
     public $css = [
-        'css/common.css',
-        'css/mine.css'
+        'css/orderlist.css',
+        'css/common.css'
     ];
     public $js = [
-        'js/controllers/MineCtrl.js'
+        'js/controllers/OrderlistCtrl.js'
+
     ];
     public $depends = [
         'yii\web\JqueryAsset',
