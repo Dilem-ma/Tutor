@@ -2,23 +2,24 @@
 /**
  * Created by PhpStorm.
  * User: №zero
- * Date: 2017/10/25
- * Time: 14:10
+ * Date: 2017/10/26
+ * Time: 15:09
  */
 
 namespace app\actions;
 
-use app\models\Issue;
+
+use app\models\Order;
 use yii\base\Action;
 
-class StuAddIssueAction extends Action
+class StuAddOrderAction extends Action
 {
     public function run(){
-        $issue = new Issue();
+        $order = new Order();
         $post = \Yii::$app->request->post();
-        $issue->load($post, '');
+        $order->load($post, '');
 
-        if ($issue->save()) {
+        if ($order->save()) {
             return [
                 'success' => true,
                 'message' => '问题发布成功',
@@ -27,7 +28,7 @@ class StuAddIssueAction extends Action
             return [
                 'success' => false,
                 'message' => '问题发布失败',
-                'errors' => $issue->errors,
+                'errors' => $order->errors,
             ];
         }
     }

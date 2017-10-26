@@ -8,15 +8,15 @@
 
 namespace app\controllers;
 
+use app\actions\SelectOrdersAction;
 use app\actions\SmsSendAction;
-use app\actions\StuAddIssueAction;
 use app\actions\ChangePasswordAction;
 use app\actions\GetCurrentUserAction;
 use app\actions\GetIdentityAction;
 use app\actions\GetTopTeachersAction;
 use app\actions\LoginAction;
 use app\actions\RegisterAction;
-use app\actions\SelectIssuesAction;
+use app\actions\StuAddOrderAction;
 use app\actions\StudentIdentityAction;
 use app\actions\TeacherIdentityAction;
 use app\actions\GetTeacherListAction;
@@ -73,8 +73,8 @@ class ApiController extends Controller
             'login' => LoginAction::className(),
             'top_teachers' => GetTopTeachersAction::className(),
             'teacher_identity' => TeacherIdentityAction::className(),
-            'stu_add_order' => StuAddIssueAction::className(),
-            'select_orders' => SelectIssuesAction::className(),
+            'stu_add_order' => StuAddOrderAction::className(),
+            'select_orders' => SelectOrdersAction::className(),
             'get_identity' => GetIdentityAction::className(),
 //            'current_user' => $this->actionCurrentUser(),
             'register' => RegisterAction::className(),

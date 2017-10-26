@@ -2,19 +2,19 @@
 /**
  * Created by PhpStorm.
  * User: №zero
- * Date: 2017/10/25
- * Time: 14:09
+ * Date: 2017/10/26
+ * Time: 15:10
  */
 
 namespace app\models;
 
 use yii\db\ActiveRecord;
 
-class Issue extends ActiveRecord
+class Order extends ActiveRecord
 {
     public static function tableName()
     {
-        return 'issue';
+        return 'order';
     }
 
     public function fields()
