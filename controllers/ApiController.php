@@ -8,6 +8,8 @@
 
 namespace app\controllers;
 
+use app\actions\SearchOrderAction;
+use app\actions\SearchTeacherAction;
 use app\actions\SelectOrdersAction;
 use app\actions\SmsSendAction;
 use app\actions\ChangePasswordAction;
@@ -37,7 +39,7 @@ class ApiController extends Controller
             'rules' => [
                 [
                     'allow' => true,
-                    'actions' => ['login', 'teacher_identity', 'student_identity', 'stu_add_order', 'select_orders', 'update_person_data', 'sms_send'],
+                    'actions' => ['login', 'teacher_identity', 'student_identity', 'stu_add_order', 'select_orders', 'update_person_data', 'sms_send', 'search_teacher', 'search_order', ],
                     'verbs' => ['POST'],
                 ],
                 [
@@ -84,6 +86,8 @@ class ApiController extends Controller
             'get_teacher_list' => GetTeacherListAction::className(),
             'update_person_data' => UpdatePersonDataAction::className(),
             'sms_send' => SmsSendAction::className(),
+            'search_teacher' => SearchTeacherAction::className(),
+            'search_order' => SearchOrderAction::className(),
         ];
     }
 
