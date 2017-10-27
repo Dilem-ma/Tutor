@@ -9,6 +9,7 @@
 namespace app\actions;
 
 
+use app\models\Pwd;
 use app\models\User;
 use yii\base\Action;
 
@@ -25,6 +26,9 @@ class UpdatePersonDataAction extends Action
         $res->area = $post['area'];
         $res->gender = $post['gender'];
         $res->url = $post['url'];
+
+        $pwd = Pwd::findOne(['id' => $res->id]);
+        $res->password = $pwd->password;
 
         if ($res->save()) {
             return [

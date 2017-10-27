@@ -9,6 +9,7 @@
 namespace app\actions;
 
 
+use app\models\Pwd;
 use app\models\Teacher;
 use app\models\User;
 use yii\base\Action;
@@ -37,6 +38,9 @@ class TeacherIdentityAction extends Action
         $res->name = $post['name'];
         $res->birthday = $post['birthday'];
         $res->gender = $post['gender'];
+
+        $pwd = Pwd::findOne(['id' => $res->id]);
+        $res->password = $pwd->password;
 
         $tea->save();
         $res->save();

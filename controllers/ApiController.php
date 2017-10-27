@@ -8,6 +8,8 @@
 
 namespace app\controllers;
 
+use app\actions\GetImgAction;
+use app\actions\PickUpOrderAction;
 use app\actions\SearchOrderAction;
 use app\actions\SearchTeacherAction;
 use app\actions\SelectOrdersAction;
@@ -22,6 +24,7 @@ use app\actions\StuAddOrderAction;
 use app\actions\StudentIdentityAction;
 use app\actions\TeacherIdentityAction;
 use app\actions\GetTeacherListAction;
+use app\actions\TestSaveImgAction;
 use app\actions\UpdatePersonDataAction;
 use yii\filters\AccessControl;
 use yii\rest\Controller;
@@ -49,7 +52,7 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['register', 'change_password'],
+                    'actions' => ['register', 'change_password', 'test_save_img', 'get_img', 'pick_up_order'],
                     'verbs' => ['POST'],
                 ],
 //                [
@@ -88,6 +91,9 @@ class ApiController extends Controller
             'sms_send' => SmsSendAction::className(),
             'search_teacher' => SearchTeacherAction::className(),
             'search_order' => SearchOrderAction::className(),
+            'test_save_img' => TestSaveImgAction::className(),
+            'get_img' => GetImgAction::className(),
+            'pick_up_order' => PickUpOrderAction::className(),
         ];
     }
 
