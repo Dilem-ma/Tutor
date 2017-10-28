@@ -8,8 +8,13 @@
 
 namespace app\controllers;
 
-use app\actions\GetImgAction;
-use app\actions\PickUpOrderAction;
+use app\actions\AddToMyFavourite;
+use app\actions\DeleteOrderAction;
+use app\actions\GetCurrentOrderAction;
+use app\actions\GetMyFavourite;
+use app\actions\GetNotPickedOrdersAction;
+use app\actions\GetTeacherDataAction;
+use app\actions\GetUserOrdersAction;
 use app\actions\SearchOrderAction;
 use app\actions\SearchTeacherAction;
 use app\actions\SelectOrdersAction;
@@ -24,7 +29,6 @@ use app\actions\StuAddOrderAction;
 use app\actions\StudentIdentityAction;
 use app\actions\TeacherIdentityAction;
 use app\actions\GetTeacherListAction;
-use app\actions\TestSaveImgAction;
 use app\actions\UpdatePersonDataAction;
 use yii\filters\AccessControl;
 use yii\rest\Controller;
@@ -47,12 +51,12 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['top_teachers', 'get_identity', 'get_current_user','get_teacher_list'],
+                    'actions' => ['top_teachers', 'get_identity', 'get_current_user','get_teacher_list', 'get_not_picked_orders'],
                     'verbs' => ['GET'],
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['register', 'change_password', 'test_save_img', 'get_img', 'pick_up_order'],
+                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite'],
                     'verbs' => ['POST'],
                 ],
 //                [
@@ -91,9 +95,13 @@ class ApiController extends Controller
             'sms_send' => SmsSendAction::className(),
             'search_teacher' => SearchTeacherAction::className(),
             'search_order' => SearchOrderAction::className(),
-            'test_save_img' => TestSaveImgAction::className(),
-            'get_img' => GetImgAction::className(),
-            'pick_up_order' => PickUpOrderAction::className(),
+            'get_not_picked_orders' => GetNotPickedOrdersAction::className(),
+            'get_user_orders' => GetUserOrdersAction::className(),
+            'get_teacher_data' => GetTeacherDataAction::className(),
+            'get_current_order' => GetCurrentOrderAction::className(),
+            'delete_order' => DeleteOrderAction::className(),
+            'get_favourite' => GetMyFavourite::className(),
+            'add_to_favourite' => AddToMyFavourite::className(),
         ];
     }
 

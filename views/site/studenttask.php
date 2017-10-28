@@ -5,103 +5,98 @@
 $this->title = 'StudentTaskPage';
 \app\assets\StudentTaskAsset::register($this);
 ?>
-<div class="scTop">
-    <span class="title">学生任务发布</span>
-    <a href="login.html"><img src="/img/back.png" class="back"/></a>
-</div>
-<div class="content">
-    <div class="form">
-        <div class="message">
-            <div class="border">
-                <div class="name"><span>选择科目</span></div>
-                <div class="ctnt">
-                    <select>
-                        <option value ="male">网络授课</option>
-                        <option value ="female">线下授课</option>
-                    </select>
+<form ng-controller="StutaskCtrl">
+    <div class="scTop">
+        <span class="title">学生任务发布</span>
+        <a href="index"><img src="/img/back.png" class="back"/></a>
+        <button class="login_btn" type="submit" ng-click="postTask(technique, area, title, description, price, teachTime, isUrgent, gender)">提交</button>
+    </div>
+    <div class="content">
+            <div class="sec">
+                <div class="message">
+                        <div class="name"><span>标题</span></div>
+                        <div class="ctnt"><input placeholder="请输入标题(5-20字)" ng-model="title"></div>
                 </div>
-            </div>
-        </div>
-        <div class="message2">
-            <div class="lastborder">
-                <div class="name"><span></span></div>
-                <div class="ctnt"><textarea type=" text"  placeholder="如选择线下授课，请在此写明授课地址" style="word-break:break-all"></textarea></div>
-            </div>
-        </div>
-        <div class="message">
-            <div class="lastborder">
-                <div class="name"><span>*上课时间</span></div>
-                <div class="ctnt"><input type="text" placeholder="请输入你计划的上课时间"></div>
-            </div>
-        </div>
+                <div class="message">
+                        <div class="name"><span>科目</span></div>
+                        <div class="ctnt">
+                            <select ng-model="technique" pattern="[0-9]{1}">
+                                <option value = "1">编程语言</option>
+                                <option value = "2">数据库</option>
+                                <option value = "3">web技术</option>
+                                <option value = "4">计算机概念</option>
+                                <option value = "5">环境配置</option>
+                                <option value = "6">app开发</option>
+                                <option value = "7">服务器脚本</option>
+                                <option value = "8">运维技术</option>
+                                <option value = "9">其他</option>
 
-    </div>
-    <div class="form">
-        <div class="message">
-            <div class="border">
-                <div class="name"><span>*标签分类</span></div>
-                <div class="ctnt" >
-                    <select>
-                        <option value ="male">考试</option>
-                        <option value ="female">技术</option>
-                        <option value ="female">科目</option>
-                    </select>
+                            </select>
+                        </div>
                 </div>
-            </div>
-        </div>
-        <div class="message">
-            <div class="border">
-                <div class="name"><span>*求教科目</span></div>
-                <div class="ctnt" placeholder="请输入你的求教科目">
-                    <select>
-                        <option value ="male">Java</option>
-                        <option value ="female">C++</option>
-                    </select>
+                <div class="message">
+                        <div class="name"><span>问题描述</span></div>
+                        <div class="ctnt"><input rows ="1" placeholder="请在此详细地描述问题详情" ng-model="description"/></div>
                 </div>
-            </div>
-        </div>
-        <div class="message2">
-            <div class="lastborder">
-                <div class="name"><span>*情况描述</span></div>
-                <div class="ctnt"><textarea type=" text"  placeholder="请在此详细地描述你当前的情况和你的需求，这将更利于帮你满足需求" style="word-break:break-all"></textarea></div>
-            </div>
-        </div>
-        <div class="message">
-            <div class="border">
-                <div class="name"><span>*是否加急</span></div>
-                <div class="ctnt" >
-                    <select>
-                        <option value ="male">是</option>
-                        <option value ="female">否</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form">
-        <div class="message2">
-            <div class="lastborder">
-                <div class="name"><span>教员要求</span></div>
-                <div class="ctnt"><textarea type="text" placeholder="请在此详细地描述你对教员的需求，这将更利于匹配教员"></textarea></div>
-            </div>
-        </div>
-        <div class="message">
-            <div class="lastborder">
-                <div class="name"><span>收费要求</span></div>
-                <div class="ctnt"><input type="text" placeholder="请输入你的收费要求"></div>
-            </div>
-        </div>
-        <div class="message2">
-            <div class="lastborder">
-                <div class="name"><span>备注</span></div>
-                <div class="ctnt"><textarea type="text" placeholder="请输入备注"></textarea></div>
-            </div>
-        </div>
-    </div>
 
-</div>
-<a href="course.html">
-    <div class="bottom">
-        提交
+
+            </div>
+            <div class="sec">
+                <div class="message">
+                        <div class="name"><span>地区</span></div>
+                        <div class="ctnt" placeholder="区县" pattern="[0-9]{1-2}">
+                            <select ng-model="area">
+                                <option value ="1">黄浦区</option>
+                                <option value ="2">徐汇区</option>
+                                <option value ="3">长宁区</option>
+                                <option value ="4">静安区</option>
+                                <option value ="5">普陀区</option>
+                                <option value ="6">虹口区</option>
+                                <option value ="7">杨浦区</option>
+                                <option value ="8">浦东新区</option>
+                                <option value ="9">闵行区</option>
+                                <option value ="10">宝山区</option>
+                                <option value ="11">嘉定区</option>
+                                <option value ="12">金山区</option>
+                                <option value ="13">松江区</option>
+                                <option value ="14">青浦区</option>
+                                <option value ="15">奉贤区</option>
+                                <option value ="16">崇明区</option>
+                            </select>
+                        </div>
+                </div>
+                <div class="message">
+                    <div class="name"><span>地址</span></div>
+                    <div class="ctnt">
+                        <input placeholder="5-60个字，且不能全部为数字"/>
+                    </div>
+                </div>
+                <div class="message">
+                        <div class="name"><span>上课时间</span></div>
+                        <div class="ctnt"><input placeholder="请输入你计划的上课时间" ng-model="teachTime"></div>
+                </div>
+            </div>
+
+            <div class="sec">
+                <div class="message">
+                        <div class="name"><span>教员性别要求</span></div>
+                        <div class="ctnt" placeholder="性别要求" pattern="[0-9]{1}">
+                            <select ng-model="gender" selected="selected">
+                                <option value ="1">男</option>
+                                <option value ="2">女</option>
+                                <option value ="3">不限</option>
+                            </select>
+                        </div>
+                </div>
+                <div class="message">
+                        <div class="name"><span>赏金</span></div>
+                        <div class="ctnt"><input placeholder="请输入预付费用（元）" ng-model="price"></div>
+                </div>
+                <div class="message">
+                    <div class = "name">我很赶时间</div>
+                    <input type = "checkbox" ng-model="isUrgent"/>
+                    <div class="des">将支付1.5倍赏金</div>
+                </div>
+            </div>
     </div>
-</a>
+</form>

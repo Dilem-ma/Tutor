@@ -26,7 +26,12 @@ class Order extends ActiveRecord
             'title',
             'description',
             'gender',
-            'price',
+            'price' => function($model){
+                if ($model->is_urgent == true){
+                    return $model->price / 1.5;
+                }
+                else return $model->price;
+            },
             'teach_time',
             'is_urgent',
             'status' => function($model){

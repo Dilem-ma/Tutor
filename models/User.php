@@ -47,6 +47,9 @@ class User extends ActiveRecord implements IdentityInterface
             'gender',
             'area',
             'url',
+            'favourite' => function($model){
+                return explode(',', $model->favourite);
+            }
         ];
     }
 

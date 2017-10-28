@@ -18,6 +18,9 @@ class StuAddOrderAction extends Action
         $order = new Order();
         $post = \Yii::$app->request->post();
         $order->load($post, '');
+        if ($order->is_urgent){
+            $order->price *= 1.5;
+        }
 
         if ($order->save()) {
             return [

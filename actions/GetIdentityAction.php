@@ -22,9 +22,9 @@ class GetIdentityAction extends Action
         if ($user){
             $teacher = Teacher::findOne(['u_id' => $user->getId()]);
             $student = Student::findOne(['u_id' => $user->getId()]);
-            return[
-                'teacher' => $teacher == null ? "未认证成为教师" : $teacher ,
-                'student' => $student == null ? "未认证成为学生" : $student ,
+            return [
+                'teacher' => $teacher,
+                'student' => $student,
             ];
         } else {
             return [

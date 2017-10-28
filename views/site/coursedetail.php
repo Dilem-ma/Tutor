@@ -5,40 +5,73 @@
 $this->title = 'CoursedetailPage';
 \app\assets\CoursedetailAsset::register($this);
 ?>
-<div class="scTop">
-    <span class="title">课程详情</span>
-    <a href="search.html"><img src="/img/android-arrow-back.png" class="back"/></a>
-</div>
-<div class="pane1">
-    <div class="pane1-1">
-        <div class="pane1-1-1">
-            <img align="absmiddle" src="/img/portrait.png" class="pic_icon" height="100" width="100"/>
-        </div>
-        <div class="pane1-1-2">
-            <div class="pane1-1-2-1">
-                <span class="name">寻找Java老师</br></br></span>
-            </div>
-            <div class="pane1-1-2-1">
-                <span class="tel">高二 女 普陀区</span>
-            </div>
-        </div>
+<?php
+
+/* @var $this yii\web\View */
+
+$this->title = 'StudentTaskPage';
+\app\assets\StudentTaskAsset::register($this);
+?>
+<form ng-controller="OrderCtrl">
+    <div class="scTop">
+        <span class="title">课程详情</span>
+        <a href="index"><img src="/img/back.png" class="back"/></a>
     </div>
-    <div class="pane1-2">
-        <div class="title1">
-            <span class="student">标签</span>
+    <div class="content">
+        <div class="sec">
+            <div class="message">
+                <div class="name"><span>标题</span></div>
+                <div class="ctnt">{{title}}</div>
+            </div>
+            <div class="message">
+                <div class="name"><span>科目</span></div>
+                <div class="ctnt">
+                    <div ng-model="technique">
+                       {{technique}}
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <div class="name"><span>问题描述</span></div>
+                <div class="ctnt">{{description}}</div>
+            </div>
+
+
+        </div>
+        <div class="sec">
+            <div class="message">
+                <div class="name"><span>地区</span></div>
+                <div class="ctnt">
+                    {{area}}
+                </div>
+            </div>
+            <div class="message">
+                <div class="name"><span>地址</span></div>
+                <div class="ctnt">
+                    {{}}
+                </div>
+            </div>
+            <div class="message">
+                <div class="name"><span>上课时间</span></div>
+                <div class="ctnt">{{time}}</div>
+            </div>
         </div>
 
-        <div class="pane1-2-1">java</div>
-        <div class="pane1-2-1">java</div>
-        <div class="pane1-2-1">java</div>
-        <div class="pane1-2-1">java</div>
-    </div>
-    <div class="pane1-3">
-        <div class="pane1-3-1">
-            <span class="student">学员情况描述</br></span>
-            <span class="green" style="word-break:break-all">*************************************************************************************************************</br></br></span>
+        <div class="sec">
+            <div class="message">
+                <div class="name"><span>教员性别要求</span></div>
+                <div class="ctnt">
+                    {{gender}}
+                </div>
+            </div>
+            <div class="message">
+                <div class="name"><span>赏金</span></div>
+                <div class="ctnt">{{price}}</div>
+            </div>
         </div>
     </div>
+</form>
+
     <div class="pane1-4">
         <button class="but1">申请订单</button>
         <button class="but2">收藏</button>

@@ -33,7 +33,3 @@ tests/_support/_generated
 config/db.php
 
 yii.bat
-
-# local test file
-models/Local.php
-controllers/LocalController.php
