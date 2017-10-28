@@ -1,13 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Vam
- * Date: 2017/3/20
- * Time: 15:36
+ * User: №zero
+ * Date: 2017/10/26
+ * Time: 15:10
  */
 
 namespace app\models;
-
 
 use yii\db\ActiveRecord;
 

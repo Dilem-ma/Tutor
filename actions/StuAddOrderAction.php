@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Vam
- * Date: 2017/3/20
- * Time: 16:11
+ * User: №zero
+ * Date: 2017/10/26
+ * Time: 15:09
  */
 
 namespace app\actions;
@@ -18,17 +18,16 @@ class StuAddOrderAction extends Action
         $order = new Order();
         $post = \Yii::$app->request->post();
         $order->load($post, '');
-//        $order->s_id = Student::findByUsername($post['name'])->getPrimaryKey();
 
         if ($order->save()) {
             return [
                 'success' => true,
-                'message' => '下单成功',
+                'message' => '问题发布成功',
             ];
         } else {
             return [
                 'success' => false,
-                'message' => '下单失败',
+                'message' => '问题发布失败',
                 'errors' => $order->errors,
             ];
         }
