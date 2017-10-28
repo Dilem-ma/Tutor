@@ -14,7 +14,7 @@ $this->title = 'search';
     <div class="shortcut1">
         <div class="srchTop">
             <div class="srchSpan">
-                <div class="back"><a href="course" target="_self"><img src="/img/android-arrow-back.png" class="back"/></a></div>
+                <div class="back"><a href="index" target="_self"><img src="/img/android-arrow-back.png" class="back"/></a></div>
                 <div class="message">
                     <form class="search"><input type="text" placeholder="请输入搜索内容"></form>
                 </div>
@@ -43,22 +43,6 @@ $this->title = 'search';
                 <p>{{x.description}}</p>
                 <div class="label"><span>{{x.area}}</span><span>{{x.technique}}</span><span ng-if="x.gender == 'male'">需要：男性</span><span ng-if="x.gender == 'female'">需要：女性</span><span>价格：{{x.price}}/h</span></div>
             </div>
-        </div>
-    </div>
-    <div id="NotMoveDIV">
-        <div class="icon-box">
-            <a href="index" target="_self" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br/>主页</a>
-        </div>
-        <div class="icon-box">
-            <a href="" target="_self" class="botm-icon-text"><img src="/img/ios7-compose.png" class="botm-icon"/><br/>课程</a>
-        </div>
-        <div class="icon-box">
-            <a href="message" target="_self" class="botm-icon-text"><img src="/img/ios7-bell-outline.png"
-                                                          class="botm-icon"/><br/>消息</a>
-        </div>
-        <div class="icon-box">
-            <a href="mine" target="_self" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br/>我的</a>
-
         </div>
     </div>
 </div>

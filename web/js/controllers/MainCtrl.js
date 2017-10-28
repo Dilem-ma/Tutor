@@ -27,4 +27,14 @@ tutorApp.controller('MainCtrl', function ($scope, $http) {
             stayTime: 1500
         });
     });
+    $http(p).then(function (d) {
+        console.log("test")
+        $scope.excellent_teacher = d.data;
+    });
+
+
+    $scope.doJump = function (tech) {
+        window.location.href = 'search?tech='+tech+'&gender='+'不限'+'&area='+'不限'+'&price='+'不限'+'&text='+undefined;
+    };
+
 });

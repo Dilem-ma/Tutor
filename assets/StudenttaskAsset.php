@@ -17,10 +17,12 @@ class StudenttaskAsset extends AssetBundle
 
     public $css = [
         'css/common.css',
-        'css/Studenttask.css'
+        'css/Studenttask.css',
+        'datepicker/bootstrap/css/bootstrap.css',
+        'datepicker/angular-bootstrap-datepicker.css'
     ];
     public $js = [
-
+        'js/controllers/StutaskCtrl.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',
