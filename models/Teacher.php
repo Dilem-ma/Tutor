@@ -22,6 +22,7 @@ class Teacher extends ActiveRecord
     {
         return [
             'id',
+            'u_id',
             'star',
             'major',
             'education',

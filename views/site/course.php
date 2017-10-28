@@ -18,8 +18,8 @@ $this->title = 'CoursePage';
 </div>
 <div class="pane4">
     <div class="pane4text">
-        <a href="search" class="title5">教员库</a></br>
-        <a href="search" class="title6">寻找合适的老师【</a>
+        <a href="teachersearch" class="title5">教员库</a></br>
+        <a href="teachersearch" class="title6">寻找合适的老师【</a>
     </div>
     <div class="pane4circle">
         <a href="search">

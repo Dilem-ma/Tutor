@@ -8,7 +8,7 @@ class m170306_075156_init_User_table extends Migration
     {
 //        Create table User and define the column
         $this->createTable(
-            'User',
+            'user',
             [
                 'id' => $this->primaryKey(),
                 'username' => $this->string(11)->notNull()->unique(),

@@ -10,17 +10,18 @@ namespace app\assets;
 
 use yii\web\AssetBundle;
 
-class MineAsset extends AssetBundle
+class FilterteacherAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
 
     public $css = [
         'css/common.css',
-        'css/mine.css'
+        'css/filter.css'
     ];
     public $js = [
-        'js/controllers/MineCtrl.js'
+        'js/controllers/FilterteacherCtrl.js'
+
     ];
     public $depends = [
         'yii\web\JqueryAsset',

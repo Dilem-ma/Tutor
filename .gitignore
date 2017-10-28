@@ -32,5 +32,8 @@ tests/_support/_generated
 # database config file
 config/db.php
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/wang
 yii.bat
