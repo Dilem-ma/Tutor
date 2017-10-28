@@ -15,6 +15,7 @@ use app\actions\GetMyFavourite;
 use app\actions\GetNotPickedOrdersAction;
 use app\actions\GetTeacherDataAction;
 use app\actions\GetUserOrdersAction;
+use app\actions\PickUpOrderAction;
 use app\actions\SearchOrderAction;
 use app\actions\SearchTeacherAction;
 use app\actions\SelectOrdersAction;
@@ -56,7 +57,7 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite'],
+                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite', 'pick_up_order'],
                     'verbs' => ['POST'],
                 ],
 //                [
@@ -64,12 +65,12 @@ class ApiController extends Controller
 //                    'actions' => ['current_user'],
 //                    'verbs' => ['GET'],
 //                ],
-//                [
-//                    'allow' => true,
-//                    'actions' => ['logout'],
-////                    'roles' => ['@'],
-//                    'verbs' => ['POST'],
-//                ],
+                [
+                    'allow' => true,
+                    'actions' => ['logout'],
+                    'roles' => ['@'],
+                    'verbs' => ['POST'],
+                ],
             ],
         ];
 
@@ -102,6 +103,7 @@ class ApiController extends Controller
             'delete_order' => DeleteOrderAction::className(),
             'get_favourite' => GetMyFavourite::className(),
             'add_to_favourite' => AddToMyFavourite::className(),
+            'pick_up_order' => PickUpOrderAction::className(),
         ];
     }
 

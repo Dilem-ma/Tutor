@@ -8,9 +8,7 @@
 
 namespace app\actions;
 
-
 use app\models\LoginForm;
-use app\models\Pwd;
 use app\models\User;
 use yii\base\Action;
 
@@ -23,16 +21,16 @@ class LoginAction extends Action
         $token = \Yii::$app->security->generateRandomString();
 
         $user = User::findOne(['username' => $post['username']]);
-        $pwd = Pwd::findOne(['id' => $user->id]);
+//        $pwd = Pwd::findOne(['id' => $user->id]);
         if ($user) {
             $user->password = $post['password'];
             $user->accessToken = $token;
-            $pwd->password = $user->password;
+//            $pwd->password = $user->password;
         }
 
         if ($form->login()) {
             $user->save();
-            $pwd->save();
+//            $pwd->save();
             return [
                 'success' => true,
                 'message' => '登陆成功',
