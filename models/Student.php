@@ -24,7 +24,8 @@ class Student extends ActiveRecord
             'id',
             'u_id',
             'grade',
-            'describe'
+            'describe',
+            'stu_id',
         ];
     }
 
