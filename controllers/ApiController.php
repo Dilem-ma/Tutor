@@ -8,6 +8,8 @@
 
 namespace app\controllers;
 
+use app\actions\DeleteOrderAction;
+use app\actions\GetCurrentOrderAction;
 use app\actions\GetNotPickedOrdersAction;
 use app\actions\GetTeacherDataAction;
 use app\actions\GetUserOrdersAction;
@@ -52,7 +54,7 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', ],
+                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order'],
                     'verbs' => ['POST'],
                 ],
 //                [
@@ -94,6 +96,8 @@ class ApiController extends Controller
             'get_not_picked_orders' => GetNotPickedOrdersAction::className(),
             'get_user_orders' => GetUserOrdersAction::className(),
             'get_teacher_data' => GetTeacherDataAction::className(),
+            'get_current_order' => GetCurrentOrderAction::className(),
+            'delete_order' => DeleteOrderAction::className(),
         ];
     }
 
