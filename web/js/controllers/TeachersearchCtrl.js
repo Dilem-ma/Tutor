@@ -30,6 +30,7 @@ tutorApp.controller('TeachersearchCtrl', function ($scope, $location, $http) {
         };
 
         $http(p).then(function (d) {
+            console.log(d)
             $scope.orders = d.data;
             console.log($scope.orders);
         });
@@ -98,5 +99,8 @@ tutorApp.controller('TeachersearchCtrl', function ($scope, $location, $http) {
         $http(q).then(function (d) {
             $scope.orders = d.data;
         });
+        $scope.jumpTo = function (id) {
+            window.location.href = 'teacherdata?id='+id;
+        };
     }
 });
