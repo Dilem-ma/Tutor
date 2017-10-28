@@ -8,6 +8,9 @@
 
 namespace app\controllers;
 
+use app\actions\GetNotPickedOrdersAction;
+use app\actions\GetTeacherDataAction;
+use app\actions\GetUserOrdersAction;
 use app\actions\SearchOrderAction;
 use app\actions\SearchTeacherAction;
 use app\actions\SelectOrdersAction;
@@ -44,12 +47,12 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['top_teachers', 'get_identity', 'get_current_user','get_teacher_list'],
+                    'actions' => ['top_teachers', 'get_identity', 'get_current_user','get_teacher_list', 'get_not_picked_orders'],
                     'verbs' => ['GET'],
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['register', 'change_password'],
+                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', ],
                     'verbs' => ['POST'],
                 ],
 //                [
@@ -88,6 +91,9 @@ class ApiController extends Controller
             'sms_send' => SmsSendAction::className(),
             'search_teacher' => SearchTeacherAction::className(),
             'search_order' => SearchOrderAction::className(),
+            'get_not_picked_orders' => GetNotPickedOrdersAction::className(),
+            'get_user_orders' => GetUserOrdersAction::className(),
+            'get_teacher_data' => GetTeacherDataAction::className(),
         ];
     }
 
