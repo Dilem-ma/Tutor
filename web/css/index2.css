@@ -17,6 +17,7 @@ body {
     position: fixed;
     top: 0%;
     width: 100%;
+    z-index: 999;
 }
 .text {
     position: relative;
@@ -75,7 +76,6 @@ body {
 }
 .content{
     overflow: auto;
-    z-index: -1111111;
     position: relative;
 }
 
@@ -92,6 +92,10 @@ body {
     border-color: #E8E8E8;
 }
 
+.title{
+    width: 4em;
+}
+
 .title2 {
     font-family: "Microsoft YaHei";
     font-size: 4em;
@@ -99,8 +103,10 @@ body {
 }
 
 .pane2 {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 28% 0 58%;
+    padding: 28% 0 0 0;
     background: #ffffff;
     text-align: center;
     color: #ececed;
@@ -108,25 +114,26 @@ body {
 
 }
 
+.groupPane{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+
 .smallpane {
-    float: left;
-    width: 23%;
-    padding: 1% 0 4%;
+    display: flex;
+    flex-direction: column;
 }
 
 .circle {
-    position: relative;
-    left: 30%;
-    background: #686868;
+    background: #ffffff;
     border-radius: 50%;
     width: 4em;
     height: 4em;
 }
 
 .text2 {
-    width: 9ex;
-    position: relative;
-    left: 2.5ex;
+    width: 4em;
     text-align: center;
     color: #303030;
 }

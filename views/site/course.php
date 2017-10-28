@@ -19,7 +19,7 @@ $this->title = 'CoursePage';
 <div class="pane4">
     <div class="pane4text">
         <a href="teachersearch" class="title5">教员库</a></br>
-        <a href="teachersearch" class="title6">寻找合适的老师【</a>
+        <a href="teachersearch" class="title6">寻找合适的老师</a>
     </div>
     <div class="pane4circle">
         <a href="search">
@@ -27,19 +27,6 @@ $this->title = 'CoursePage';
             </div>
         </a>
     </div>
-</div>
-<div class="pane5">
-    <div class="pane4circle2">
-        <a href="search">
-            <div class="circle3">
-            </div>
-        </a>
-    </div>
-    <div class="pane4text2">
-        <a href="search" class="title5">学员库</a></br>
-        <a href="search" class="title6">寻找合适的学生【</a>
-    </div>
-
 </div>
 <div id="NotMoveDIV">
     <div class="icon-box">

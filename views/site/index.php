@@ -23,63 +23,42 @@ $this->title = 'MainPage';
     <div class="content">
 
     <div class="pane2">
-        <div class="smallpane">
-            <div class="circle">
-            </div>
-            <div class="text2">
-                <a class="title">索引1</a>
-            </div>
+        <div class="groupPane">
+            <a class="smallpane" ng-click="doJump('数据库')">
+                <img class="circle"src=../img/1.png>
+                <div class="title">数据库</div>
+            </a>
+            <a class="smallpane" ng-click="doJump('编程语言')">
+                <img class="circle"src=../img/2.png>
+                <div class="title">编程语言</div>
+            </a>
+            <a class="smallpane" ng-click="doJump('app开发')">
+                <img class="circle"src=../img/3.png>
+                <div class="title">app开发</div>
+            </a>
+            <a class="smallpane" ng-click="doJump('web技术')">
+                <img class="circle"src=../img/4.png>
+                <div class="title">web技术</div>
+            </a>
         </div>
-        <div class="smallpane">
-            <div class="circle">
-            </div>
-            <div class="text2">
-                <a class="title">索引2</a>
-            </div>
+        <div class="groupPane">
+            <a class="smallpane" ng-click="doJump('服务器脚本')">
+                <img class="circle"src=../img/5.png>
+                <div class="title">服务器脚本</div>
+            </a>
+            <a class="smallpane" ng-click="doJump('环境配置')">
+                <img class="circle"src=../img/6.png>
+                <div class="title">环境配置</div>
+            </a>
+            <a class="smallpane" ng-click="doJump('计算机概念')">
+                <img class="circle"src=../img/7.png>
+                <div class="title">计算机概念</div>
+            </a>
+            <a class="smallpane" ng-click="doJump('不限')">
+                <img class="circle"src=../img/8.png>
+                <div class="title">查看所有</div>
+            </a>
         </div>
-        <div class="smallpane">
-            <div class="circle">
-            </div>
-            <div class="text2">
-                <a class="title">索引1</a>
-            </div>
-        </div>
-        <div class="smallpane">
-            <div class="circle">
-            </div>
-            <div class="text2">
-                <a class="title">索引1</a>
-            </div>
-        </div>
-        <div class="smallpane">
-            <div class="circle">
-            </div>
-            <div class="text2">
-                <a class="title">索引1</a>
-            </div>
-        </div>
-        <div class="smallpane">
-            <div class="circle">
-            </div>
-            <div class="text2">
-                <a class="title">索引1</a>
-            </div>
-        </div>
-        <div class="smallpane">
-            <div class="circle">
-            </div>
-            <div class="text2">
-                <a class="title">索引1</a>
-            </div>
-        </div>
-        <div class="smallpane">
-            <div class="circle">
-            </div>
-            <div class="text2">
-                <a class="title">索引1</a>
-            </div>
-        </div>
-
     </div>
     <div class="pane3">
         <div class="pane3-1">
