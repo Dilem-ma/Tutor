@@ -22,8 +22,7 @@ class MainAsset extends AssetBundle
     ];
     public $js = [
         'js/jquery.toastmessage.js',
-        'js/controllers/MainCtrl.js'
-
+        'js/controllers/MainCtrl.js',
     ];
     public $depends = [
         'yii\web\JqueryAsset',
