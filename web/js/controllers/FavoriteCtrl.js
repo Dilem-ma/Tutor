@@ -8,7 +8,7 @@ tutorApp = angular.module('tutorApp', []);
 
 storage = window.localStorage;
 
-tutorApp.controller('AuthenCtrl', function ($scope, $http) {
+tutorApp.controller('FavoriteCtrl', function ($scope, $http) {
     if (localStorage.getItem(storage) !== void 0) {
         $scope.token = localStorage.getItem(storage);
         console.log($scope.token);
@@ -23,9 +23,7 @@ tutorApp.controller('AuthenCtrl', function ($scope, $http) {
         }
     };
     $http(q).then(function (d) {
-        $scope.current_url = d.data.url;
-        $scope.current_num = d.data.username;
-        $scope.current_name = d.data.name;
+        $scope.current_id = d.data.id;
     });
     var p = {
         method: 'get',
@@ -35,17 +33,17 @@ tutorApp.controller('AuthenCtrl', function ($scope, $http) {
         }
     };
     $http(p).then(function (d) {
-        if (d.data.teacher.id == undefined && d.data.student.id == undefined) { //都不是
+        if (d.data.error != undefined) { //都不是
             $scope.stu_status = 0; //没注册
             $scope.tea_status = 0;
         }
-        else if (d.data.teacher.id == undefined && d.data.student.id != undefined) { //不是老师是学生
+        else if (d.data.teacher.id == undefined) { //不是老师是学生
             $scope.tea_status = 0;
             $scope.stu_status = 1;
             $scope.stu_description = d.data.student.describe;
             $scope.stu_grade = d.data.student.grade;
         }
-        else if (d.data.student.id == undefined && d.data.teacher.id != undefined) { //不是学生是老师
+        else if (d.data.student.id == undefined) { //不是学生是老师
             $scope.tea_status = 1;
             $scope.stu_status = 0;
             $scope.tea_description = d.data.teacher.describe;

@@ -11,7 +11,7 @@
 $this->title = 'teacher_authentication';
 \app\assets\TeacherauthenAsset::register($this);
 ?>
-<div class="shortcut">
+<div class="shortcut" ng-controller="TeacherauthenCtrl">
     <div class="scTop">
         <span class="title">教师认证</span>
         <a href="authentication"><img src="/img/back.png" class="back"/></a>
@@ -21,14 +21,14 @@ $this->title = 'teacher_authentication';
             <div class="message">
                 <div class="border">
                     <div class="name"><span>姓名</span></div>
-                    <div class="ctnt"><input type="text" placeholder="请输入本人姓名"></div>
+                    <div class="ctnt"><input type="text" ng-model="name" placeholder="请输入本人姓名"></div>
                 </div>
             </div>
             <div class="message">
                 <div class="border">
                     <div class="name"><span>性别</span></div>
                     <div class="ctnt">
-                        <select>
+                        <select ng-model="gender">
                             <option value ="male">男</option>
                             <option value ="female">女</option>
                         </select>
@@ -39,7 +39,7 @@ $this->title = 'teacher_authentication';
             <div class="message">
                 <div class="lastborder">
                     <div class="name"><span>出生年月</span></div>
-                    <div class="ctnt"><input type="text" placeholder="请输入本人姓名"></div>
+                    <div class="ctnt"><input type="text" ng-model="birthday" placeholder="请输入你的出生年月"></div>
                 </div>
             </div>
         </div>
@@ -48,11 +48,12 @@ $this->title = 'teacher_authentication';
             <div class="message">
                 <div class="border">
                     <div class="name"><span>学历</span></div>
-                    <div class="ctnt"><select>
-                            <option value ="male">高中及以下</option>
-                            <option value ="female">本科</option>
-                            <option value ="female">硕士</option>
-                            <option value ="female">博士</option>
+                    <div class="ctnt"><select ng-model="education">
+                            <option value ="1">高中及以下</option>
+                            <option value ="2">专科</option>
+                            <option value ="3">本科</option>
+                            <option value ="4">硕士</option>
+                            <option value ="5">博士</option>
                         </select></div>
                 </div>
             </div>
@@ -60,7 +61,7 @@ $this->title = 'teacher_authentication';
             <div class="message">
                 <div class="border">
                     <div class="name"><span>专业</span></div>
-                    <div class="ctnt"><input type="text" placeholder="请输入专业"></div>
+                    <div class="ctnt"><input type="text" ng-model="major" placeholder="请输入专业"></div>
                 </div>
             </div>
             <div class="message">
@@ -75,10 +76,12 @@ $this->title = 'teacher_authentication';
             <div class="message">
                 <div class="lastborder">
                     <div class="name"><span>自我简介</span></div>
-                    <div class="ctnt"><input type="text" placeholder="请输入自我简介"></div>
+                    <div class="ctnt"><input type="text" ng-model="describe" placeholder="请输入自我简介"></div>
                 </div>
             </div>
         </div>
-        <button class="submit" type="submit">认证</button>
+        <a ng-click="postTask(name,gender,birthday,education,major,describe)">
+        <button class="submit"  type="submit">认证</button>
+        </a>
     </div>
 </div>

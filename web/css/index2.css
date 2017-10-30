@@ -220,7 +220,19 @@ body {
     width: 26%;
     height: 8em;
 }
-
+.message2 textarea{
+    border: none;
+    color: #646464;
+    background-color: #fafafa;
+    height: 99%;
+    font-size: 1em;
+    font-family: "Microsoft YaHei";
+    text-indent: 0.2em;
+    display: block;
+    outline: 0;
+    width: 98%;
+    text-decoration: none;
+}
 .title5 {
     font-family: "Microsoft YaHei";
     font-size: 240%;
