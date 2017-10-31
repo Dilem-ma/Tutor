@@ -28,12 +28,12 @@ $this->title = 'AuthenticationPage';
         <div class="pane1-2" ng-show = "!stu_status">
             <span class="student">学生认证 ：</span>
             <span class="red">未通过认证</span>
-            <a href="stuauthen">（点击此处进行认证）</a>
+            <a href="stuauthen" ng-show = "!stu_status && !tea_status">（点击此处进行认证）</a>
         </div>
         <div class="pane1-2" ng-show = "!tea_status">
             <span class="student">教师认证 ：</span>
             <span class="red">未通过认证</span>
-            <a href="teacherauthen">（点击此处进行认证）</a>
+            <a href="teacherauthen" ng-show = "!stu_status && !tea_status">（点击此处进行认证）</a>
         </div>
         <div class="pane1-3" ng-show = "stu_status">
             <span class="student">学生认证 ：</span>

@@ -17,6 +17,31 @@ tutorApp.config(['$locationProvider', function ($locationProvider) {
 }]);
 
 
+<<<<<<< HEAD
+tutorApp.controller('OrderCtrl', function ($scope, $location, $http) {
+    if ($location.search().orderId) {
+        $scope.orderId = $location.search().orderId;
+        var p = {
+            method: 'get',
+            url: '/orders'
+        };
+        $http(p).then(function (d) {
+            $scope.orders = d.data;
+            console.log($scope.orders);
+            $scope.title = d.title;
+            $scope.technique = d.technique;
+            $scope.description = d.description;
+            $scope.area = d.area;
+            $scope.time = d.time;
+            $scope.gender = d.gender;
+            $scope.price = d.price;
+
+        });
+
+    }
+
+=======
 tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
+>>>>>>> origin/sunjingling
 
 });

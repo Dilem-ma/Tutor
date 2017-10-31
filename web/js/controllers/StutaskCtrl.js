@@ -7,10 +7,8 @@ tutorApp = angular.module('tutorApp', []);
 
 storage = window.localStorage;
 
-tutorApp.controller('StutaskCtrl', function ($scope, $http, $window, $location) {
-    $scope.searchTechnique = function (technique){
+tutorApp.controller('StutaskCtrl', function ($scope, $http) {
 
-    }
     $scope.postTask = function (technique, area, title, description, price, teachTime, isUrgent, gender) {
         var p;
         if (localStorage.getItem(storage) !== void 0) {
@@ -69,7 +67,7 @@ tutorApp.controller('StutaskCtrl', function ($scope, $http, $window, $location) 
 
                 } else {
                     return $().toastmessage('showToast', {
-                        // text: d.data.errors.password[0], 要改成自己要用的信息
+                        text: d.data.errors,
                         sticky: false,
                         position: 'top-center',
                         type: 'error',
@@ -78,7 +76,7 @@ tutorApp.controller('StutaskCtrl', function ($scope, $http, $window, $location) 
                 }
             },function (e) {
                 return $().toastmessage('showToast', {
-                    // text: e.data.errors.password[0],
+                    text: e.data.errors,
                     sticky: false,
                     position: 'top-center',
                     type: 'error',

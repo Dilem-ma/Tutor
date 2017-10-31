@@ -17,10 +17,14 @@ class CoursedetailAsset extends AssetBundle
 
     public $css = [
         'css/common.css',
-        'css/coursedetail.css'
+        'css/Studenttask.css',
+        'datepicker/bootstrap/css/bootstrap.css',
+        'datepicker/angular-bootstrap-datepicker.css',
+        'css/jquery.toastmessage.css'
     ];
     public $js = [
-
+        'js/controllers/StutaskCtrl.js',
+        'js/jquery.toastmessage.js',
     ];
     public $depends = [
         'yii\web\JqueryAsset',

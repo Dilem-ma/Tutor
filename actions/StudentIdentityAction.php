@@ -10,7 +10,6 @@ namespace app\actions;
 
 
 use app\models\Student;
-use app\models\User;
 use yii\base\Action;
 
 class StudentIdentityAction extends Action

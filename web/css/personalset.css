@@ -30,12 +30,12 @@
     background:#F8F8F8;
     width:100%;
 }
-.pane2-2{
-    padding-left:5%;
-    padding-right:5%;
+.pane2-2 {
+    padding-left: 5%;
     background: #ffffff;
-    width:90%;
-    height:3.5em;
+    width: 95%;
+    height: 2.8em;
+    border-top: 1px solid rgba(160, 160, 160, 0.3);
 }
 .pane2-4{
     padding-left:5%;
@@ -45,27 +45,36 @@
     height:5.5em;
 }
 .pane2-5{
-    border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+
     background: #ffffff;
     width:100%;
     height:5.5em;
 }
 .pane2-3{
-    border-bottom: 1px solid rgba(160, 160, 160, 0.3);
     background: #ffffff;
     width:100%;
-    height:3.5em;
+    height:2.5em;
+}
+select{
+    height: 100%;
+    width: 100%;
+    font-size: 0.9em;
+    color: #909093;
+    border: solid 1px #909093;
+    font-family: "Microsoft YaHei";
+    border: 0; background: transparent;
 }
 .image1{
     width:18%;
     float:left;
     margin: 2% 0% 0% 44%;
 }
-.text3{
-    width:30%;
-    float:left;
+.text3 {
+    width: 27%;
+    float: left;
     text-align: left;
-    margin: 5% 5% 0% 0%;
+    margin: 3.5% 5% 0% 0%;
+    font-size: 0.9em;
 }
 .text6{
     width:30%;
@@ -79,19 +88,18 @@
     font-weight: 100;
     color: #686868;
 }
-.text5{
-    width:65%;
-    float:left;
+.text5 {
+    width: 65%;
+    float: left;
     text-align: right;
-    margin: 5% 0% 0% 0%;
+    margin: 4% 0% 0% 0%;
 }
-.pane2-2 textarea{
+.pane2-2 input {
     border: none;
     color: #646464;
-    height: 99%;
-    font-size: 1em;
+    height: 2em;
+    font-size: 0.8em;
     font-family: "Microsoft YaHei";
-    background-color: #fafafa;
     text-indent: 0.2em;
     display: block;
     outline: 0;

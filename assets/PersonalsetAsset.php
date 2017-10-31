@@ -10,21 +10,17 @@ namespace app\assets;
 
 use yii\web\AssetBundle;
 
-class StudenttaskAsset extends AssetBundle
+class PersonalsetAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
 
     public $css = [
         'css/common.css',
-        'css/Studenttask.css',
-        'datepicker/bootstrap/css/bootstrap.css',
-        'datepicker/angular-bootstrap-datepicker.css',
-        'css/jquery.toastmessage.css'
+        'css/personalset.css'
     ];
     public $js = [
-        'js/controllers/StutaskCtrl.js',
-        'js/jquery.toastmessage.js',
+        'js/controllers/PersonalsetCtrl.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',

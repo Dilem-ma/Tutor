@@ -8,7 +8,6 @@
 
 namespace app\actions;
 
-
 use app\models\User;
 use yii\base\Action;
 
@@ -19,9 +18,11 @@ class ChangePasswordAction extends Action
         $user->password = \Yii::$app->request->post('password');
 
         if ($user->save()) {
+//            $pwd->save();
             return [
                 'success' => true,
                 'message' => '修改成功',
+//                'pwd' => $pwd->password,
             ];
         } else {
             return [
