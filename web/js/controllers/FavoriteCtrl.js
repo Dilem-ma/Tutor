@@ -7,16 +7,6 @@ tutorApp = angular.module('tutorApp', []);
 
 storage = window.localStorage;
 
-
-tutorApp.config(['$locationProvider', function ($locationProvider) {
-
-    $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false//必须配置为false，否则<base href=''>这种格式带base链接的地址才能解析
-    });
-}]);
-
-
 tutorApp.controller('FavoriteCtrl', function ($scope, $location, $http) {
     var flag = 1;
     if ($location.search().tech) {
@@ -24,15 +14,35 @@ tutorApp.controller('FavoriteCtrl', function ($scope, $location, $http) {
     }
     else {
         flag = 0;
-        var p = {
+        if (localStorage.getItem(storage) !== void 0) {
+            $scope.token = localStorage.getItem(storage);
+            console.log($scope.token);
+        } else {
+            $scope.token = void 0;
+        }
+        var q = {
             method: 'get',
-            url: '/api/get_teacher_list'
+            url: '/api/get_current_user',
+            params: {
+                'token': $scope.token
+            }
         };
+        $http(q).then(function (d) {
+            $scope.current_id = d.data.id;
+            var p = {
+                method: 'post',
+                url: '/api/get_favourite',
+                data: {
+                    "id":$scope.current_id
+                }
+            };
+            $http(p).then(function (d) {
+                $scope.orders = d.data;
 
-        $http(p).then(function (d) {
-            $scope.orders = d.data;
-            console.log($scope.orders);
+
+            });
         });
+
 
     }
     if ($location.search().id) {
@@ -82,21 +92,6 @@ tutorApp.controller('FavoriteCtrl', function ($scope, $location, $http) {
             var maj = "";
         else
             maj = $scope.major;
-        var q = {
-            method: 'post',
-            url: '/api/select_orders',
-            data: {
-                "gender": gen,
-                "area": are,
-                "technique": tec,
-                "text": te,
-                "price_min": pri_min,
-                "price_max": pri_max
-            }
-        };
 
-        $http(q).then(function (d) {
-            $scope.orders = d.data;
-        });
     }
 });
