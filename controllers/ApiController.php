@@ -14,6 +14,7 @@ use app\actions\GetCurrentOrderAction;
 use app\actions\GetMyFavourite;
 use app\actions\GetNotPickedOrdersAction;
 use app\actions\GetTeacherDataAction;
+use app\actions\GetUserDataAction;
 use app\actions\GetUserOrdersAction;
 use app\actions\PickUpOrderAction;
 use app\actions\SearchOrderAction;
@@ -47,7 +48,7 @@ class ApiController extends Controller
             'rules' => [
                 [
                     'allow' => true,
-                    'actions' => ['login', 'teacher_identity', 'student_identity', 'stu_add_order', 'select_orders', 'update_person_data', 'sms_send', 'search_teacher', 'search_order', ],
+                    'actions' => ['login', 'teacher_identity', 'student_identity', 'stu_add_order', 'select_orders', 'update_person_data', 'sms_send', 'search_teacher', 'search_order', 'get_user_data', ],
                     'verbs' => ['POST'],
                 ],
                 [
@@ -104,6 +105,7 @@ class ApiController extends Controller
             'get_favourite' => GetMyFavourite::className(),
             'add_to_favourite' => AddToMyFavourite::className(),
             'pick_up_order' => PickUpOrderAction::className(),
+            'get_user_data' => GetUserDataAction::className(),
         ];
     }
 

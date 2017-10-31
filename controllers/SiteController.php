@@ -131,6 +131,10 @@ class SiteController extends Controller
     {
         return $this->render('Teachersearch');
     }
+    public function actionTeacherdata()
+    {
+        return $this->render('Teacherdata');
+    }
     public function actionPersonalset()
     {
         return $this->render('Personalset');

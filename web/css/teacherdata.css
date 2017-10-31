@@ -1,0 +1,88 @@
+.scTop{
+    width: 100%;
+    padding:8% 0 6% 0%;
+    background: #64a9e9;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+.title{
+    font-family: "Microsoft YaHei";
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+.back{
+    position: absolute;
+    width: 0.85em;
+    height: auto;
+    left: 5%;
+    top: 45%;
+    color: #ffffff;
+}
+.pane2{
+    width:100%;
+    height:35em;
+    position: relative;
+    background:#F8F8F8;
+}
+.pane2-1{
+    padding-top:5%;
+    background:#F8F8F8;
+    width:100%;
+}
+.pane2-2{
+    padding-left:5%;
+    padding-right:5%;
+    background: #ffffff;
+    width:90%;
+    height:3.5em;
+}
+.pane2-4{
+    padding-left:5%;
+    padding-right:5%;
+    background: #ffffff;
+    width:90%;
+    height:5.5em;
+}
+.pane2-5{
+    border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+    background: #ffffff;
+    width:100%;
+    height:5.5em;
+}
+.pane2-3{
+    border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+    background: #ffffff;
+    width:100%;
+    height:3.5em;
+}
+.image1{
+    width:18%;
+    float:left;
+    margin: 2% 0% 0% 44%;
+}
+.text3{
+    width:30%;
+    float:left;
+    text-align: left;
+    margin: 5% 5% 0% 0%;
+}
+.text6{
+    width:30%;
+    float:left;
+    text-align: left;
+    margin: 10% 5% 0% 0%;
+}
+.text4{
+    font-family: "Microsoft YaHei";
+    font-size: 1em;
+    font-weight: 100;
+    color: #686868;
+}
+.text5{
+    width:65%;
+    float:left;
+    text-align: right;
+    margin: 5% 0% 0% 0%;
+}

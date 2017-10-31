@@ -85,7 +85,7 @@ tutorApp.controller('TeachersearchCtrl', function ($scope, $location, $http) {
             maj = $scope.major;
         var q = {
             method: 'post',
-            url: '/api/select_orders',
+            url: '/api/search_teacher',
             data: {
                 "gender": gen,
                 "area": are,
@@ -99,8 +99,11 @@ tutorApp.controller('TeachersearchCtrl', function ($scope, $location, $http) {
         $http(q).then(function (d) {
             $scope.orders = d.data;
         });
-        $scope.jumpTo = function (id) {
-            window.location.href = 'teacherdata?id='+id;
-        };
+
     }
+    $scope.jumpTo = function (id) {
+        console.log(id)
+
+        window.location.href = 'teacherdata?id='+id;
+    };
 });
