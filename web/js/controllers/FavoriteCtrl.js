@@ -1,66 +1,102 @@
 /**
- * Created by Dilemma丶 on 2017/3/22.
+ * Created by Dilemma丶 on 2017/3/21.
  */
-
 var storage, tutorApp;
 
 tutorApp = angular.module('tutorApp', []);
 
 storage = window.localStorage;
 
-tutorApp.controller('FavoriteCtrl', function ($scope, $http) {
-    if (localStorage.getItem(storage) !== void 0) {
-        $scope.token = localStorage.getItem(storage);
-        console.log($scope.token);
-    } else {
-        $scope.token = void 0;
-    }
-    var q = {
-        method: 'get',
-        url: '/api/get_current_user',
-        params: {
-            'token': $scope.token
-        }
-    };
-    $http(q).then(function (d) {
-        $scope.current_id = d.data.id;
-    });
-    var p = {
-        method: 'get',
-        url: '/api/get_identity',
-        params: {
-            'token': $scope.token
-        }
-    };
-    $http(p).then(function (d) {
-        if (d.data.error != undefined) { //都不是
-            $scope.stu_status = 0; //没注册
-            $scope.tea_status = 0;
-        }
-        else if (d.data.teacher.id == undefined) { //不是老师是学生
-            $scope.tea_status = 0;
-            $scope.stu_status = 1;
-            $scope.stu_description = d.data.student.describe;
-            $scope.stu_grade = d.data.student.grade;
-        }
-        else if (d.data.student.id == undefined) { //不是学生是老师
-            $scope.tea_status = 1;
-            $scope.stu_status = 0;
-            $scope.tea_description = d.data.teacher.describe;
-            $scope.tea_education = d.data.teacher.education;
-            $scope.tea_major = d.data.teacher.major;
-            $scope.tea_star = d.data.teacher.star;
-        }
-        else {
-            $scope.tea_status = 1;
-            $scope.stu_status = 1;
-            $scope.stu_description = d.data.student.describe;
-            $scope.stu_grade = d.data.student.grade;
-            $scope.tea_description = d.data.teacher.describe;
-            $scope.tea_education = d.data.teacher.education;
-            $scope.tea_major = d.data.teacher.major;
-            $scope.tea_star = d.data.teacher.star;
-        }
-    });
 
+tutorApp.config(['$locationProvider', function ($locationProvider) {
+
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false//必须配置为false，否则<base href=''>这种格式带base链接的地址才能解析
+    });
+}]);
+
+
+tutorApp.controller('FavoriteCtrl', function ($scope, $location, $http) {
+    var flag = 1;
+    if ($location.search().tech) {
+        $scope.tech = $location.search().tech;
+    }
+    else {
+        flag = 0;
+        var p = {
+            method: 'get',
+            url: '/api/get_teacher_list'
+        };
+
+        $http(p).then(function (d) {
+            $scope.orders = d.data;
+            console.log($scope.orders);
+        });
+
+    }
+    if ($location.search().id) {
+        $scope.id = $location.search().id;
+    }
+    if ($location.search().name) {
+        $scope.name = $location.search().name;
+    }
+    if ($location.search().url) {
+        $scope.url = $location.search().url;
+    }
+    if ($location.search().area) {
+        $scope.area = $location.search().area;
+    }
+    if ($location.search().star) {
+        $scope.star = $location.search().star;
+    }
+    if ($location.search().gender) {
+        $scope.gender = $location.search().gender;
+    }
+    if ($location.search().education) {
+        $scope.education = $location.search().education;
+    }
+    if ($location.search().major) {
+        $scope.major = $location.search().major;
+    }
+    if ($location.search().describe) {
+        $scope.describe = $location.search().describe;
+    }
+    if (flag) {
+
+        if ($scope.gender == "男性")
+            var gen = "male";
+        else if ($scope.gender == "女性")
+            gen = "female";
+        else
+            gen = "";
+        if ($scope.star == "不限")
+            var sta = "";
+        else
+            sta = $scope.star;
+        if ($scope.education == "不限")
+            var edu = "";
+        else
+            edu = $scope.education;
+        if ($scope.major == "不限")
+            var maj = "";
+        else
+            maj = $scope.major;
+        var q = {
+            method: 'post',
+            url: '/api/select_orders',
+            data: {
+                "gender": gen,
+                "area": are,
+                "technique": tec,
+                "text": te,
+                "price_min": pri_min,
+                "price_max": pri_max
+            }
+        };
+
+        $http(q).then(function (d) {
+            $scope.orders = d.data;
+        });
+    }
 });

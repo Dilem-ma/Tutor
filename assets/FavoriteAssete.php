@@ -20,7 +20,7 @@ class FavoriteAssete extends  AssetBundle
         'css/common.css'
     ];
     public $js = [
-
+        'js/controllers/FavoriteCtrl.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',

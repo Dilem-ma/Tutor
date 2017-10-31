@@ -127,12 +127,12 @@ select{
     float: left;
     margin-left: 1em;
     margin-top: 1em;
-
+    margin-right: 1em;
 }
 
 .info{
     float: left;
-    padding: 1.5em 1em;
+    padding-top: 1.5em;
 }
 
 .info h1{
