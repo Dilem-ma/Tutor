@@ -17,6 +17,7 @@ tutorApp.config(['$locationProvider', function ($locationProvider) {
 }]);
 
 
+<<<<<<< HEAD
 tutorApp.controller('OrderCtrl', function ($scope, $location, $http) {
     if ($location.search().orderId) {
         $scope.orderId = $location.search().orderId;
@@ -39,5 +40,8 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http) {
 
     }
 
+=======
+tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
+>>>>>>> origin/sunjingling
 
 });

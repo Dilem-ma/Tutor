@@ -20,7 +20,7 @@ class TeacherauthenAsset extends  AssetBundle
         'css/common.css'
     ];
     public $js = [
-
+        'js/controllers/TeacherauthenCtrl.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',
