@@ -35,17 +35,17 @@ tutorApp.controller('AuthenCtrl', function ($scope, $http) {
         }
     };
     $http(p).then(function (d) {
-        if (d.data.error != undefined) { //都不是
+        if (d.data.teacher == undefined && d.data.student == undefined) { //都不是
             $scope.stu_status = 0; //没注册
             $scope.tea_status = 0;
         }
-        else if (d.data.teacher.id == undefined) { //不是老师是学生
+        else if (d.data.teacher == undefined && d.data.student != undefined) { //不是老师是学生
             $scope.tea_status = 0;
             $scope.stu_status = 1;
             $scope.stu_description = d.data.student.describe;
             $scope.stu_grade = d.data.student.grade;
         }
-        else if (d.data.student.id == undefined) { //不是学生是老师
+        else if (d.data.student == undefined && d.data.teacher != undefined) { //不是学生是老师
             $scope.tea_status = 1;
             $scope.stu_status = 0;
             $scope.tea_description = d.data.teacher.describe;
