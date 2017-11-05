@@ -17,7 +17,7 @@ class GetTeacherListAction extends Action
     public function run(){
 
         $rows = (new Query())
-            ->select(['user.id', 'name', 'url', 'star', 'gender', 'education', 'major', 'describe', 'area'])
+            ->select(['user.id', 'teacher.id AS t_id', 'name', 'url', 'star', 'gender', 'education', 'major', 'describe', 'area'])
             ->from(['user', 'teacher'])
             ->where('user.id = teacher.u_id');
         return $rows->all();

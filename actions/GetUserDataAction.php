@@ -12,6 +12,7 @@ namespace app\actions;
 use app\models\Teacher;
 use app\models\User;
 use yii\base\Action;
+use yii\db\Query;
 
 class GetUserDataAction extends Action
 {
@@ -29,7 +30,13 @@ class GetUserDataAction extends Action
             if (is_null($tea)){
                 return $user;
             }else {
-                return array($user, $tea);
+                $rows = (new Query())
+                    ->select(['user.id', 'teacher.id AS t_id', 'name', 'url', 'star', 'gender', 'education', 'major', 'describe', 'area'])
+                    ->from(['user', 'teacher'])
+                    ->where('user.id = teacher.u_id')
+                    ->andWhere(['user.id' => $id])
+                    ->all();
+                return $rows;
             }
         }
     }

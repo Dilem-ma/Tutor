@@ -2,20 +2,16 @@
 
 use yii\db\Migration;
 
-class m171027_080448_add_pwd_table extends Migration
+class m171105_105958_add_credit_to_user extends Migration
 {
     public function up()
     {
-        $this->createTable('pwd', [
-            'id' => $this->primaryKey(),
-            'password' => $this->string(64)->notNull(),
-        ]);
-
+        $this->addColumn('user', 'credit', $this->integer()->defaultValue(100));
     }
 
     public function down()
     {
-        echo "m171027_080448_add_pwd_table cannot be reverted.\n";
+        echo "m171105_105958_add_credit_to_user cannot be reverted.\n";
 
         return false;
     }
