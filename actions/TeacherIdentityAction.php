@@ -8,7 +8,6 @@
 
 namespace app\actions;
 
-
 use app\models\Teacher;
 use app\models\User;
 use yii\base\Action;
@@ -38,25 +37,25 @@ class TeacherIdentityAction extends Action
         $res->birthday = $post['birthday'];
         $res->gender = $post['gender'];
 
-        $tea->save();
-        $res->save();
+//        $tea->save();
+//        $res->save();
+//
+//        return [
+//            'success' => true,
+//            'message' => '操作成功',
+//        ];
 
-        return [
-            'success' => true,
-            'message' => '操作成功',
-        ];
-
-//        if ($tea->save()&&$res->save()) {
-//            return [
-//                'success' => true,
-//                'message' => '操作成功',
-//            ];
-//        } else {
-//            return [
-//                'success' => false,
-//                'message' => '操作失败',
-//                'errors' => 'You have already been identified as a teacher.',
-//            ];
-//        }
+        if ($tea->save()&&$res->save()) {
+            return [
+                'success' => true,
+                'message' => '操作成功',
+            ];
+        } else {
+            return [
+                'success' => false,
+                'message' => '操作失败',
+                'errors' => 'You have already been identified as a teacher.',
+            ];
+        }
     }
 }

@@ -14,7 +14,9 @@ use app\actions\GetCurrentOrderAction;
 use app\actions\GetMyFavourite;
 use app\actions\GetNotPickedOrdersAction;
 use app\actions\GetTeacherDataAction;
+use app\actions\GetUserDataAction;
 use app\actions\GetUserOrdersAction;
+use app\actions\PickUpOrderAction;
 use app\actions\SearchOrderAction;
 use app\actions\SearchTeacherAction;
 use app\actions\SelectOrdersAction;
@@ -26,6 +28,7 @@ use app\actions\GetTopTeachersAction;
 use app\actions\LoginAction;
 use app\actions\RegisterAction;
 use app\actions\StuAddOrderAction;
+use app\actions\StuCheckOrderAction;
 use app\actions\StudentIdentityAction;
 use app\actions\TeacherIdentityAction;
 use app\actions\GetTeacherListAction;
@@ -46,7 +49,7 @@ class ApiController extends Controller
             'rules' => [
                 [
                     'allow' => true,
-                    'actions' => ['login', 'teacher_identity', 'student_identity', 'stu_add_order', 'select_orders', 'update_person_data', 'sms_send', 'search_teacher', 'search_order', ],
+                    'actions' => ['login', 'teacher_identity', 'student_identity', 'stu_add_order', 'select_orders', 'update_person_data', 'sms_send', 'search_teacher', 'search_order', 'get_user_data', ],
                     'verbs' => ['POST'],
                 ],
                 [
@@ -56,7 +59,7 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite'],
+                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite', 'pick_up_order', 'stu_check_order'],
                     'verbs' => ['POST'],
                 ],
 //                [
@@ -64,12 +67,12 @@ class ApiController extends Controller
 //                    'actions' => ['current_user'],
 //                    'verbs' => ['GET'],
 //                ],
-//                [
-//                    'allow' => true,
-//                    'actions' => ['logout'],
-////                    'roles' => ['@'],
-//                    'verbs' => ['POST'],
-//                ],
+                [
+                    'allow' => true,
+                    'actions' => ['logout'],
+                    'roles' => ['@'],
+                    'verbs' => ['POST'],
+                ],
             ],
         ];
 
@@ -102,6 +105,9 @@ class ApiController extends Controller
             'delete_order' => DeleteOrderAction::className(),
             'get_favourite' => GetMyFavourite::className(),
             'add_to_favourite' => AddToMyFavourite::className(),
+            'pick_up_order' => PickUpOrderAction::className(),
+            'get_user_data' => GetUserDataAction::className(),
+            'stu_check_order' => StuCheckOrderAction::className(),
         ];
     }
 

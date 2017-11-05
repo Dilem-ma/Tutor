@@ -21,29 +21,46 @@ $this->title = 'stuauthen';
             <div class="message">
                 <div class="border">
                     <div class="name"><span>学校</span></div>
-                    <div class="ctnt"><select>
-                            <option value ="volvo">Volvo</option>
-                            <option value ="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
+                    <div class="ctnt"><select ng-model="school">
+                            <option value ="华东师范大学">华东师范大学</option>
+                            <option value ="同济大学">同济大学</option>
+                            <option value="上海交通大学">上海交通大学</option>
+                            <option value="复旦大学">复旦大学</option>
                         </select></div>
                 </div>
             </div>
-
+            <div class="message">
+                <div class="border">
+                    <div class="name"><span>年级</span></div>
+                    <div class="ctnt"><select ng-model="grade">
+                            <option value ="1">大一</option>
+                            <option value ="2">大二</option>
+                            <option value="3">大三</option>
+                            <option value="4">大四</option>
+                            <option value="4">研一</option>
+                            <option value="4">研二</option>
+                            <option value="4">研三</option>
+                            <option value="4">博一</option>
+                            <option value="4">博二</option>
+                        </select></div>
+                </div>
+            </div>
             <div class="message">
                 <div class="border">
                     <div class="name"><span>姓名</span></div>
-                    <div class="ctnt"><input type="text" placeholder="请输入本人姓名"></div>
+                    <div class="ctnt"><input ng-model="name" type="text" placeholder="请输入本人姓名"></div>
                 </div>
             </div>
             <div class="message">
                 <div class="lastborder">
                     <div class="name"><span>卡号</span></div>
-                    <div class="ctnt"><input type="text" placeholder="请输入校园卡卡号"></div>
+                    <div class="ctnt"><input ng-model="education" type="text" placeholder="请输入校园卡卡号"></div>
                 </div>
             </div>
         </div>
+        <a ng-click="postTask(name,school,grade,stu_id)">
         <button class="submit" type="submit">认证</button>
+        </a>
     </div>
 <div id="NotMoveDIV">
     <div class="icon-box">

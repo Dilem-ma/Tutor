@@ -42,16 +42,6 @@ $this->title = 'MinePage';
                 </a>
             </div>
             <div class="pane2-2">
-                <a href="wallet">
-                    <div class="image1">
-                        <img align="absmiddle" src="/img/social-usd.png" class="pic_icon" height="30" width="30"/>
-                    </div>
-                    <div class="text3">
-                        <span class="text4">我的钱包</span>
-                    </div>
-                </a>
-            </div>
-            <div class="pane2-2">
                 <a href="authentication">
                     <div class="image1">
                         <img align="absmiddle" src="/img/mailopened.png" class="pic_icon" height="30" width="30"/>
@@ -86,12 +76,14 @@ $this->title = 'MinePage';
     </div>
     <div class="pane2-1">
         <div class="pane2-2">
+            <a href="../login/login">
             <div class="image1">
                 <img align="absmiddle" src="/img/gear-b.png" class="pic_icon" height="30" width="30"/>
             </div>
             <div class="text3">
-                <span class="text4">设置</span>
+                <span class="text4">登出</span>
             </div>
+            </a>
         </div>
     </div>
 </div>

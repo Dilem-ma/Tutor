@@ -11,6 +11,7 @@
     font-size: 1.3em;
     font-weight: 200;
 }
+
 .back{
     position: absolute;
     width: 0.85em;
@@ -84,17 +85,4 @@
     float:left;
     text-align: right;
     margin: 5% 0% 0% 0%;
-}
-.pane2-2 textarea{
-    border: none;
-    color: #646464;
-    height: 99%;
-    font-size: 1em;
-    font-family: "Microsoft YaHei";
-    background-color: #fafafa;
-    text-indent: 0.2em;
-    display: block;
-    outline: 0;
-    width: 98%;
-    text-decoration: none;
 }

@@ -3,13 +3,13 @@
 /* @var $this yii\web\View */
 
 $this->title = 'TeacherdataPage';
-\app\assets\PersonaldataAsset::register($this);
+\app\assets\TeacherdataAsset::register($this);
 ?>
 <div class="scTop" >
     <span class="title">教师资料</span>
     <a href="mine"><img src="/img/back.png" class="back"/></a>
 </div >
-<div class="pane2" ng-controller="TeacherCtrl">
+<div class="pane2" ng-controller="TeacherdataCtrl">
     <div class="pane2-1">
         <div class="pane2-4">
             <div class="pane2-5">
@@ -78,15 +78,6 @@ $this->title = 'TeacherdataPage';
                 </div>
                 <div class="text5">
                     <span class="text4">Java，c++</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="pane2-1">
-        <div class="pane2-2">
-            <div class="pane2-3">
-                <div class="text3">
-                    <span class="text4">修改密码</span>
                 </div>
             </div>
         </div>

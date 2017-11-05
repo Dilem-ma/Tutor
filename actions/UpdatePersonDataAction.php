@@ -8,7 +8,6 @@
 
 namespace app\actions;
 
-
 use app\models\User;
 use yii\base\Action;
 

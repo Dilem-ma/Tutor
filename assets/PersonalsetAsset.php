@@ -1,26 +1,26 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: cuiyuxuan
- * Date: 2017/3/22
- * Time: 上午12:54
+ * User: Dilemma丶
+ * Date: 2017/3/2
+ * Time: 9:40
  */
 
 namespace app\assets;
+
 use yii\web\AssetBundle;
 
-
-class FavoriteAssete extends  AssetBundle
+class PersonalsetAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
 
     public $css = [
-        'css/favorite.css',
-        'css/common.css'
+        'css/common.css',
+        'css/personalset.css'
     ];
     public $js = [
-        'js/controllers/FavoriteCtrl.js'
+        'js/controllers/PersonalsetCtrl.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',

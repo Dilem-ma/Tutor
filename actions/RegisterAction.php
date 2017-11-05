@@ -8,7 +8,6 @@
 
 namespace app\actions;
 
-
 use app\models\User;
 use yii\base\Action;
 
@@ -16,9 +15,11 @@ class RegisterAction extends Action
 {
     public function run(){
         $post = \Yii::$app->request->post();
-        $user = new User();
 
-        if ($user->load($post, '') && $user->save()) {
+        $user = new User();
+        $user->load($post, '');
+
+        if ($user->save()) {
             return [
                 'success' => true,
                 'message' => '注册成功',

@@ -17,8 +17,7 @@ tutorApp.config(['$locationProvider', function ($locationProvider) {
 }]);
 
 
-tutorApp.controller('TeachersearchCtrl', function ($scope, $location, $http) {
-    console.log($location)
+tutorApp.controller('FavoriteCtrl', function ($scope, $location, $http) {
     var flag = 1;
     if ($location.search().tech) {
         $scope.tech = $location.search().tech;
@@ -31,7 +30,6 @@ tutorApp.controller('TeachersearchCtrl', function ($scope, $location, $http) {
         };
 
         $http(p).then(function (d) {
-            console.log(d)
             $scope.orders = d.data;
             console.log($scope.orders);
         });
@@ -86,7 +84,7 @@ tutorApp.controller('TeachersearchCtrl', function ($scope, $location, $http) {
             maj = $scope.major;
         var q = {
             method: 'post',
-            url: '/api/search_teacher',
+            url: '/api/select_orders',
             data: {
                 "gender": gen,
                 "area": are,
@@ -100,11 +98,5 @@ tutorApp.controller('TeachersearchCtrl', function ($scope, $location, $http) {
         $http(q).then(function (d) {
             $scope.orders = d.data;
         });
-
     }
-    $scope.jumpTo = function (id) {
-        console.log(id)
-
-        window.location.href = 'teacherdata?id='+id;
-    };
 });

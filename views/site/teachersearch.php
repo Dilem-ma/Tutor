@@ -26,7 +26,7 @@ $this->title = 'teachersearch';
 
     </div>
     <div class="content" ng-hide="(gender==undefined || gender == '') && (tech==undefined || tech == '') &&(price==undefined || price == '') &&(area==undefined || area == '')">
-        <div class="need"  ng-repeat="x in orders">
+        <div class="need"  ng-repeat="x in orders" ng-click="jumpTo(x.id)">
             <div class="portrait"><a><img src="/img/portrait.png"></a></div>
             <div class="need-content">
                 <h1><a>{{x.title}}</a></h1>
