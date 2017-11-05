@@ -57,16 +57,32 @@ body {
 .icon-box {
     float: left;
     height: 4em;
-    width: 25%;
+    width: 22%;
     margin: 0 auto;
     text-align: center;
     padding-top: 0.6em;
     background: #fff;
 }
+.icon-box2{
+    float: left;
+    height: 100%;
+    width: 12%;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
 
 .botm-icon {
     height: 2em !important;
     width: 2em !important;
+}
+
+.botm-icon2 {
+    height: 3em !important;
+    width: 3em !important;
 }
 
 .botm-icon-text {

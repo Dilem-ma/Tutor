@@ -8,8 +8,10 @@
 
 namespace app\controllers;
 
+use app\actions\AddToMyFavourite;
 use app\actions\DeleteOrderAction;
 use app\actions\GetCurrentOrderAction;
+use app\actions\GetMyFavourite;
 use app\actions\GetNotPickedOrdersAction;
 use app\actions\GetTeacherDataAction;
 use app\actions\GetUserOrdersAction;
@@ -54,7 +56,7 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order'],
+                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite'],
                     'verbs' => ['POST'],
                 ],
 //                [
@@ -98,6 +100,8 @@ class ApiController extends Controller
             'get_teacher_data' => GetTeacherDataAction::className(),
             'get_current_order' => GetCurrentOrderAction::className(),
             'delete_order' => DeleteOrderAction::className(),
+            'get_favourite' => GetMyFavourite::className(),
+            'add_to_favourite' => AddToMyFavourite::className(),
         ];
     }
 

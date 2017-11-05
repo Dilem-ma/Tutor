@@ -10,7 +10,7 @@ $this->title = 'MainPage';
     <div class="thehead">
         <div class="text">
             <img align="absmiddle" src="/img/android-location.png"  height="20" width="15"/>
-            <span class="title">{{user}}</span>
+            <span class="title"></span>
         </div>
         <div class="texth2">
             <h2 class="title">tutor</h2>
@@ -66,19 +66,17 @@ $this->title = 'MainPage';
         </div>
         <a href="talk">
         <div ng-repeat="a in teachers">
-
                 <div class="pane3-2">
-                        <img class="circle2" ng-src="{{a.url}}"/>
+                    <img class="circle2" ng-src="{{a.url}}"/>
                     <a class="title4">{{a.name}}</a>
                 </div>
-
         </div>
         </a>
 
     </div>
-    <div class="pane4">
+    <div class="pane4" ng-show=isStudent>
         <div class="pane4text">
-            <a href="teachersearch"><a class="title5">我要悬赏</a></a></br>
+            <a href="teachersearch"><a class="title5" href = "studenttask">我要悬赏</a></a></br>
             <a class="title6">寻找合适的老师</a>
         </div>
         <div class="pane4circle">
@@ -86,12 +84,12 @@ $this->title = 'MainPage';
             </div>
         </div>
     </div>
-    <div class="pane4">
+    <div class="pane4" ng-show=isTeacher>
         <div class="pane4circle2">
             <div class="circle3">
             </div>
         </div>
-        <div class="pane4text2">
+        <div class="pane4text2" >
             <a class="title5">我要接单</a></br>
             <a class="title6">寻找合适的学生</a>
         </div>
@@ -114,11 +112,13 @@ $this->title = 'MainPage';
             <a href="" class="botm-icon-text"><img src="/img/ios7-home.png" class="botm-icon"/><br />主页</a>
         </div>
         <div class="icon-box">
-            <a href="/site/course" class="botm-icon-text"><img src="/img/ios7-compose-outline.png" class="botm-icon"/><br />课程</a>
+            <a href="/site/search" class="botm-icon-text"><img src="/img/ios7-compose-outline.png" class="botm-icon"/><br />课程</a>
+        </div>
+        <div class="icon-box2">
+            <a href="/site/studenttask"><img src="/img/plus2.png" class="botm-icon2"/></a>
         </div>
         <div class="icon-box">
-            <a href="/site/message" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br />消息</a>
-
+            <a href="/site/message" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br />订单</a>
         </div>
         <div class="icon-box">
             <a href="/site/mine" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br />我的</a>
