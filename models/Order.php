@@ -50,7 +50,7 @@ class Order extends ActiveRecord
     public function rules()
     {
         return [
-            [['s_id', 'technique', 'area', 'title', 'description', 'is_urgent', 'teach_time', 'price'], 'required'],
+            [['s_id', 'technique', 'area', 'title', 'description', 'is_urgent', 'teach_time', 'price'], 'required', 'on' => 'stu_add_order'],
             [['s_id', 'price'], 'integer'],
             [['technique'], 'string', 'max' => 20],
             [['area'], 'string', 'max' => 20],
