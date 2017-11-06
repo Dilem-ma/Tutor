@@ -25,7 +25,7 @@ $this->title = 'TaskPage';
                 </div>
                 <div class="message">
                         <div class="name"><span>问题描述</span></div>
-                        <div class="ctnt"><span>我是问题描述</span></div>
+                        <div class="ctnt"><span>我是问题描述啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</span></div>
                 </div>
 
 
