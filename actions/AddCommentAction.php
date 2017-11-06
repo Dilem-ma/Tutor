@@ -10,6 +10,7 @@ namespace app\actions;
 
 
 use app\models\Comment;
+use app\models\Order;
 use app\models\Teacher;
 use yii\base\Action;
 
@@ -19,14 +20,21 @@ class AddCommentAction extends Action
         $post = \Yii::$app->request->post();
 
         $comment = new Comment();
-//        $comment->o_id = $post['o_id'];
-//        $comment->t_id = $post['t_id'];
-//        $comment->u_id = $post['u_id'];
-//        $comment->content = $post['content'];
 
         $comment->load($post, '');
 
         $comment->date = date("Y-m-d");
+
+        $order = Order::findOne(['id' => $post['o_id']]);
+
+        if (is_null($order)){
+            return [
+                'success' => false,
+                'message' => '未找到该订单',
+            ];
+        }
+
+        $order->status = -3;
 
         $tea = Teacher::findOne(['id' => $post['t_id']]);
 
@@ -84,7 +92,5 @@ class AddCommentAction extends Action
                 'teacher' => $tea,
             ];
         }
-
-
     }
 }
