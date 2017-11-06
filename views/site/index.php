@@ -60,6 +60,7 @@ $this->title = 'MainPage';
             </a>
         </div>
     </div>
+        <a href="teachersearch">
     <div class="pane3">
         <div class="pane3-1">
             <span class="title3">优质教师推荐</span>
@@ -72,8 +73,8 @@ $this->title = 'MainPage';
                 </div>
         </div>
         </a>
-
     </div>
+        </a>
     <div class="pane4" ng-show=isStudent>
         <div class="pane4text">
             <a href="teachersearch"><a class="title5" href = "studenttask">我要悬赏</a></a></br>

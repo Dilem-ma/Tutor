@@ -54,8 +54,6 @@ tutorApp.controller('PersonalsetCtrl', function ($scope, $http, $window, $locati
         console.log(gender);
         console.log(area);
         console.log(name);
-
-
         var p = {
             method: 'post',
             url: '/api/update_person_data',
@@ -83,8 +81,6 @@ tutorApp.controller('PersonalsetCtrl', function ($scope, $http, $window, $locati
                 });
             }
         });
-
-
     };
 
 });

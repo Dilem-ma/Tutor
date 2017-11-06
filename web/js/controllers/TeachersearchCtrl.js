@@ -20,6 +20,7 @@ tutorApp.config(['$locationProvider', function ($locationProvider) {
 tutorApp.controller('TeachersearchCtrl', function ($scope, $location, $http) {
     console.log($location)
     var flag = 1;
+    console.log($location);
     if ($location.search().tech) {
         $scope.tech = $location.search().tech;
     }
@@ -29,7 +30,6 @@ tutorApp.controller('TeachersearchCtrl', function ($scope, $location, $http) {
             method: 'get',
             url: '/api/get_teacher_list'
         };
-
         $http(p).then(function (d) {
             console.log(d)
             $scope.orders = d.data;
