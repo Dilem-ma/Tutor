@@ -26,15 +26,16 @@ class PickUpOrderAction extends Action
                 $order->status = 1;
                 $order->t_id = $post['t_id'];
             }else {
-                if (strpos($order->t_id, $post['t_id'])) {
-                    $order->status += 1;
-                    $order->t_id = $order->t_id . "," . $post['t_id'];
-                }else {
+                $t_ids = explode(',', $order->t_id);
+                if (in_array($post['t_id'], $t_ids)) {
                     return [
                         "success" => false,
                         "message" => "Pick up failed.",
                         "errors" => "You have picked up this order.",
                     ];
+                }else {
+                    $order->status += 1;
+                    $order->t_id = $order->t_id . "," . $post['t_id'];
                 }
             }
             if ($order->save()){

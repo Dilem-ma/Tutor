@@ -19,7 +19,7 @@ tutorApp.config(['$locationProvider', function ($locationProvider) {
 
 tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
     var flag = 1;
-    console.log($location)
+    console.log($location);
     if ($location.search().tech) {
         $scope.tech = $location.search().tech;
     }
