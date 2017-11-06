@@ -139,5 +139,9 @@ class SiteController extends Controller
     {
         return $this->render('Personalset');
     }
+    public function actionTask()
+    {
+        return $this->render('Task');
+    }
 }
 

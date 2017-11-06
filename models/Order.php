@@ -57,7 +57,7 @@ class Order extends ActiveRecord
             [['area'], 'string', 'max' => 20],
             [['title'], 'string', 'max' => 20],
             [['description'], 'string', 'max' => 100],
-            [['gender'], 'integer'],
+            [['gender'], 'integer', 'on' => 'stu_add_order'],
             [['teach_time'], 'string'],
             [['is_urgent'], 'boolean'],
         ];

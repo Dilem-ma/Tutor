@@ -7,7 +7,7 @@ $this->title = 'TeacherdataPage';
 ?>
 <div class="scTop" >
     <span class="title">教师资料</span>
-    <a href="mine"><img src="/img/back.png" class="back"/></a>
+    <a ng-click="jump()"><img src="/img/back.png" class="back"/></a>
 </div >
 <div class="pane2" ng-controller="TeacherdataCtrl">
     <div class="pane2-1">
@@ -44,10 +44,10 @@ $this->title = 'TeacherdataPage';
         <div class="pane2-2">
             <div class="pane2-3">
                 <div class="text3">
-                    <span class="text4">手机号</span>
+                    <span class="text4">专业</span>
                 </div>
                 <div class="text5">
-                    <span class="text4">{{current_num}}</span>
+                    <span class="text4">{{current_major}}</span>
                 </div>
             </div>
         </div>
@@ -64,22 +64,33 @@ $this->title = 'TeacherdataPage';
         <div class="pane2-2">
             <div class="pane2-3">
                 <div class="text3">
-                    <span class="text4">生日</span>
+                    <span class="text4">星级</span>
                 </div>
                 <div class="text5">
-                    <span class="text4">{{current_birthday}}</span>
+                    <span class="text4">{{current_star}}星</span>
                 </div>
             </div>
         </div>
         <div class="pane2-2">
             <div class="pane2-3">
                 <div class="text3">
-                    <span class="text4">擅长领域</span>
+                    <span class="text4">个人描述</span>
                 </div>
                 <div class="text5">
-                    <span class="text4">Java，c++</span>
+                    <span class="text4">{{current_describe}}</span>
                 </div>
             </div>
+        </div>
+        <div class="pane2-1">
+            <a ng-click="postTask(current_id)">
+                <div class="pane2-2">
+                    <div class="pane2-3">
+                        <div class="text3">
+                            <span class="text4">收藏老师</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 </div>

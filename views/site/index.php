@@ -60,6 +60,7 @@ $this->title = 'MainPage';
             </a>
         </div>
     </div>
+        <a href="teachersearch">
     <div class="pane3">
         <div class="pane3-1">
             <span class="title3">优质教师推荐</span>
@@ -72,8 +73,8 @@ $this->title = 'MainPage';
                 </div>
         </div>
         </a>
-
     </div>
+        </a>
     <div class="pane4" ng-show=isStudent>
         <div class="pane4text">
             <a href="teachersearch"><a class="title5" href = "studenttask">我要悬赏</a></a></br>
@@ -118,7 +119,7 @@ $this->title = 'MainPage';
             <a href="/site/studenttask"><img src="/img/plus2.png" class="botm-icon2"/></a>
         </div>
         <div class="icon-box">
-            <a href="/site/message" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br />订单</a>
+            <a href="/site/orderlist" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br />订单</a>
         </div>
         <div class="icon-box">
             <a href="/site/mine" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br />我的</a>
