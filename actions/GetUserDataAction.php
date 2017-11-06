@@ -31,7 +31,7 @@ class GetUserDataAction extends Action
                 return $user;
             }else {
                 $rows = (new Query())
-                    ->select(['user.id', 'name', 'url', 'star', 'gender', 'education', 'major', 'describe', 'area'])
+                    ->select(['user.id', 'teacher.id AS t_id', 'name', 'url', 'star', 'gender', 'education', 'major', 'describe', 'area'])
                     ->from(['user', 'teacher'])
                     ->where('user.id = teacher.u_id')
                     ->andWhere(['user.id' => $id])

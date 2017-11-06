@@ -8,8 +8,10 @@
 
 namespace app\controllers;
 
+use app\actions\AddCommentAction;
 use app\actions\AddToMyFavourite;
 use app\actions\DeleteOrderAction;
+use app\actions\GetCommentsAction;
 use app\actions\GetCurrentOrderAction;
 use app\actions\GetMyFavourite;
 use app\actions\GetNotPickedOrdersAction;
@@ -28,6 +30,7 @@ use app\actions\GetTopTeachersAction;
 use app\actions\LoginAction;
 use app\actions\RegisterAction;
 use app\actions\StuAddOrderAction;
+use app\actions\StuCheckOrderAction;
 use app\actions\StudentIdentityAction;
 use app\actions\TeacherIdentityAction;
 use app\actions\GetTeacherListAction;
@@ -58,7 +61,7 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite', 'pick_up_order'],
+                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite', 'pick_up_order', 'stu_check_order', 'add_comment', 'get_comments', ],
                     'verbs' => ['POST'],
                 ],
 //                [
@@ -106,6 +109,9 @@ class ApiController extends Controller
             'add_to_favourite' => AddToMyFavourite::className(),
             'pick_up_order' => PickUpOrderAction::className(),
             'get_user_data' => GetUserDataAction::className(),
+            'stu_check_order' => StuCheckOrderAction::className(),
+            'add_comment' => AddCommentAction::className(),
+            'get_comments' => GetCommentsAction::className(),
         ];
     }
 

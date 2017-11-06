@@ -23,7 +23,9 @@ class Teacher extends ActiveRecord
         return [
             'id',
             'u_id',
-            'star',
+            'star' => function($model){
+                return number_format($model->star, 1);
+            },
             'major',
             'education',
             'describe',
@@ -35,7 +37,7 @@ class Teacher extends ActiveRecord
         return [
             [['major'] ,'string', 'max' => 10],
             [['describe'], 'string', 'max' => 200],
-            [['star'], 'integer'],
+            [['star'], 'double'],
             [['education'], 'integer'],
             [['u_id'], 'integer'],
             [['major', 'education', 'u_id'], 'required'],
