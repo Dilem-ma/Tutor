@@ -35,8 +35,8 @@ $this->title = 'search';
             </div>
         </div>
     </div>
-    <div class="content" ng-show="(gender==undefined || gender == '') && (tech==undefined || tech == '') &&(price==undefined || price == '') &&(area==undefined || area == '')" style="top:14%;">
-        <div class="need"  ng-repeat="x in orders">
+    <div class="content"  ng-show="(gender==undefined || gender == '') && (tech==undefined || tech == '') &&(price==undefined || price == '') &&(area==undefined || area == '')" style="top:14%;">
+        <div class="need" ng-repeat="x in orders" ng-click="getDetail(x.id)">
             <div class="portrait"><a><img src="/img/portrait.png"></a></div>
             <div class="need-content">
                 <h1><a>{{x.title}}</a></h1>
