@@ -15,6 +15,14 @@ class ChangePasswordAction extends Action
 {
     public function run(){
         $user = User::findOne(['username' => \Yii::$app->request->post('username')]);
+
+        if (is_null($user)){
+            return [
+                'success' => false,
+                'message' => '该用户不存在',
+            ];
+        }
+
         $user->password = \Yii::$app->request->post('password');
 
         if ($user->save()) {
