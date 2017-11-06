@@ -7,7 +7,6 @@ tutorApp = angular.module('tutorApp', []);
 
 storage = window.localStorage;
 
-
 tutorApp.config(['$locationProvider', function ($locationProvider) {
 
     $locationProvider.html5Mode({
@@ -16,8 +15,9 @@ tutorApp.config(['$locationProvider', function ($locationProvider) {
     });
 }]);
 
-
 tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
+
+
     var flag = 1;
     console.log($location);
     if ($location.search().tech) {
@@ -37,7 +37,6 @@ tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
 
     }
 
-
     if ($location.search().gender) {
         $scope.gender = $location.search().gender;
     }
@@ -52,7 +51,6 @@ tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
         $scope.text = $location.search().text;
     }
     if (flag) {
-
         if ($scope.gender == "男性")
             var gen = "male";
         else if ($scope.gender == "女性")

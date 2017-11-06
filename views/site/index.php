@@ -60,7 +60,6 @@ $this->title = 'MainPage';
             </a>
         </div>
     </div>
-        <a href="teachersearch">
     <div class="pane3">
         <div class="pane3-1">
             <span class="title3">优质教师推荐</span>
@@ -73,31 +72,14 @@ $this->title = 'MainPage';
                 </div>
         </div>
         </a>
-    </div>
-        </a>
-    <div class="pane4" ng-show=isStudent>
-        <div class="pane4text">
-            <a href="teachersearch"><a class="title5" href = "studenttask">我要悬赏</a></a></br>
-            <a class="title6">寻找合适的老师</a>
-        </div>
-        <div class="pane4circle">
-            <div class="circle3">
-            </div>
-        </div>
-    </div>
-    <div class="pane4" ng-show=isTeacher>
-        <div class="pane4circle2">
-            <div class="circle3">
-            </div>
-        </div>
-        <div class="pane4text2" >
-            <a class="title5">我要接单</a></br>
-            <a class="title6">寻找合适的学生</a>
-        </div>
 
     </div>
-    <div class="pane5">
+    <div class="pane4">
+        <div class="pane4text">
+            <a href="teachersearch"><a class="title5" href = "teachersearch">老师专区</a></a></br>
+        </div>
     </div>
+
     </div>
     <!--<SCRIPT LANGUAGE="JavaScript">-->
     <!--function changeSrc(obj) {-->
@@ -123,7 +105,6 @@ $this->title = 'MainPage';
         </div>
         <div class="icon-box">
             <a href="/site/mine" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br />我的</a>
-
         </div>
     </div>
 </div>

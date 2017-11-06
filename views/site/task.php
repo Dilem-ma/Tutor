@@ -9,23 +9,23 @@ $this->title = 'TaskPage';
     <div class="scTop">
         <span class="title">学生任务详情</span>
         <a href="index"><img src="/img/back.png" class="back"/></a>
-        <button class="login_btn" type="submit" ng-click="">申请教学</button>
+<!--        <button class="login_btn" type="submit" ng-click="">申请教学</button>-->
     </div>
     <div class="content">
             <div class="sec">
                 <div class="message">
                         <div class="name"><span>标题</span></div>
-                        <div class="ctnt"><span>我是标题</span></div>
+                        <div class="ctnt"><span>kubernetes中service的配置</span></div>
                 </div>
                 <div class="message">
                         <div class="name"><span>科目</span></div>
                         <div class="ctnt">
-                            <span>app开发</span>
+                            <span>环境配置</span>
                         </div>
                 </div>
                 <div class="message">
                         <div class="name"><span>问题描述</span></div>
-                        <div class="ctnt"><span>我是问题描述啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</span></div>
+                        <div class="ctnt"><span>最近在使用kubernetes做web运行环境的优化，将web中各模块分别部署到不同的docker中以后，怎么利用service进行端口的配置？</span></div>
                 </div>
 
 
@@ -40,12 +40,12 @@ $this->title = 'TaskPage';
                 <div class="message">
                     <div class="name"><span>地址</span></div>
                     <div class="ctnt">
-                        <span>我是地址</span>
+                        <span>华东师范大学理科楼二楼</span>
                     </div>
                 </div>
                 <div class="message">
                         <div class="name"><span>上课时间</span></div>
-                        <div class="ctnt"><span>全天</span></div>
+                        <div class="ctnt"><span>2017-12-03 17：00：00</span></div>
                 </div>
             </div>
 
@@ -59,11 +59,6 @@ $this->title = 'TaskPage';
                 <div class="message">
                         <div class="name"><span>赏金</span></div>
                         <div class="ctnt"><span>100元</span></div>
-                </div>
-                <div class="message">
-                    <div class = "name">我很赶时间</div>
-                    <input type = "checkbox" ng-model="isUrgent"/>
-                    <div class="des">将支付1.5倍赏金</div>
                 </div>
             </div>
     </div>

@@ -8,7 +8,15 @@ tutorApp = angular.module('tutorApp', []);
 
 storage = window.localStorage;
 
-tutorApp.controller('TeacherCtrl', function ($scope, $http) {
+tutorApp.config(['$locationProvider', function ($locationProvider) {
+
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false//必须配置为false，否则<base href=''>这种格式带base链接的地址才能解析
+    });
+}]);
+
+tutorApp.controller('TeacherCtrl', function ($scope, $http, $location) {
     if (localStorage.getItem(storage) !== void 0) {
         $scope.token = localStorage.getItem(storage);
         console.log($scope.token);

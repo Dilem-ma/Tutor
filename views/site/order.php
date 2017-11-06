@@ -37,7 +37,7 @@ $this->title = 'order';
         <div class="message" ng-if="teacher">
             <div class="border">
                 <div class="name"><span>授课教师</span></div>
-                <div class="ctnt"><a>小明</a></div>
+                <div class="ctnt"><a>待确定</a></div>
             </div>
         </div>
         <div class="message">
@@ -63,21 +63,21 @@ $this->title = 'order';
             <div class="border teacher">
                 <div class="wrap">
                     <div class="avaster"></div>
-                    <div class="intro"><span>王小二 </span><span>擅长c++</span></div>
+                    <div class="intro"><span>崔宇璇</span><span>擅长c++</span></div>
                 </div>
                 <div class="button">选择</div>
             </div>
             <div class="border teacher">
                 <div class="wrap">
                     <div class="avaster"></div>
-                    <div class="intro"><span>王小四 </span><span>擅长c++</span></div>
+                    <div class="intro"><span>孙静翎 </span><span>c++大神</span></div>
                 </div>
                 <div class="button">选择</div>
             </div>
             <div class="border teacher">
                 <div class="wrap">
                     <div class="avaster"></div>
-                    <div class="intro"><span>王小五 </span><span>擅长c++</span></div>
+                    <div class="intro"><span>张嫣婧 </span><span></span></div>
                 </div>
                 <div class="button">选择</div>
             </div>
