@@ -2,28 +2,40 @@
 /**
  * Created by PhpStorm.
  * User: №zero
- * Date: 2017/3/17
- * Time: 14:01
+ * Date: 2017/11/7
+ * Time: 11:44
  */
 
 namespace app\actions;
+
 
 use app\models\LoginForm;
 use app\models\User;
 use yii\base\Action;
 
-class LoginAction extends Action
+class FastLoginAction extends Action
 {
     public function run(){
         $post = \Yii::$app->request->post();
+
         $form = new LoginForm();
-        $form->load($post, '');
-        $token = \Yii::$app->security->generateRandomString();
+
+        $form->username = $post['username'];
 
         $user = User::findOne(['username' => $post['username']]);
-        if ($user) {
-            $user->accessToken = $token;
+
+        if (is_null($user)){
+            return [
+                'success' => false,
+                'errors' => 'User '.$post['username'].' not found.',
+            ];
         }
+
+        $form->password = \Yii::$app->security->decryptByPassword(base64_decode($user->base_64), '');
+
+        $token = \Yii::$app->security->generateRandomString();
+
+        $user->accessToken = $token;
 
         if ($form->login()) {
             $user->save();
@@ -42,5 +54,6 @@ class LoginAction extends Action
                 'identity' => 0,
             ];
         }
+
     }
 }

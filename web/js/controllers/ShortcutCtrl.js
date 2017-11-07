@@ -90,7 +90,7 @@ tutorApp.controller('ShortcutCtrl', function ($scope, $http, $window) {
                 if (d.data.success === true) {
                     var access_token = d.data.token;
                     if (access_token != null) {
-                        // localStorage.setItem(storage, access_token);
+                        localStorage.setItem(storage, access_token);
                         localStorage.setItem("name", access_token);
                     }
                     return $window.location.href = "../site/index";
