@@ -35,6 +35,7 @@ class Student extends ActiveRecord
             [['u_id', 'grade', 'school'], 'integer'],
             [['describe'], 'string', 'max' => 200],
             [['stu_id'], 'string'],
+            [['u_id', 'grade', 'school', 'stu_id', 'describe'], 'required'],
         ];
     }
 
