@@ -22,7 +22,7 @@ $this->title = 'OrderlistPage';
 </div>
 <div id="NotMoveDIV">
     <div class="icon-box">
-        <a href="" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br />主页</a>
+        <a href="/site/index" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br />主页</a>
     </div>
     <div class="icon-box">
         <a href="/site/search" class="botm-icon-text"><img src="/img/ios7-compose-outline.png" class="botm-icon"/><br />课程</a>

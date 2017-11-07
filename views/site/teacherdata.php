@@ -11,7 +11,7 @@ $this->title = 'TeacherdataPage';
 </div >
 <div class="pane2" ng-controller="TeacherdataCtrl">
     <div class="pane2-1">
-        <div class="pane2-4">
+        <div class="pane2-4">㥂acher
             <div class="pane2-5">
                 <div class="text6">
                     <span class="text4">头像</span>

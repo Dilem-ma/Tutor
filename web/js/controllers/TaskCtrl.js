@@ -7,82 +7,125 @@ tutorApp = angular.module('tutorApp', []);
 
 storage = window.localStorage;
 
-tutorApp.controller('StutaskCtrl', function ($scope, $http) {
+tutorApp.config(['$locationProvider', function ($locationProvider) {
 
-    $scope.postTask = function (technique, area, title, description, price, teachTime, isUrgent, gender) {
-        var p;
-        if (localStorage.getItem(storage) !== void 0) {
-            $scope.token = localStorage.getItem(storage);
-            console.log($scope.token);
-        } else {
-            $scope.token = void 0;
-        }
-        var q = {
-            method: 'get',
-            url: '/api/get_current_user',
-            params: {
-                'token': $scope.token
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false//必须配置为false，否则<base href=''>这种格式带base链接的地址才能解析
+    });
+}]);
+
+tutorApp.controller('TaskCtrl', function ($scope, $location, $http, $window) {  // 得到订单信息（根据订单ID）
+    if ($location.search().id) {
+        $scope.orderId = $location.search().id;
+        var p = {
+            method: 'post',
+            url: '/api/get_current_order',
+            data: {
+                'id': $scope.orderId,
             }
         };
-        $http(q).then(function (d) {
-            $scope.current_id = d.data.id;
+        $http(p).then(function (d) {
+            console.log(d.data);
+            $scope.technique = d.data.technique;
+            $scope.description = d.data.description;
+            $scope.area = d.data.area;
+            $scope.time = d.data.teach_time;
+            $scope.gender = d.data.gender;
+            $scope.price = d.data.price;
+            $scope.address = d.data.address;
+            $scope.title = d.data.title;
         });
+    }
 
-        if (technique === void 0 || technique.length === 0 ) {
-            //已经有input自带的正则弹出alert了
-        } else if (area === void 0 || area.length === 0) {
-            //已经有input自带的正则弹出alert了
-        } else if (title === void 0 || title.length === 0) {
-            //已经有input自带的正则弹出alert了
-        } else if (description === void 0 || description.length === 0) {
-            //已经有input自带的正则弹出alert了
-        } else if (price === void 0 || price.length === 0) {
-            //已经有input自带的正则弹出alert了
-        } else if (teachTime === void 0 || teachTime.length === 0) {
-            //已经有input自带的正则弹出alert了
-        }else if (isUrgent === void 0 || isUrgent.length === 0) {
-            //已经有input自带的正则弹出alert了
-        }else if (gender === void 0 || gender.length === 0) {
-            //已经有input自带的正则弹出alert了
-        } else {
-            console.log($scope.current_id, technique, area, title, description, price, teachTime, isUrgent, gender);
-            p = {
+
+    var isteacher = false
+    var isstudent = false
+    var isguest = false
+
+    if (localStorage.getItem(storage) !== void 0) {
+        $scope.token = localStorage.getItem(storage);
+        console.log($scope.token);
+    } else {
+        $scope.token = void 0;
+    }
+    var q = {
+        method: 'get',
+        url: '/api/get_identity',
+        params: {
+            'token': $scope.token
+        }
+    };
+    $http(q).then(function (d) {
+
+            if (d.data.teacher != null) {
+                isteacher = true;
+            }
+            else if (d.data.student != null) {
+                isstudent = true;
+            }
+            else {
+                isguest = true;
+            }
+            $scope.isTeacher = isteacher;
+            $scope.isStudent = isstudent;
+            $scope.isGuest = isguest;
+        // console.log($scope.isTeacher)
+        // console.log($scope.isStudent)
+        // console.log($scope.isGuest)
+        console.log(isteacher)
+        console.log(isstudent)
+        console.log(isguest)
+    });
+
+
+
+    var b =  {
+        method: 'get',
+        url: '/api/get_current_user',
+        params: {
+            'token': $scope.token
+        }
+    };
+    $http(b).then(function (d) {
+        $scope.u_id = d.data.id
+    });
+
+
+    //教师--是否剋接单
+
+    var isWaiting = (isteacher == true && $scope.status != 0) //判断教师可以接单
+
+    $scope.postRequirement = function(){
+        if(isteacher){
+            var c = {
                 method: 'post',
-                url: '/api/stu_add_order',
+                url: '/api/get_teacher_data',
                 data: {
-                    "s_id":$scope.current_id,
-                    "technique":technique,
-                    "area":area,
-                    "title":title,
-                    "description":description,
-                    "price":price,
-                    "teach_time":teachTime,
-                    "is_urgent":isUrgent,
-                    "gender":gender
+                    "id":$scope.u_id
                 }
             };
-            $http(p).then(function (d) {
-                if (d.data.success === true) {
-                    console.log("successful")
+            $http(c).then(function (d) {
+                console.log(d.data);
+                var t_id = d.data[0].t_id;
+                console.log(t_id)
+                var b = {
+                    method: 'post',
+                    url: '/api/pick_up_order',
+                    data: {
+                        "o_id":$scope.orderId,
+                        "t_id":t_id
+                    }
+                };
+                console.log(t_id)
 
-                } else {
-                    return $().toastmessage('showToast', {
-                        text: d.data.errors,
-                        sticky: false,
-                        position: 'top-center',
-                        type: 'error',
-                        stayTime: 1500
-                    });
-                }
-            },function (e) {
-                return $().toastmessage('showToast', {
-                    text: e.data.errors,
-                    sticky: false,
-                    position: 'top-center',
-                    type: 'error',
-                    stayTime: 1500
+                $http(b).then(function (d) {
+                    return $window.location.href = "orderlist";
                 });
             });
-            return false;
         }
-    };});
+    }
+
+
+
+});

@@ -19,7 +19,6 @@ class TaskAsset extends AssetBundle
         'css/common.css',
         'css/task.css',
         'datepicker/bootstrap/css/bootstrap.css',
-        'datepicker/angular-bootstrap-datepicker.css',
         'css/jquery.toastmessage.css'
     ];
     public $js = [

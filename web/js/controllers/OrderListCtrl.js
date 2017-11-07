@@ -49,7 +49,7 @@ tutorApp.controller('OrderListCtrl', function ($scope, $http) {
                     case 0 : v.status = "等待完成";break
                     case -2: v.status = "等待评价";break
                     case -3: v.status = "已完成";break
-                    default: v.status = "已经有" + d.data.status+ "名老师接单";
+                    default: v.status = "有老师发接单请求";
                     break
                 }
             })
@@ -57,7 +57,7 @@ tutorApp.controller('OrderListCtrl', function ($scope, $http) {
     });
 
     $scope.toOrder = function (id) {
-        window.location.href = 'task?id='+id;
+        window.location.href = 'order?id='+id;
     };
 
 });
