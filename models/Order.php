@@ -44,7 +44,8 @@ class Order extends ActiveRecord
             'status',
             't_id' => function($model){
                 return explode(',', $model->t_id);
-            }
+            },
+            'address',
         ];
     }
 
