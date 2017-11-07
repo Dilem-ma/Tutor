@@ -30,7 +30,7 @@ tutorApp.controller('RegisterCtrl', function ($scope, $http, $window) {
         };
         $http(p).then(function (d) {
             if (d.data.result === "1") {
-                localStorage.setItem("tmp_vcode", d.data['verification code']);
+                localStorage.setItem("tmp_vcode", d.data.verification_code);
                 return $window.location.href = "./register2";
             } else {
                 return $().toastmessage('showToast', {
