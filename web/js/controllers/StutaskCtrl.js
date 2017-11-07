@@ -17,7 +17,8 @@ tutorApp.controller('StutaskCtrl', function ($scope, $http) {
         } else {
             $scope.token = void 0;
         }
-        var q = {
+
+        var a = {
             method: 'get',
             url: '/api/get_current_user',
             params: {
@@ -27,8 +28,13 @@ tutorApp.controller('StutaskCtrl', function ($scope, $http) {
         $http(q).then(function (d) {
             $scope.current_id = d.data.id;
         });
+
             console.log($scope.current_id, technique, area, title, description, price, teachTime, isUrgent, gender);
-        var p = {
+
+            if(isUrgent === undefined){
+            isUrgent = false;
+        }
+            var p = {
             method: 'post',
             url: '/api/stu_add_order',
             data: {

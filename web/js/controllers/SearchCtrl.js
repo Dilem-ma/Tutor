@@ -15,7 +15,7 @@ tutorApp.config(['$locationProvider', function ($locationProvider) {
     });
 }]);
 
-tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
+tutorApp.controller('SearchCtrl', function ($scope, $location, $http, $window) {
 
 
     var flag = 1;
@@ -105,5 +105,9 @@ tutorApp.controller('SearchCtrl', function ($scope, $location, $http) {
         $http(q).then(function (d) {
             $scope.orders = d.data;
         });
+    }
+
+    $scope.getDetail = function (id){
+        window.location.href = 'task?id='+id;
     }
 });
