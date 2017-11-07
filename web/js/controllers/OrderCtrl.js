@@ -52,11 +52,11 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                         method: 'post',
                         url: '/api/get_teacher_data',
                         data: {
-                            "t_id": $scope.d.data.t_id[0],
+                            "t_id": d.data.t_id[0],
                         }
                     };
-                    $http(c).then(function (d) {
-                        $scope.teacher = d.data.name
+                    $http(c).then(function (e) {
+                        $scope.teacher = e.data.name
                     });
                     break
                 case -2:
@@ -65,11 +65,11 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                         method: 'post',
                         url: '/api/get_teacher_data',
                         data: {
-                            "t_id": $scope.d.data.t_id[0],
+                            "t_id": d.data.t_id[0],
                         }
                     };
-                    $http(c).then(function (d) {
-                        $scope.teacher = d.data.name
+                    $http(c).then(function (e) {
+                        $scope.teacher = e.data.name
                     });
                     break
                 case -3:
@@ -78,11 +78,11 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                         method: 'post',
                         url: '/api/get_teacher_data',
                         data: {
-                            "t_id": $scope.d.data.t_id[0],
+                            "t_id": d.data.t_id[0],
                         }
                     };
-                    $http(c).then(function (d) {
-                        $scope.teacher = d.data.name
+                    $http(c).then(function (e) {
+                        $scope.teacher = e.data.name
                     });
                     break
                 default:
