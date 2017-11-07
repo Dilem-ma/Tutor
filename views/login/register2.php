@@ -9,7 +9,7 @@
 /* @var $this yii\web\View */
 
 $this->title = 'Register2';
-\app\assets\RegisterAsset::register($this);
+\app\assets\Register2Asset::register($this);
 ?>
 
 <style>
@@ -74,7 +74,7 @@ $this->title = 'Register2';
     }
 </script>
 
-<div class="shortcut" ng-controller="RegisterCtrl">
+<div class="shortcut" ng-controller="Register2Ctrl">
     <div class="scTop">
         <span class="title">注册账号</span>
         <a href="login"><img src="/img/back.png" class="back"/></a>
@@ -91,7 +91,7 @@ $this->title = 'Register2';
                     <b><img id="vis" src="/img/eye.png" class="icon2" alt="" onclick="show()"/></b>
                     <b><img id="invis" src="/img/eye-disabled.png" class="icon3" alt="" onclick="hide()"/></b>
                 </div>
-                <a class="code" href="" ng-click="step1_()">重新发送</a>
+                <button style="border: 0;" class="code" id="resend" href="" ng-click="step1_()">重新发送</button>
             </div>
             <button class="submit" ng-click="regi(vcode,pwd)">登&nbsp;&nbsp;录</button>
         </form>
