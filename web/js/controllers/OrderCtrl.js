@@ -48,7 +48,6 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                     break
                 case 0 :
                     $scope.status = "等待完成";
-                    $scope.teacher = d.data.t_id[0];
                     var c = {
                         method: 'post',
                         url: '/api/get_teacher_data',
@@ -62,7 +61,6 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                     break
                 case -2:
                     $scope.status = "等待评价";
-                    $scope.teacher = d.data.t_id[0];
                     var c = {
                         method: 'post',
                         url: '/api/get_teacher_data',
@@ -76,7 +74,6 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                     break
                 case -3:
                     $scope.status = "已完成";
-                    $scope.teacher = d.data.t_id[0];
                     var c = {
                         method: 'post',
                         url: '/api/get_teacher_data',
