@@ -15,16 +15,26 @@ tutorApp.config(['$locationProvider', function ($locationProvider) {
 
 tutorApp.controller('Register2Ctrl', function ($scope, $http, $window) {
 
+    $scope.pivot = false;
+
     $scope.disableBtn = function () {
-        document.getElementById("resend").setAttribute("disabled","disabled");
+        $scope.pivot = true;
         setTimeout(function () {
-            document.getElementById("resend").removeAttribute("disabled");
+            $scope.pivot = false;
         }, 60 * 1000);
     };
 
     $scope.disableBtn();
 
     $scope.step1_ = function () {
+        if ($scope.pivot === true)
+            return $().toastmessage('showToast', {
+                text: "Vcode can only be sent once in a minute",
+                sticky: false,
+                position: 'top-center',
+                type: 'error',
+                stayTime: 1500
+            });
         $scope.disableBtn();
         var p;
         p = {
