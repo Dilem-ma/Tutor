@@ -63,7 +63,7 @@ tutorApp.controller('RegisterCtrl', function ($scope, $http, $window) {
             }
         };
         $http(p).then(function (d) {
-            if (d.data.result === 1) {
+            if (d.data.result === "1") {
                 return localStorage.setItem("tmp_vcode", d.data.verification_code);
             } else {
                 return $().toastmessage('showToast', {
