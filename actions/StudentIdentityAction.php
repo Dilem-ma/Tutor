@@ -27,7 +27,7 @@ class StudentIdentityAction extends Action
             return [
                 'success' => false,
                 'message' => '操作失败',
-                'errors' => 'You have already been identified as a student.',
+                'errors' => $stu->errors,
             ];
         }
     }
