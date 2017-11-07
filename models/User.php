@@ -14,7 +14,7 @@ class User extends ActiveRecord implements IdentityInterface
                 'class' => AttributeBehavior::className(),
                 'attributes' => [
                     ActiveRecord::EVENT_BEFORE_INSERT => 'password',
-                    ActiveRecord::EVENT_BEFORE_UPDATE => 'password',
+//                    ActiveRecord::EVENT_BEFORE_UPDATE => 'password',
                 ],
                 'value' => function ($event) {
                     return \Yii::$app->security->generatePasswordHash($this->password);

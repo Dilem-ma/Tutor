@@ -1,6 +1,3 @@
-/**
- * Created by cuiyuxuan on 2017/9/23.
- */
 var storage, tutorApp;
 
 tutorApp = angular.module('tutorApp', []);
@@ -16,7 +13,43 @@ tutorApp.config(['$locationProvider', function ($locationProvider) {
     });
 }]);
 
+tutorApp.controller('RegisterCtrl', function ($scope, $http, $window) {
 
-tutorApp.controller('RegisterCtrl', function ($scope, $location, $http) {
-œœ
+    $scope.step1 = function (phone) {
+        if (phone === void 0 || phone.length === 0)
+            return false;
+        localStorage.setItem("tmp_phone", phone);
+        localStorage.setItem("tmp_vcode", "000000");
+        var p;
+        p = {
+            method: 'post',
+            url: '/api/sms_send',
+            data: {
+                'phone': phone
+            }
+        };
+        $http(p).then(function (d) {
+            if (d.data.result === "1") {
+                localStorage.setItem("tmp_vcode", d.data.verification_code);
+                return $window.location.href = "./register2";
+            } else {
+                return $().toastmessage('showToast', {
+                    text: "Send vcode failed",
+                    sticky: false,
+                    position: 'top-center',
+                    type: 'error',
+                    stayTime: 1500
+                });
+            }
+        }, function (e) {
+            return $().toastmessage('showToast', {
+                text: "Network failed",
+                sticky: false,
+                position: 'top-center',
+                type: 'error',
+                stayTime: 1500
+            });
+        });
+        return false;
+    };
 });

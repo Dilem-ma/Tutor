@@ -9,7 +9,7 @@
 /* @var $this yii\web\View */
 
 $this->title = 'Register';
-\app\assets\LoginAsset::register($this);
+\app\assets\RegisterAsset::register($this);
 ?>
 
 <style>
@@ -38,20 +38,20 @@ $this->title = 'Register';
     }
 </style>
 
-<div class="shortcut">
+<div class="shortcut" ng-controller="RegisterCtrl">
     <div class="scTop">
         <span class="title">注册账号</span>
         <a href="login"><img src="/img/back.png" class="back"/></a>
     </div>
     <div class="content">
-        <form action="register2">
+        <form>
             <div class="message">
-                <input type="text" placeholder="请输入手机号码" pattern="[0-9]{11}" required/>
+                <input type="text" placeholder="请输入手机号码" ng-model="phone" pattern="[0-9]{11}" required/>
                 <div class="icons">
                     <b><img src="/img/phone.png" class="icon" alt=""/></b>
                 </div>
             </div>
-            <button class="submit" type="submit">获取验证码</button>
+            <button class="submit" type="submit" ng-click="step1(phone)">获取验证码</button>
         </form>
     </div>
 </div>
