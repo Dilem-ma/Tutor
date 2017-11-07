@@ -15,8 +15,14 @@ use yii\base\Action;
 class StudentIdentityAction extends Action
 {
     public function run(){
+        $post = \Yii::$app->request->post();
         $stu = new Student();
         $stu->load(\Yii::$app->request->post(), '');
+//        $stu->u_id = $post['u_id'];
+//        $stu->describe = $post['describe'];
+//        $stu->grade = $post['grade'];
+//        $stu->school = $post['school'];
+//        $stu->stu_id = $post['stu_id'];
 
         if ($stu->save()) {
             return [
