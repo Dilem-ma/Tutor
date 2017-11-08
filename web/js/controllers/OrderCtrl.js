@@ -89,7 +89,6 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                 default:
                     $scope.status = "已经有" + d.data.status + "名老师发出申请";
                     $scope.teacher = "待确定";
-
                     break
             }
             var isstudent = false
@@ -127,7 +126,8 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                             }
                         };
                         $http(c).then(function (e) {
-                            $scope.teacher = e.data[0].name
+                            $scope.teacherList = e.data
+
                             console.log(e.data)
                         });
                     }
@@ -191,17 +191,6 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                                 });
                                 break
                             default:
-                                console.log($scope.t_id)
-                                var c = {
-                                    method: 'post',
-                                    url: '/api/get_teacher_data',
-                                    data: {
-                                        "t_id": $scope.t_id,
-                                    }
-                                };
-                                $http(c).then(function (e) {
-                                    $scope.teacher = e.data[0].name
-                                });
                                 if (e.data.success == false) {
                                     $scope.status = "已被拒"
                                     $scope.teacher = "保密"
