@@ -9,7 +9,7 @@ $this->title = 'StudentTaskPage';
     <div class="scTop">
         <span class="title">学生任务发布</span>
         <a href="index"><img src="/img/back.png" class="back"/></a>
-        <button class="login_btn" type="submit" ng-click="postTask(technique, area, title, description, price, teachTime, isUrgent, gender)">提交</button>
+        <button class="login_btn" type="submit" ng-click="postTask(technique, area, title, description, price, teachTime, gender, address)">提交</button>
     </div>
     <div class="content">
             <div class="sec">
@@ -68,7 +68,7 @@ $this->title = 'StudentTaskPage';
                 <div class="message">
                     <div class="name"><span>地址</span></div>
                     <div class="ctnt">
-                        <input placeholder="5-60个字，且不能全部为数字"/>
+                        <input placeholder="5-60个字，且不能全部为数字" ng-model="address"/>
                     </div>
                 </div>
                 <div class="message">
@@ -92,11 +92,11 @@ $this->title = 'StudentTaskPage';
                         <div class="name"><span>赏金</span></div>
                         <div class="ctnt"><input placeholder="请输入预付费用（元）" ng-model="price"></div>
                 </div>
-                <div class="message">
-                    <div class = "name">我很赶时间</div>
-                    <input type = "checkbox" ng-model="isUrgent"/>
-                    <div class="des">将支付1.5倍赏金</div>
-                </div>
+<!--                <div class="message">-->
+<!--                    <div class = "name">我很赶时间</div>-->
+<!--                    <input type = "checkbox" ng-model="isUrgent"/>-->
+<!--                    <div class="des">将支付1.5倍赏金</div>-->
+<!--                </div>-->
             </div>
     </div>
 </form>

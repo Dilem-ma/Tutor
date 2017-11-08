@@ -18,7 +18,7 @@ $this->title = 'MinePage';
             </div>
             <div class="name">
                 <span class="text1">{{current_name}}</span>
-            </div>闽e
+            </div>
         </div>
     </div>
     <div class="pane2">

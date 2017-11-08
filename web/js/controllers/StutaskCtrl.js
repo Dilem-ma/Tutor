@@ -7,10 +7,9 @@ tutorApp = angular.module('tutorApp', []);
 
 storage = window.localStorage;
 
-tutorApp.controller('StutaskCtrl', function ($scope, $http) {
+tutorApp.controller('StutaskCtrl', function ($scope, $http, $window) {
 
-    $scope.postTask = function (technique, area, title, description, price, teachTime, isUrgent, gender) {
-        var p;
+    $scope.postTask = function (technique, area, title, description, price, teachTime, gender, address) {
         if (localStorage.getItem(storage) !== void 0) {
             $scope.token = localStorage.getItem(storage);
             console.log($scope.token);
@@ -25,50 +24,54 @@ tutorApp.controller('StutaskCtrl', function ($scope, $http) {
                 'token': $scope.token
             }
         };
-        $http(q).then(function (d) {
+        $http(a).then(function (d) {
             $scope.current_id = d.data.id;
-        });
+            var c = {
+                method: 'post',
+                url: '/api/get_stu_data',
+                data: {
+                    "u_id": $scope.current_id
+                }
+            };
+            $http(c).then(function (e) {
+                $scope.s_id=e.data.id
+                console.log($scope.current_id,$scope.s_id, technique, area, title, description, price, teachTime, gender,address);
 
-            console.log($scope.current_id, technique, area, title, description, price, teachTime, isUrgent, gender);
 
-            if(isUrgent === undefined){
-            isUrgent = false;
-        }
-            var p = {
-            method: 'post',
-            url: '/api/stu_add_order',
-            data: {
-                "s_id":$scope.current_id,
-                "technique":technique,
-                "area":area,
-                "title":title,
-                "description":description,
-                "price":price,
-                "teach_time":teachTime,
-                "is_urgent":isUrgent,
-                "gender":gender
-            }
-        };
-        $http(p).then(function (d) {
-            if (d.data.success === true) {
-                console.log("successful")
-            } else {
-                return $().toastmessage('showToast', {
-                    text: d.data.errors,
-                    sticky: false,
-                    position: 'top-center',
-                    type: 'error',
-                    stayTime: 1500
+                var p = {
+                    method: 'post',
+                    url: '/api/stu_add_order',
+                    data: {
+                        "s_id":$scope.s_id,
+                        "technique":technique,
+                        "area":area,
+                        "title":title,
+                        "description":description,
+                        "price":price,
+                        "teach_time":teachTime,
+                        "is_urgent":false,
+                        "gender":gender,
+                        "address":address
+                    }
+                };
+                $http(p).then(function (f) {
+                    if (f.data.success === true) {
+                        return $window.location.href = "search";
+                    } else {
+                        return $().toastmessage('showToast', {
+                            text: f.data.errors,
+                            sticky: false,
+                            position: 'top-center',
+                            type: 'error',
+                            stayTime: 1500
+                        });
+                    }
                 });
-            }
-        },function (e) {
-            return $().toastmessage('showToast', {
-                text: e.data.errors,
-                sticky: false,
-                position: 'top-center',
-                type: 'error',
-                stayTime: 1500
             });
         });
-        return false;
-    };});
+
+
+
+
+    };
+});
