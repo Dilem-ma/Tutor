@@ -9,7 +9,7 @@ $this->title = 'PersonalsetPage';
     <span class="title">个人资料</span>
     <a href="mine"><img src="/img/back.png" class="back"/></a>
 </div >
-<div class="pane2" ng-controller="PersonalsetCtrl">
+<div class="pane2" ng-controller="PersonalsetCtrl" ng-cloak class="ng-cloak">
     <div class="pane2-1">
         <div class="pane2-4">
             <div class="pane2-5">

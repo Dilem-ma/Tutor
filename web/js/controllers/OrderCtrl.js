@@ -38,6 +38,7 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
             $scope.t_id = d.data.t_id;
             $scope.address = d.data.address
             var status = $scope.status = d.data.status;
+            $scope.t_id = d.data.t_id[0]
 
 
             switch (d.data.status) {
@@ -52,14 +53,11 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                         method: 'post',
                         url: '/api/get_teacher_data',
                         data: {
-                            "t_id": d.data.t_id[0],
+                            "t_id": $scope.t_id,
                         }
                     };
                     $http(c).then(function (e) {
-                        $scope.teacher = e.data.name
-                        console.log(e.data)
-                        console.log($scope.teacher+e.data.name)
-
+                        $scope.teacher = e.data[0].name
                     });
                     break
                 case -2:
@@ -68,11 +66,11 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                         method: 'post',
                         url: '/api/get_teacher_data',
                         data: {
-                            "t_id": d.data.t_id[0],
+                            "t_id": $scope.t_id,
                         }
                     };
                     $http(c).then(function (e) {
-                        $scope.teacher = e.data.name
+                        $scope.teacher = e.data[0].name
                     });
                     break
                 case -3:
@@ -81,17 +79,16 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                         method: 'post',
                         url: '/api/get_teacher_data',
                         data: {
-                            "t_id": d.data.t_id[0],
+                            "t_id": $scope.t_id,
                         }
                     };
                     $http(c).then(function (e) {
-                        $scope.teacher = e.data.name
+                        $scope.teacher = e.data[0].name
                     });
                     break
                 default:
-                    $scope.status = "已经有" + d.data.status + "名老师接单";
+                    $scope.status = "已经有" + d.data.status + "名老师发出申请";
                     $scope.teacher = "待确定";
-
                     break
             }
             var isstudent = false
@@ -111,10 +108,12 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                 }
             };
             $http(q).then(function (d) {
+
                 if (d.data.student != null) {
                     isstudent = true;
                     $scope.isStudent = isstudent;
                     $scope.isPreparing = (isstudent == true && status > 0) //判断学生可以确认老师
+                    $scope.onFinish = (isstudent == true && status == -2)
                     $scope.onSure = (isstudent==true && status == 0)
                     $scope.teacherList = new Array();
                     //获取待确认老师列表
@@ -155,31 +154,26 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                                     method: 'post',
                                     url: '/api/get_teacher_data',
                                     data: {
-                                        "t_id": d.data.t_id[0],
+                                        "t_id": $scope.t_id,
                                     }
                                 };
                                 $http(c).then(function (e) {
-                                    $scope.teacher = e.data.name
-                                    console.log(e.data)
-                                    console.log($scope.teacher+e.data.name)
-
+                                    $scope.teacher = e.data[0].name
                                 });
 
                                 break
                             case -2:
                                 $scope.status = "等待评价";
+                                console.log($scope.t_id)
                                 var c = {
                                     method: 'post',
                                     url: '/api/get_teacher_data',
                                     data: {
-                                        "t_id": d.data.t_id[0],
+                                        "t_id": $scope.t_id,
                                     }
                                 };
                                 $http(c).then(function (e) {
-                                    $scope.teacher = e.data.name
-                                    console.log(e.data)
-                                    console.log($scope.teacher+e.data.name)
-
+                                    $scope.teacher = e.data[0].name
                                 });
 
                                 break
@@ -189,14 +183,11 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                                     method: 'post',
                                     url: '/api/get_teacher_data',
                                     data: {
-                                        "t_id": d.data.t_id[0],
+                                        "t_id": $scope.t_id,
                                     }
                                 };
                                 $http(c).then(function (e) {
-                                    $scope.teacher = e.data.name
-                                    console.log(e.data)
-                                    console.log($scope.teacher+e.data.name)
-
+                                    $scope.teacher = e.data[0].name
                                 });
                                 break
                             default:
@@ -213,24 +204,67 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                 }
 
             });
-            $scope.onSelect = function () {
-                var p = {
-                    method: 'post',
-                    url: '/api/complete_order',
-                    data: {
-                        'o_id': $scope.orderId
-                    }
-                };
-                $http(p).then(function (e) {
-                    if(e.data.success == true){
-                        return $window.location.href = "orderlist";
-                    }
-                });
-            }
+
         });
 
 
-    }
 
+
+    }
+    $scope.onComplete = function () {
+        var p = {
+            method: 'post',
+            url: '/api/complete_order',
+            data: {
+                'o_id': $scope.orderId
+            }
+        };
+        $http(p).then(function (e) {
+            if(e.data.success == true){
+                return $window.location.href = "orderlist";
+            }
+        });
+    }
+    $scope.onSelect = function (t_id) {
+        var p = {
+            method: 'post',
+            url: '/api/stu_check_order',
+            data: {
+                't_id': t_id,
+                'o_id': $scope.orderId,
+            }
+        };
+        $http(p).then(function (e) {
+            if(e.data.success == true){
+                return $window.location.href = "orderlist";
+            }
+        });
+    }
+    $scope.onComment = function(){
+        var b =  {
+            method: 'get',
+            url: '/api/get_current_user',
+            params: {
+                'token': $scope.token
+            }
+        };
+        $http(b).then(function (d) {
+            $scope.u_id = d.data.id
+            if ($location.search().id) {
+                $scope.orderId = $location.search().id;
+                var p = {
+                    method: 'post',
+                    url: '/api/get_current_order',
+                    data: {
+                        'id': $scope.orderId,
+                    }
+                };
+                $http(p).then(function (e) {
+                    var t_id = e.data.t_id[0]
+                    window.location.href = 'comment?o_id=' + $scope.orderId + '+t_id=' + t_id + '+u_id=' + $scope.u_id;
+                });
+            }
+        });
+    }
 
 });

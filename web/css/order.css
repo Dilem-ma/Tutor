@@ -115,7 +115,6 @@ select{
 }
 .content{
     margin-top: 16%;
-    z-index: -1111111;
     position: relative;
 }
 
@@ -161,3 +160,7 @@ select{
 .teacher .button{
     width: 40px;
 }
+.login_btn{
+    color: #ffffff;
+}
+.ng-cloak{display:none;}

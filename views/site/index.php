@@ -5,7 +5,7 @@
 $this->title = 'MainPage';
 \app\assets\MainAsset::register($this);
 ?>
-<div class="index2" ng-controller="MainCtrl">
+<div class="index2" ng-controller="MainCtrl" ng-cloak class="ng-cloak">
     <div class="shortcut1">
     <div class="thehead">
         <div class="text">
@@ -61,16 +61,18 @@ $this->title = 'MainPage';
         </div>
     </div>
     <div class="pane3">
+        <a href="teachersearch">
         <div class="pane3-1">
             <span class="title3">优质教师推荐</span>
         </div>
-        <a href="talk">
-        <div ng-repeat="a in teachers">
+        </a>
+        <a href="teacherdata?id={{a.id}}">
+            <div ng-repeat="a in teachers">
                 <div class="pane3-2">
                     <img class="circle2" ng-src="{{a.url}}"/>
                     <a class="title4">{{a.name}}</a>
                 </div>
-        </div>
+            </div>
         </a>
 
     </div>

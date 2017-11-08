@@ -7,11 +7,11 @@ $this->title = 'TeacherdataPage';
 ?>
 <div class="scTop" >
     <span class="title">教师资料</span>
-    <a ng-click="jump()"><img src="/img/back.png" class="back"/></a>
+    <a href="teachersearch" target="_self"><img src="/img/back.png" class="back"/></a>
 </div >
 <div class="pane2" ng-controller="TeacherdataCtrl">
     <div class="pane2-1">
-        <div class="pane2-4">㥂acher
+        <div class="pane2-4">
             <div class="pane2-5">
                 <div class="text6">
                     <span class="text4">头像</span>

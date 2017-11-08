@@ -20,5 +20,7 @@ input{
     top: 0%;
     width: 100%;
 }
+.ng-cloak{display:none;}
+
 
 

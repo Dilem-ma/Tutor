@@ -9,6 +9,7 @@ $this->title = 'PersonaldataPage';
     <span class="title">个人资料</span>
     <a href="mine"><img src="/img/back.png" class="back"/></a>
 </div >
+<form  ng-cloak class="ng-cloak" >
 <div class="pane2" ng-controller="MineCtrl">
     <div class="pane2-1">
         <div class="pane2-4">
@@ -71,16 +72,6 @@ $this->title = 'PersonaldataPage';
                 </div>
             </div>
         </div>
-        <div class="pane2-2">
-            <div class="pane2-3">
-                <div class="text3">
-                    <span class="text4">擅长领域</span>
-                </div>
-                <div class="text5">
-                    <span class="text4">Java，c++</span>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="pane2-1">
         <a href="personalset">
@@ -94,3 +85,4 @@ $this->title = 'PersonaldataPage';
         </a>
     </div>
 </div>
+</form>

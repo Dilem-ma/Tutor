@@ -5,7 +5,7 @@
 $this->title = 'AuthenticationPage';
 \app\assets\AuthenticationAsset::register($this);
 ?>
-<div ng-controller="AuthenCtrl">
+<div ng-controller="AuthenCtrl" ng-cloak class="ng-cloak">
 
     <div class="scTop">
         <span class="title">认证信息</span>

@@ -10,7 +10,7 @@ $this->title = 'MinePage';
         <span class="title">我的</span>
     </div>
 </div>
-<div class="content" ng-controller="MineCtrl">
+<div class="content" ng-controller="MineCtrl" ng-cloak class="ng-cloak">
     <div class="pane1">
         <div class="pane1-1">
             <div class="circle">

@@ -12,7 +12,7 @@ $this->title = 'CoursedetailPage';
 $this->title = 'StudentTaskPage';
 \app\assets\StudentTaskAsset::register($this);
 ?>
-<form ng-controller="OrderCtrl">
+<form ng-controller="OrderCtrl" ng-cloak class="ng-cloak">
     <div class="scTop">
         <span class="title">课程详情</span>
         <a href="index"><img src="/img/back.png" class="back"/></a>
