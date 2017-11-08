@@ -213,25 +213,25 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                 }
 
             });
-            $scope.onSelect = function (t_id) {
-                console.log("test")
-                var p = {
-                    method: 'post',
-                    url: '/api/complete_order',
-                    data: {
-                        'o_id': $scope.orderId,
-                        't_id': t_id
-                    }
-                };
-                $http(p).then(function (e) {
-                    if(e.data.success == true){
-                        return $window.location.href = "orderlist";
-                    }
-                });
-            }
+
         });
 
-
+        $scope.onSelect = function (t_id) {
+            console.log("test")
+            var p = {
+                method: 'post',
+                url: '/api/complete_order',
+                data: {
+                    'o_id': $scope.orderId,
+                    't_id': t_id
+                }
+            };
+            $http(p).then(function (e) {
+                if(e.data.success == true){
+                    return $window.location.href = "orderlist";
+                }
+            });
+        }
     }
 
 
