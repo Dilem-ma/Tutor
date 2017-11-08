@@ -46,4 +46,21 @@ $this->title = 'search';
             </div>
         </div>
     </div>
+    <div id="NotMoveDIV">
+        <div class="icon-box">
+            <a href="" class="botm-icon-text"><img src="/img/ios7-home.png" class="botm-icon"/><br />主页</a>
+        </div>
+        <div class="icon-box">
+            <a href="/site/search" class="botm-icon-text"><img src="/img/ios7-compose-outline.png" class="botm-icon"/><br />课程</a>
+        </div>
+        <div class="icon-box2">
+            <a href="/site/studenttask"><img src="/img/plus2.png" class="botm-icon2"/></a>
+        </div>
+        <div class="icon-box">
+            <a href="/site/orderlist" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br />订单</a>
+        </div>
+        <div class="icon-box">
+            <a href="/site/mine" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br />我的</a>
+        </div>
+    </div>
 </div>
