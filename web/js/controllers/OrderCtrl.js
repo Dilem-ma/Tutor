@@ -214,6 +214,7 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
 
             });
             $scope.onSelect = function (t_id) {
+                console.log("test")
                 var p = {
                     method: 'post',
                     url: '/api/complete_order',
