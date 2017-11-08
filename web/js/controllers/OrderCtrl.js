@@ -218,6 +218,21 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
 
         $scope.onSelect = function (t_id) {
             console.log("test")
+            // var p = {
+            //     method: 'post',
+            //     url: '/api/stu_check_order',
+            //     data: {
+            //         't_id': t_id,
+            //         'o_id': $scope.orderId,
+            //     }
+            // };
+            // $http(p).then(function (e) {
+            //     if(e.data.success == true){
+            //         return $window.location.href = "orderlist";
+            //     }
+            // });
+        }
+        $scope.onComplete = function (t_id) {
             var p = {
                 method: 'post',
                 url: '/api/complete_order',
@@ -232,6 +247,7 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                 }
             });
         }
+
     }
 
 
