@@ -14,6 +14,27 @@ tutorApp.controller('StutaskCtrl', function ($scope, $http, $window) {
     $scope.genders = ["男性", "女性","不限"];
     $scope.areas = ["黄浦区","徐汇区","长宁区","静安区","普陀区","虹口区","杨浦区","浦东新区","闵行区","宝山区","嘉定区","金山区","松江区","青浦区","奉贤区","崇明区"];
 
+    function findtech(tech){
+        for(var i=0;i<$scope.techs.length;i++){
+            if (tech === $scope.techs[i])
+                return i+1;
+        }
+    }
+
+    function findgender(tech){
+        for(var i=0;i<$scope.genders.length;i++){
+            if (tech === $scope.genders[i])
+                return i+1;
+        }
+    }
+
+    function findarea(tech){
+        for(var i=0;i<$scope.areas.length;i++){
+            if (tech === $scope.areas[i])
+                return i+1;
+        }
+    }
+
     $scope.postTask = function (technique, area, title, description, price, teachTime, gender, address) {
 
         if (title === void 0 || title.length === 0)
@@ -51,22 +72,24 @@ tutorApp.controller('StutaskCtrl', function ($scope, $http, $window) {
             };
             $http(c).then(function (e) {
                 $scope.s_id=e.data.id
-                console.log($scope.current_id,$scope.s_id, technique, area, title, description, price, teachTime, gender,address);
 
-
+                var area_ = findarea(area); // 转成数字的area
+                var gender_ = findgender(gender); // 转成数字
+                var technique_ = findtech(technique); // 转成数字
+                console.log($scope.current_id,$scope.s_id, technique_, area_, title, description, price, teachTime, gender_,address);
                 var p = {
                     method: 'post',
                     url: '/api/stu_add_order',
                     data: {
                         "s_id":$scope.s_id,
-                        "technique":technique,
-                        "area":area,
+                        "technique":technique_,
+                        "area":area_,
                         "title":title,
                         "description":description,
                         "price":price,
                         "teach_time":teachTime,
                         "is_urgent":false,
-                        "gender":gender,
+                        "gender":gender_,
                         "address":address
                     }
                 };
