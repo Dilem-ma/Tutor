@@ -113,12 +113,9 @@
     float: left;
     height: 100%;
     width: 12%;
-    margin: 0 auto;
+    margin: .5em auto 0;
     text-align: center;
     background: #fff;
-    justify-content: center;
-    display: flex;
-    align-items: center;
 }
 
 .botm-icon {
