@@ -32,26 +32,5 @@ class GetOrderStatusAction extends Action
             'success' => in_array($post['t_id'], $t_ids),
             'status' => $order->status,
         ];
-
-        if (in_array($post['t_id'], $t_ids)){
-            if ($order->status == 0){
-                return [
-                    'success' => true,
-                    'message' => 'You have picked up the order.',
-                    'status' => $order->status,
-                ];
-            }else{
-                return [
-                    'success' => true,
-                    'message' => 'You have picked up the order.',
-                    'status' => $order->status,
-                ];
-            }
-        }else{
-            return [
-                'success' => false,
-                'status' => $order->status,
-            ];
-        }
     }
 }
