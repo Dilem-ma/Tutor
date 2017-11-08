@@ -143,5 +143,9 @@ class SiteController extends Controller
     {
         return $this->render('Task');
     }
+    public function actionComment()
+    {
+        return $this->render('Comment');
+    }
 }
 
