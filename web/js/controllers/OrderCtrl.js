@@ -164,7 +164,9 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                                 break
                             case -2:
                                 $scope.status = "等待评价";
+                                $scope.showcomment = 1 ;
                                 console.log($scope.t_id)
+                                console.log(showcomment)
                                 var c = {
                                     method: 'post',
                                     url: '/api/get_teacher_data',
@@ -240,6 +242,7 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
             }
         });
     }
+
     $scope.onComment = function(){
         var b =  {
             method: 'get',
@@ -261,7 +264,7 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                 };
                 $http(p).then(function (e) {
                     var t_id = e.data.t_id[0]
-                    window.location.href = 'comment?o_id=' + $scope.orderId + '+t_id=' + t_id + '+u_id=' + $scope.u_id;
+                    window.location.href = 'comment?o_id='+$scope.orderId +'&t_id='+ $scope.t_id + '&u_id=' + $scope.u_id;
                 });
             }
         });
