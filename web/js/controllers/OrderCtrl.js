@@ -57,6 +57,9 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                     };
                     $http(c).then(function (e) {
                         $scope.teacher = e.data.name
+                        console.log(e.data)
+                        console.log($scope.teacher+e.data.name)
+
                     });
                     break
                 case -2:
@@ -112,9 +115,11 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                     isstudent = true;
                     $scope.isStudent = isstudent;
                     $scope.isPreparing = (isstudent == true && status > 0) //判断学生可以确认老师
+                    $scope.onSure = (isstudent==true && status == 0)
                     $scope.teacherList = new Array();
                     //获取待确认老师列表
                     if ($scope.isPreparing) {
+                        console.log($scope.orderId)
                         var c = {
                             method: 'post',
                             url: '/api/get_pick_teachers',
@@ -146,13 +151,53 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                                 break
                             case 0 :
                                 $scope.status = "等待完成";
+                                var c = {
+                                    method: 'post',
+                                    url: '/api/get_teacher_data',
+                                    data: {
+                                        "t_id": d.data.t_id[0],
+                                    }
+                                };
+                                $http(c).then(function (e) {
+                                    $scope.teacher = e.data.name
+                                    console.log(e.data)
+                                    console.log($scope.teacher+e.data.name)
+
+                                });
 
                                 break
                             case -2:
                                 $scope.status = "等待评价";
+                                var c = {
+                                    method: 'post',
+                                    url: '/api/get_teacher_data',
+                                    data: {
+                                        "t_id": d.data.t_id[0],
+                                    }
+                                };
+                                $http(c).then(function (e) {
+                                    $scope.teacher = e.data.name
+                                    console.log(e.data)
+                                    console.log($scope.teacher+e.data.name)
+
+                                });
+
                                 break
                             case -3:
                                 $scope.status = "已完成";
+                                var c = {
+                                    method: 'post',
+                                    url: '/api/get_teacher_data',
+                                    data: {
+                                        "t_id": d.data.t_id[0],
+                                    }
+                                };
+                                $http(c).then(function (e) {
+                                    $scope.teacher = e.data.name
+                                    console.log(e.data)
+                                    console.log($scope.teacher+e.data.name)
+
+                                });
                                 break
                             default:
                                 if (e.data.success == false) {
@@ -168,23 +213,23 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                 }
 
             });
+            $scope.onSelect = function () {
+                var p = {
+                    method: 'post',
+                    url: '/api/complete_order',
+                    data: {
+                        'o_id': $scope.orderId
+                    }
+                };
+                $http(p).then(function (e) {
+                    if(e.data.success == true){
+                        return $window.location.href = "orderlist";
+                    }
+                });
+            }
         });
 
-        $scope.onSelect = function (t_id) {
-            var p = {
-                method: 'post',
-                url: '/api/get_order_status',
-                data: {
-                    't_id': d.data.teacher.id,
-                    'o_id': $scope.orderId,
-                }
-            };
-            $http(p).then(function (e) {
-                if(e.data.success == true){
-                    return $window.location.href = "orderlist";
-                }
-            });
-        }
+
     }
 
 

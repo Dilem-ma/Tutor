@@ -15,6 +15,7 @@ $this->title = 'order';
     <div class="scTop">
         <span class="title">订单详情</span>
         <a href="orderlist" target="_self"><img src="/img/back.png" class="back"/></a>
+        <button class="login_btn" type="submit" ng-click="onSelect()" ng-show="onSure">申请教学</button>
     </div>
 </div>
 
