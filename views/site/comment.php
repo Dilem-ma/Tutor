@@ -16,10 +16,10 @@ $this->title = 'comment';
 
     </div>
 </div>
-<div class="comment">
-    <div class="star"><input type="text">/5分</div>
-    <div class="content"><textarea rows="6" placeholder="请填写对此订单的评价"></textarea></div>
-    <button class="btn" type="submit" ng-click="onSelect()">评论</button>
+<div class="comment" ng-controller="CommentCtrl">
+    <div class="star"><input ng-model="grade" type="text">/5分</div>
+    <div class="content"><textarea rows="6" ng-model="commenttext" placeholder="请填写对此订单的评价"></textarea></div>
+    <button class="btn" type="submit" ng-model="grade" ng-click="postComment(grade,commenttext)">评论</button>
 </div>
 
 

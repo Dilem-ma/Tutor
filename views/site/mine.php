@@ -45,7 +45,7 @@ $this->title = 'MinePage';
             </div>
         </div>
         <div class="pane2-1">
-            <a href="order">
+            <a href="orderlist">
                 <div class="pane2-2">
                     <div class="image1">
                         <img align="absmiddle" src="/img/calendar .png" class="pic_icon" height="30" width="30"/>

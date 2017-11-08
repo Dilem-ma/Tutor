@@ -66,9 +66,24 @@ $this->title = 'PersonalsetPage';
                     <span class="text4">地区</span>
                 </div>
                 <div class="text5">
-                    <select ng-model="gender">
-                        <option value ="1">徐汇区</option>
+                    <select ng-model="area">
+                        <option value ="1">黄浦区</option>
                         <option value ="2">徐汇区</option>
+                        <option value ="3">长宁区</option>
+                        <option value ="4">静安区</option>
+                        <option value ="5">普陀区</option>
+                        <option value ="6">虹口区</option>
+                        <option value ="7">杨浦区</option>
+                        <option value ="8">浦东新区</option>
+                        <option value ="9">闵行区</option>
+                        <option value ="10">宝山区</option>
+                        <option value ="11">嘉定区</option>
+                        <option value ="12">金山区</option>
+                        <option value ="13">松江区</option>
+                        <option value ="14">青浦区</option>
+                        <option value ="15">奉贤区</option>
+                        <option value ="16">崇明区</option>
+
                     </select>
                 </div>
             </div>
