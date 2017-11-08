@@ -15,6 +15,17 @@ tutorApp.controller('StutaskCtrl', function ($scope, $http, $window) {
     $scope.areas = ["黄浦区","徐汇区","长宁区","静安区","普陀区","虹口区","杨浦区","浦东新区","闵行区","宝山区","嘉定区","金山区","松江区","青浦区","奉贤区","崇明区"];
 
     $scope.postTask = function (technique, area, title, description, price, teachTime, gender, address) {
+
+        if (title === void 0 || title.length === 0)
+            return;
+        if (description === void 0 || description.length === 0)
+            return;
+        if (teachTime === void 0 || teachTime.length === 0)
+            return;
+        if (price === void 0 || price.length === 0)
+            return;
+        if (address === void 0 || address.length === 0)
+            return;
         if (localStorage.getItem(storage) !== void 0) {
             $scope.token = localStorage.getItem(storage);
             console.log($scope.token);

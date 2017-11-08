@@ -15,7 +15,7 @@ $this->title = 'StudentTaskPage';
             <div class="sec">
                 <div class="message">
                         <div class="name"><span>标题</span></div>
-                        <div class="ctnt"><input placeholder="请输入标题(5-20字)" ng-model="title"></div>
+                        <div class="ctnt"><input placeholder="请输入标题(5-20字)" ng-model="title" required pattern=".{5,20}"></div>
                 </div>
                 <div class="message">
                         <div class="name"><span>科目</span></div>
@@ -25,7 +25,7 @@ $this->title = 'StudentTaskPage';
                 </div>
                 <div class="message">
                         <div class="name"><span>问题描述</span></div>
-                        <div class="ctnt"><input rows ="1" placeholder="请在此详细地描述问题详情" ng-model="description"/></div>
+                        <div class="ctnt"><input rows ="1" placeholder="请在此详细地描述问题详情" ng-model="description" required/></div>
                 </div>
 
 
@@ -40,12 +40,12 @@ $this->title = 'StudentTaskPage';
                 <div class="message">
                     <div class="name"><span>地址</span></div>
                     <div class="ctnt">
-                        <input placeholder="5-60个字，且不能全部为数字" ng-model="address"/>
+                        <input placeholder="5-60个字，且不能全部为数字" ng-model="address" required pattern=".{5,60}"/>
                     </div>
                 </div>
                 <div class="message">
                         <div class="name"><span>上课时间</span></div>
-                        <div class="ctnt"><input placeholder="请输入你计划的上课时间" ng-model="teachTime"></div>
+                        <div class="ctnt"><input placeholder="请输入你计划的上课时间" ng-model="teachTime" required></div>
                 </div>
             </div>
 
@@ -59,7 +59,7 @@ $this->title = 'StudentTaskPage';
                 </div>
                 <div class="message">
                         <div class="name"><span>赏金</span></div>
-                        <div class="ctnt"><input placeholder="请输入预付费用（元）" ng-model="price"></div>
+                        <div class="ctnt"><input placeholder="请输入预付费用（元）" ng-model="price" required pattern="\+?(?!0+(\.00?)?$)\d+(\.\d\d?)?"></div>
                 </div>
 <!--                <div class="message">-->
 <!--                    <div class = "name">我很赶时间</div>-->
