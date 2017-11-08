@@ -72,16 +72,6 @@ $this->title = 'PersonaldataPage';
                 </div>
             </div>
         </div>
-        <div class="pane2-2">
-            <div class="pane2-3">
-                <div class="text3">
-                    <span class="text4">擅长领域</span>
-                </div>
-                <div class="text5">
-                    <span class="text4">Java，c++</span>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="pane2-1">
         <a href="personalset">

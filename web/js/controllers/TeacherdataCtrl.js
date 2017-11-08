@@ -44,15 +44,15 @@ tutorApp.controller('TeacherdataCtrl', function ($window,$scope, $location,$http
             method: 'post',
             url: '/api/add_to_favourite',
             data:{
-                "id":current_id,
-                "tid":"1"
+                "id":$scope.current_id,
+                "tid":$scope.current_t_id
             }
         };
         $http(p).then(function (d) {
             console.log($scope.token)
             if (d.data.success === true) {
                 console.log("successful")
-                return $window.location.href = "../site/teachersearch";
+                return $window.location.href = "../site/favorite";
             } else {
                 return $().toastmessage('showToast', {
                     // text: d.data.errors.password[0], 要改成自己要用的信息
@@ -72,7 +72,7 @@ tutorApp.controller('TeacherdataCtrl', function ($window,$scope, $location,$http
         }
     };
     $http(q).then(function (d) {
-        $scope.current_id = d.data[0].id;
+        $scope.current_t_id = d.data[0].t_id;
         $scope.current_url = d.data[0].url;
         $scope.current_num = d.data[0].username;
         $scope.current_name = d.data[0].name;

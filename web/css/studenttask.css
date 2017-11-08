@@ -11,6 +11,9 @@ body{
     color: #ffffff;
     position: relative;
 }
+.login_btn{
+    color:#ffffff
+}
 .title{
     font-family: "Microsoft YaHei";
     font-size: 1.3em;
