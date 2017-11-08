@@ -29,16 +29,15 @@ body {
     float: left;
 }
 .texth2 {
-    position: relative;
-    left: 2ex;
-    width:48%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     float: left;
 }
 .texth3 {
     position: relative;
-    left: 2ex;
+    right: 2ex;
     width:10%;
-    float: left;
+    float: right;
     padding:2% 0% 0%;
 }
 #NotMoveDIV {
