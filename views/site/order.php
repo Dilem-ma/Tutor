@@ -67,15 +67,15 @@ $this->title = 'order';
             </div>
 
 
-    <!--        <div class="teachers" ng-show=isPreparing>-->
+            <div class="teachers" ng-show=isPreparing>
                 <div class="teachers">
-                <div class="title">申请教师列表</div>
-
-<!--                    <div class="border teacher"  ng-repeat="teacher in teacherList">-->
-                    <div class="wrap">
-                        <img class="avatar" ng-src="{{teacher.url}}">
-                        <div class="intro"><span>{{teacher.name}}</span><span>{{teacher.describe}}</span></div>
-                        <button class="button" type="submit"  ng-click="onSelect(1)">选择</button>
+                    <div class="title">申请教师列表</div>
+                    <div class="border teacher"  ng-repeat="teacher in teacherList">
+                        <div class="wrap">
+                            <img class="avatar" ng-src="{{teacher.url}}">
+                            <div class="intro"><span>{{teacher.name}}</span><span>{{teacher.describe}}</span></div>
+                            <button class="button" type="submit"  ng-click="onSelect(teacher.id)">选择</button>
+                        </div>
                     </div>
                 </div>
             </div>
