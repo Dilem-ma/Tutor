@@ -89,7 +89,6 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                 default:
                     $scope.status = "已经有" + d.data.status + "名老师发出申请";
                     $scope.teacher = "待确定";
-
                     break
             }
             var isstudent = false
@@ -114,6 +113,7 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                     isstudent = true;
                     $scope.isStudent = isstudent;
                     $scope.isPreparing = (isstudent == true && status > 0) //判断学生可以确认老师
+                    $scope.onFinish = (isstudent == true && status == -2)
                     $scope.onSure = (isstudent==true && status == 0)
                     $scope.teacherList = new Array();
                     //获取待确认老师列表
@@ -237,6 +237,32 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
         $http(p).then(function (e) {
             if(e.data.success == true){
                 return $window.location.href = "orderlist";
+            }
+        });
+    }
+    $scope.onComment = function(){
+        var b =  {
+            method: 'get',
+            url: '/api/get_current_user',
+            params: {
+                'token': $scope.token
+            }
+        };
+        $http(b).then(function (d) {
+            $scope.u_id = d.data.id
+            if ($location.search().id) {
+                $scope.orderId = $location.search().id;
+                var p = {
+                    method: 'post',
+                    url: '/api/get_current_order',
+                    data: {
+                        'id': $scope.orderId,
+                    }
+                };
+                $http(p).then(function (e) {
+                    var t_id = e.data.t_id[0]
+                    window.location.href = 'comment?o_id=' + $scope.orderId + '+t_id=' + t_id + '+u_id=' + $scope.u_id;
+                });
             }
         });
     }

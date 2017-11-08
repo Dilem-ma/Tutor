@@ -16,6 +16,8 @@ $this->title = 'order';
             <span class="title">订单详情</span>
             <a href="orderlist" target="_self"><img src="/img/back.png" class="back"/></a>
             <button class="login_btn" type="submit" ng-click="onComplete()" ng-show="onSure">完成订单</button>
+            <button class="login_btn" type="submit" ng-click="onComment()" ng-show="onFinish">完成订单</button>
+
         </div>
     </div>
 
