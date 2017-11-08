@@ -23,11 +23,34 @@ tutorApp.controller('SearchCtrl', function ($scope, $location, $http, $window) {
     if ($location.search().tech) {
         $scope.tech = $location.search().tech;
     }
+    else if ($location.search().description) {
+        if($location.search().description=="undefined")
+            $scope.thedescription = "";
+        else
+            $scope.thedescription = $location.search().description;
+        console.log($scope.thedescription);
+        var k = {
+            method: 'post',
+            url: '/api/search_order',
+            data: {
+                "description":$scope.thedescription
+            }
+        };
+
+        $http(k).then(function (d) {
+            $scope.orders = d.data;
+            console.log($scope.orders);
+        });
+    }
     else {
         flag = 0;
         var p = {
-            method: 'get',
-            url: '/orders'
+            method: 'post',
+            url: '/api/search_order',
+            data: {
+
+                "description":"",
+            }
         };
 
         $http(p).then(function (d) {
@@ -109,5 +132,8 @@ tutorApp.controller('SearchCtrl', function ($scope, $location, $http, $window) {
 
     $scope.getDetail = function (id){
         window.location.href = 'task?id='+id;
+    }
+    $scope.postteacher = function (description){
+        window.location.href = 'search?description='+description;
     }
 });

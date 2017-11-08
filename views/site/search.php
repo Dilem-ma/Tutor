@@ -16,9 +16,10 @@ $this->title = 'search';
             <div class="srchSpan">
                 <div class="back"><a href="index" target="_self"><img src="/img/android-arrow-back.png" class="back"/></a></div>
                 <div class="message">
-                    <form class="search"><input type="text" placeholder="请输入搜索内容"></form>
+                    <form class="search"><input ng-model="description" type="text" placeholder="请输入搜索内容"></form>
                 </div>
                 <div class="btn-box"><a href="filter" target="_self" class="select">筛选</a></div>
+                <div class="btn-box"><a ng-click="postteacher(description)"  class="select">搜索</a></div>
             </div>
             <div class="select-content" ng-hide="(gender==undefined || gender == '') && (tech==undefined || tech == '') &&(price==undefined || price == '') &&(area==undefined || area == '')"><a>{{gender}}</a><span class="pipe">|</span><a>{{tech}}</a><span
                     class="pipe">|</span><a>{{price}}</a><span class="pipe">|</span><a>{{area}}</a></div>

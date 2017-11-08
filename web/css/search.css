@@ -35,7 +35,7 @@ body {
 }
 
 .message {
-    width: 70%;
+    width: 50%;
     float: left;
     height: 100%;
 }
@@ -81,7 +81,7 @@ body {
     text-indent: 0.2em;
     display: block;
     outline: 0;
-    width: 85%;
+    width: 70%;
     text-decoration: none;
 }
 
