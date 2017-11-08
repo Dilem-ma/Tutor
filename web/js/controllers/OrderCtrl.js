@@ -89,7 +89,7 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                     });
                     break
                 default:
-                    $scope.status = "已经有" + d.data.status + "名老师接单";
+                    $scope.status = "已经有" + d.data.status + "名老师发出申请";
                     $scope.teacher = "待确定";
 
                     break
@@ -213,12 +213,13 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                 }
 
             });
-            $scope.onSelect = function () {
+            $scope.onSelect = function (t_id) {
                 var p = {
                     method: 'post',
                     url: '/api/complete_order',
                     data: {
-                        'o_id': $scope.orderId
+                        'o_id': $scope.orderId,
+                        't_id': t_id
                     }
                 };
                 $http(p).then(function (e) {
