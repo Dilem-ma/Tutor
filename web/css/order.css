@@ -33,30 +33,33 @@ body{
     overflow: auto;
 }
 
- .order{
+.order{
     width: 100%;
     height: 35.21%;
     background-color: #fafafa;
-     margin-top: 2em;
+    margin-top: 2em;
 }
 
- .message{
-     display:flex;
-     background: none;
-     position: relative;
-     width: 90%;
-     padding:.5em 0;
-     margin-left: 5%;
-     border-bottom: 1px solid rgba(160, 160, 160, 0.3);
- }
- .lastborder{
-     width: 92%;
-     margin: 0% 4%;
-     overflow: auto;
-     height: 100%;
+.message{
+    background: none;
+    position: relative;
+    width:100%;
+}
+.lastborder{
+    width: 92%;
+    padding: .7em 4%;
+    overflow: auto;
+    height: 100%;
 
- }
-
+}
+.border{
+    border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+    width: 92%;
+    padding: .7em 4%;
+    overflow: hidden;
+    clear:both;
+    height: 100%;
+}
 .message input{
     border: none;
     color: #646464;
@@ -72,16 +75,13 @@ body{
 }
 
 .message .name{
-    padding-top: 1em;
     float:left;
     width:30%;
 }
 
 .message .ctnt{
-    display: flex;
-    align-items: center;
+    float: left;
     width: 70%;
-    margin-top: 0.9%;
 }
 
 select{
@@ -128,50 +128,36 @@ select{
 }
 .teachers .border{
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
     border: none;
     padding: .25em 0;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 .teachers .border+.border{
     border-top: 1px solid rgba(160, 160, 160, 0.3);
 }
 .teacher .wrap{
+    padding-left: 4%;
+    width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: row;
 }
-.teacher .wrap .avaster{
+.teacher .wrap .avatar{
     background: #000;
     border-radius: 50%;
     width: 3.5em;
     height: 3.5em;
     margin-right:1em;
-    display: flex;
-    flex: 0 0 auto;
+}
+.teacher .wrap .intro {
+    width: 70%;
+}
+.teacher .wrap .intro span{
+    word-wrap: break-word;
 }
 .teacher .wrap .intro span+span{
     margin-left: .5em;
 }
-
-
-.intro{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.teacher .button{
+    width: 40px;
 }
-
-.name{
-    display: flex;
-    flex: 0 0 auto;
-}
-
-.button{
-    display: flex;
-    flex: 0 0 auto;
-}
-
-
-

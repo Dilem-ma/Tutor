@@ -73,9 +73,10 @@ tutorApp.controller('StutaskCtrl', function ($scope, $http, $window) {
             $http(c).then(function (e) {
                 $scope.s_id=e.data.id
 
-                var area_ = findarea(area); // 转成数字的area
-                var gender_ = findgender(gender); // 转成数字
-                var technique_ = findtech(technique); // 转成数字
+                var area_ = findarea(area).toString(); // 转成数字的area
+                var gender_ = findgender(gender).toString(); // 转成数字
+                var technique_ = findtech(technique).toString(); // 转成数字
+
                 console.log($scope.current_id,$scope.s_id, technique_, area_, title, description, price, teachTime, gender_,address);
                 var p = {
                     method: 'post',
@@ -94,11 +95,12 @@ tutorApp.controller('StutaskCtrl', function ($scope, $http, $window) {
                     }
                 };
                 $http(p).then(function (f) {
+                    console.log(f.data)
                     if (f.data.success === true) {
                         return $window.location.href = "search";
                     } else {
                         return $().toastmessage('showToast', {
-                            text: f.data.errors,
+                            text: f.data.errors.message,
                             sticky: false,
                             position: 'top-center',
                             type: 'error',
