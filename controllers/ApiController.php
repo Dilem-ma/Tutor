@@ -17,6 +17,7 @@ use app\actions\GetCommentsAction;
 use app\actions\GetCurrentOrderAction;
 use app\actions\GetMyFavourite;
 use app\actions\GetNotPickedOrdersAction;
+use app\actions\GetOrderCommentAction;
 use app\actions\GetOrderStatusAction;
 use app\actions\GetPickTeachersAction;
 use app\actions\GetStuDataAction;
@@ -66,7 +67,7 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite', 'pick_up_order', 'stu_check_order', 'add_comment', 'get_comments', 'complete_order', 'fast_login', 'get_stu_data', 'get_order_status', 'get_pick_teachers', ],
+                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite', 'pick_up_order', 'stu_check_order', 'add_comment', 'get_comments', 'complete_order', 'fast_login', 'get_stu_data', 'get_order_status', 'get_pick_teachers', 'get_order_comment', ],
                     'verbs' => ['POST'],
                 ],
 //                [
@@ -122,6 +123,7 @@ class ApiController extends Controller
             'get_stu_data' => GetStuDataAction::className(),
             'get_order_status' => GetOrderStatusAction::className(),
             'get_pick_teachers' => GetPickTeachersAction::className(),
+            'get_order_comment' => GetOrderCommentAction::className(),
         ];
     }
 

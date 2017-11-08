@@ -36,6 +36,8 @@ class AddCommentAction extends Action
 
         $order->status = -3;
 
+        $order->save();
+
         $tea = Teacher::findOne(['id' => $post['t_id']]);
 
         if (is_null($tea)){
