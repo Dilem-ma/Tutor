@@ -8,10 +8,6 @@ $this->title = 'MainPage';
 <div class="index2" ng-controller="MainCtrl" ng-cloak class="ng-cloak">
     <div class="shortcut1">
     <div class="thehead">
-        <div class="text">
-            <img align="absmiddle" src="/img/android-location.png"  height="20" width="15"/>
-            <span class="title"></span>
-        </div>
         <div class="texth2">
             <h2 class="title">tutor</h2>
         </div>

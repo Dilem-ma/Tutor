@@ -29,16 +29,15 @@ body {
     float: left;
 }
 .texth2 {
-    position: relative;
-    left: 2ex;
-    width:48%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     float: left;
 }
 .texth3 {
     position: relative;
-    left: 2ex;
+    right: 2ex;
     width:10%;
-    float: left;
+    float: right;
     padding:2% 0% 0%;
 }
 #NotMoveDIV {
@@ -69,12 +68,9 @@ body {
     float: left;
     height: 100%;
     width: 12%;
-    margin: 0 auto;
+    margin: .5em auto 0;
     text-align: center;
     background: #fff;
-    justify-content: center;
-    display: flex;
-    align-items: center;
 }
 
 .botm-icon {
@@ -110,9 +106,6 @@ body {
     border-color: #E8E8E8;
 }
 
-.title{
-    width: 4em;
-}
 
 .title2 {
     font-family: "Microsoft YaHei";
@@ -133,14 +126,14 @@ body {
 }
 
 .groupPane{
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
     margin-top: 1em;
 }
 
 .smallpane {
-    display: flex;
-    flex-direction: column;
+    width: 5em;
+    text-align: center;
 }
 
 .circle {

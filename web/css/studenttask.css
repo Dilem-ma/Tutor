@@ -69,9 +69,6 @@ body{
 }
 
 .message .ctnt{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 70%;
     margin-top: 0.9%;
 }
@@ -80,6 +77,9 @@ body{
     width: 70%;
     height: 90%;
     margin-top: 0.9%;
+}
+.message .ctnt select{
+    width: 100%;
 }
 select{
     height: 100%;
