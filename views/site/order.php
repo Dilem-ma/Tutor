@@ -16,7 +16,7 @@ $this->title = 'order';
             <span class="title">订单详情</span>
             <a href="orderlist" target="_self"><img src="/img/back.png" class="back"/></a>
             <button class="login_btn" type="submit" ng-click="onComplete()" ng-show="onSure">完成订单</button>
-            <button class="login_btn" type="submit" ng-click="onComment()" ng-show="onFinish">完成订单</button>
+            <button class="login_btn" type="submit" ng-click="onComment()" ng-show="onFinish">评论订单</button>
 
         </div>
     </div>
@@ -67,7 +67,18 @@ $this->title = 'order';
                     <div class="ctnt">{{price}}</div>
                 </div>
             </div>
-
+            <div class="message">
+                <div class="border">
+                    <div class="name"><span>评论</span></div>
+                    <div class="ctnt">{{content}}</div>
+                </div>
+            </div>
+            <div class="message">
+                <div class="border">
+                    <div class="name"><span>评价星级</span></div>
+                    <div class="ctnt">{{star}}</div>
+                </div>
+            </div>
 
             <div class="teachers" ng-show=isPreparing>
                 <div class="teachers">

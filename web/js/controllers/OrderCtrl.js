@@ -19,6 +19,18 @@ tutorApp.config(['$locationProvider', function ($locationProvider) {
 tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) {  // 得到订单信息（根据订单ID）
     if ($location.search().id) {
         $scope.orderId = $location.search().id;
+        var k = {
+            method: 'post',
+            url: '/api/get_order_comment',
+            data: {
+                'o_id': $scope.orderId
+            }
+        };
+        $http(k).then(function (d) {
+            console.log(d.data.content);
+            $scope.content = d.data.content;
+            $scope.star = d.data.star;
+        });
         var p = {
             method: 'post',
             url: '/api/get_current_order',
