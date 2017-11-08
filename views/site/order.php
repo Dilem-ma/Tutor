@@ -15,7 +15,7 @@ $this->title = 'order';
         <div class="scTop">
             <span class="title">订单详情</span>
             <a href="orderlist" target="_self"><img src="/img/back.png" class="back"/></a>
-            <button class="login_btn" type="submit" ng-click="onComplete()" ng-show="onSure">申请教学</button>
+            <button class="login_btn" type="submit" ng-click="onComplete()" ng-show="onSure">完成订单</button>
         </div>
     </div>
 
@@ -75,9 +75,7 @@ $this->title = 'order';
                     <div class="wrap">
                         <img class="avatar" ng-src="{{teacher.url}}">
                         <div class="intro"><span>{{teacher.name}}</span><span>{{teacher.describe}}</span></div>
-                        <form>
-                            <button class="button" type="submit"  ng-click="onSelect(1)">选择</button>
-                        </form>
+                        <button class="button" type="submit"  ng-click="onSelect(1)">选择</button>
                     </div>
                 </div>
             </div>
