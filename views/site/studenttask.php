@@ -20,18 +20,7 @@ $this->title = 'StudentTaskPage';
                 <div class="message">
                         <div class="name"><span>科目</span></div>
                         <div class="ctnt">
-                            <select ng-model="technique" pattern="[0-9]{1}">
-                                <option value = "1">编程语言</option>
-                                <option value = "2">数据库</option>
-                                <option value = "3">web技术</option>
-                                <option value = "4">计算机概念</option>
-                                <option value = "5">环境配置</option>
-                                <option value = "6">app开发</option>
-                                <option value = "7">服务器脚本</option>
-                                <option value = "8">运维技术</option>
-                                <option value = "9">其他</option>
-
-                            </select>
+                            <select ng-init="technique = techs[0]" ng-model="technique" ng-options="x for x in techs">  </select>
                         </div>
                 </div>
                 <div class="message">
@@ -45,24 +34,7 @@ $this->title = 'StudentTaskPage';
                 <div class="message">
                         <div class="name"><span>地区</span></div>
                         <div class="ctnt" placeholder="区县" pattern="[0-9]{1-2}">
-                            <select ng-model="area">
-                                <option value ="1">黄浦区</option>
-                                <option value ="2">徐汇区</option>
-                                <option value ="3">长宁区</option>
-                                <option value ="4">静安区</option>
-                                <option value ="5">普陀区</option>
-                                <option value ="6">虹口区</option>
-                                <option value ="7">杨浦区</option>
-                                <option value ="8">浦东新区</option>
-                                <option value ="9">闵行区</option>
-                                <option value ="10">宝山区</option>
-                                <option value ="11">嘉定区</option>
-                                <option value ="12">金山区</option>
-                                <option value ="13">松江区</option>
-                                <option value ="14">青浦区</option>
-                                <option value ="15">奉贤区</option>
-                                <option value ="16">崇明区</option>
-                            </select>
+                            <select ng-model="area" ng-init="area = areas[0]" ng-options="x for x in areas"> </select>
                         </div>
                 </div>
                 <div class="message">
@@ -81,10 +53,7 @@ $this->title = 'StudentTaskPage';
                 <div class="message">
                         <div class="name"><span>教员性别要求</span></div>
                         <div class="ctnt" placeholder="性别要求" pattern="[0-9]{1}">
-                            <select ng-model="gender" selected="selected">
-                                <option value ="1">男</option>
-                                <option value ="2">女</option>
-                                <option value ="3">不限</option>
+                            <select ng-model="gender" ng-init="gender = genders[0]" ng-options="x for x in genders">
                             </select>
                         </div>
                 </div>
