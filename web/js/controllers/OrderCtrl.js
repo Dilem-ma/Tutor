@@ -89,6 +89,7 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                 default:
                     $scope.status = "已经有" + d.data.status + "名老师发出申请";
                     $scope.teacher = "待确定";
+
                     break
             }
             var isstudent = false
@@ -127,7 +128,6 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                         };
                         $http(c).then(function (e) {
                             $scope.teacherList = e.data
-
                             console.log(e.data)
                         });
                     }
