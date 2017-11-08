@@ -20,6 +20,14 @@ $this->title = 'MinePage';
                 <span class="text1">{{current_name}}</span>
             </div>
         </div>
+        <div class="pane1-2">
+            <div class="pane1-2-1">
+                <span class="text2">积分  555</span>
+            </div>
+            <div class="pane1-2-1">
+                <span class="text2">余额  ￥59</span>
+            </div>
+        </div>
     </div>
     <div class="pane2">
         <div class="pane2-1">
@@ -90,9 +98,10 @@ $this->title = 'MinePage';
         <a href="/site/studenttask"><img src="/img/plus2.png" class="botm-icon2"/></a>
     </div>
     <div class="icon-box">
-        <a href="/site/orderlist" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br />订单</a>
+        <a href="/site/message" class="botm-icon-text"><img src="/img/ios7-bell-outline.png" class="botm-icon"/><br />订单</a>
     </div>
     <div class="icon-box">
         <a href="" class="botm-icon-text"><img src="/img/ios7-person.png" class="botm-icon"/><br />我的</a>
+
     </div>
 </div>

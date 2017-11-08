@@ -31,6 +31,10 @@ tutorApp.controller('MainCtrl', function ($scope, $http) {
         $scope.excellent_teacher = d.data;
     });
 
+
+
+
+
     if (localStorage.getItem(storage) !== void 0) {
         $scope.token = localStorage.getItem(storage);
         console.log($scope.token);

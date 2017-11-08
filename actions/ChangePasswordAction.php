@@ -24,8 +24,6 @@ class ChangePasswordAction extends Action
         }
 
         $user->password = \Yii::$app->request->post('password');
-        $user->base_64 = base64_encode(\Yii::$app->security->encryptByPassword($user->password, ''));
-        $user->password = \Yii::$app->security->generatePasswordHash($user->password);
 
         if ($user->save()) {
 //            $pwd->save();

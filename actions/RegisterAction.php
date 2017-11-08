@@ -16,19 +16,8 @@ class RegisterAction extends Action
     public function run(){
         $post = \Yii::$app->request->post();
 
-        $user = User::findOne(['username' => $post['username']]);
-        if (!is_null($user)){
-            return [
-                'success' => false,
-                'message' => '注册失败',
-                'errors' => 'Username '.$post['username'].' has already been token',
-            ];
-        }
-
         $user = new User();
         $user->load($post, '');
-
-        $user->base_64 = base64_encode(\Yii::$app->security->encryptByPassword($post['password'],''));
 
         if ($user->save()) {
             return [

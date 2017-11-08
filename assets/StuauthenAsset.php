@@ -20,7 +20,7 @@ class StuauthenAsset extends  AssetBundle
         'css/common.css'
     ];
     public $js = [
-        'js/controllers/StuauthenCtrl.js'
+
     ];
     public $depends = [
         'yii\web\JqueryAsset',

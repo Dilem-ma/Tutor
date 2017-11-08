@@ -20,7 +20,7 @@ class OrderAsset extends  AssetBundle
         'css/common.css'
     ];
     public $js = [
-        'js/controllers/OrderCtrl.js'
+
     ];
     public $depends = [
         'yii\web\JqueryAsset',

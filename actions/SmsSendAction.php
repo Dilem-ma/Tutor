@@ -24,7 +24,7 @@ class SmsSendAction extends Action
         $url="http://utf8.api.smschinese.cn/?Uid=".$uid."&Key=".$key."&smsMob=".$smsMob."&smsText=验证码：".$smsTest;
         return [
             'result' => $this->Get($url),
-            'verification_code' => $smsTest,
+            'verification code' => $smsTest,
         ];
     }
 
@@ -36,10 +36,7 @@ class SmsSendAction extends Action
     {
         if(function_exists('file_get_contents'))
         {
-            $opts = array('http'=>array('header' => "User-Agent:MyAgent/1.0\r\n"));
-            $context = stream_context_create($opts);
-//            $file_contents = file_get_contents($url);
-            $file_contents = file_get_contents($url, false, $context);
+            $file_contents = file_get_contents($url);
         }
         else
         {

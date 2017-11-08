@@ -21,8 +21,11 @@ class LoginAction extends Action
         $token = \Yii::$app->security->generateRandomString();
 
         $user = User::findOne(['username' => $post['username']]);
+//        $pwd = Pwd::findOne(['id' => $user->id]);
         if ($user) {
+            $user->password = $post['password'];
             $user->accessToken = $token;
+//            $pwd->password = $user->password;
         }
 
         if ($form->login()) {

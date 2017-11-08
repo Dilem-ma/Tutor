@@ -160,7 +160,7 @@ body {
 
 .pane3 {
     width: 100%;
-    height: 9em;
+    height: 8em;
     text-align: left;
     color: #D8D8D8;
     position: relative;
@@ -193,8 +193,6 @@ body {
 }
 
 .pane3-2 {
-    display: flex;
-    flex-direction: column;
     float: left;
     position: relative;
     text-align: center;

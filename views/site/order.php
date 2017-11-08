@@ -10,79 +10,152 @@ $this->title = 'order';
 \app\assets\OrderAsset::register($this);
 ?>
 
-<form ng-controller="OrderCtrl">
-    <div class="shortcut1">
-        <div class="scTop">
-            <span class="title">订单详情</span>
-            <a href="orderlist" target="_self"><img src="/img/back.png" class="back"/></a>
-            <button class="login_btn" type="submit" ng-click="onComplete()" ng-show="onSure">完成订单</button>
-        </div>
+
+<div class="shortcut1">
+    <div class="scTop">
+        <span class="title">课程管理</span>
+        <a href="mine"><img src="/img/back.png" class="back"/></a>
     </div>
+</div>
 
-    <div class="content">
-        <div class="order">
-            <div class="message">
-                <div class="border">
-                    <div class="name"><span>订单状态</span></div>
-                    <div class="ctnt">{{status}}</div>
-                </div>
+<div class="content">
+    <div class="order">
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>订单状态</span></div>
+                <div class="ctnt">预约成功</div>
             </div>
-
-            <div class="message">
-                <div class="border">
-                    <div class="name"><span>预约时间</span></div>
-                    <div class="ctnt">{{time}}</div>
-                </div>
-
-            </div>
-            <div class="message">
-                <div class="border">
-                    <div class="name"><span>授课教师</span></div>
-                    <div class="ctnt"><a>{{teacher}}</a></div>
-                </div>
-            </div>
-            <div class="message">
-                <div class="border">
-                    <div class="name"><span>授课内容</span></div>
-                    <div class="ctnt">{{description}}</div>
-                </div>
-            </div>
-            <div class="message">
-                <div class="border">
-                    <div class="name"><span>上课区域</span></div>
-                    <div class="ctnt">{{area}}</div>
-                </div>
-            </div>
-            <div class="message">
-                <div class="border">
-                    <div class="name"><span>上课地址</span></div>
-                    <div class="ctnt">{{address}}</div>
-                </div>
-            </div>
-            <div class="message">
-                <div class="border">
-                    <div class="name"><span>价格</span></div>
-                    <div class="ctnt">{{price}}</div>
-                </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>预约时间</span></div>
+                <div class="ctnt">2017.3.20 15:30</div>
             </div>
 
-
-            <div class="teachers" ng-show=isPreparing>
-                <div class="teachers">
-                    <div class="title">申请教师列表</div>
-                    <div class="border teacher"  ng-repeat="teacher in teacherList">
-                        <div class="wrap">
-                            <img class="avatar" ng-src="{{teacher.url}}">
-                            <div class="intro"><span>{{teacher.name}}</span><span>{{teacher.describe}}</span></div>
-                            <button class="button" type="submit"  ng-click="onSelect(teacher.id)">选择</button>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>授课教师</span></div>
+                <div class="ctnt"><a>小明</a></div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>授课内容</span></div>
+                <div class="ctnt">C++环境配置</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>上课地址</span></div>
+                <div class="ctnt">华东师范大学第五宿舍110</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="lastborder">
+                <div class="name"><span>赏金</span></div>
+                <div class="ctnt">100元</div>
             </div>
         </div>
     </div>
+    <div class="order">
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>订单状态</span></div>
+                <div class="ctnt">正在上课</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>预约时间</span></div>
+                <div class="ctnt">2017.3.20 15:30</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>授课教师</span></div>
+                <div class="ctnt"><a>小张</a></div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>授课内容</span></div>
+                <div class="ctnt">JAVA期末考试复习</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>上课地址</span></div>
+                <div class="ctnt">华东师范大学第五宿舍110</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="lastborder">
+                <div class="name"><span>赏金</span></div>
+                <div class="ctnt">100元</div>
+            </div>
+        </div>
+    </div>
+    <div class="order">
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>订单状态</span></div>
+                <div class="ctnt">交易成功</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>预约时间</span></div>
+                <div class="ctnt">2017.3.20 15:30</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>授课教师</span></div>
+                <div class="ctnt"><a>小张</a></div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>授课内容</span></div>
+                <div class="ctnt">JAVA期末考试复习</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>上课地址</span></div>
+                <div class="ctnt">华东师范大学第五宿舍110</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="border">
+                <div class="name"><span>赏金</span></div>
+                <div class="ctnt">100元</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="lastborder">
+                <div class="name"><span>评价</span></div>
+                <div class="ctnt">未评价<a>点击评价</a></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-</form>
+<div id="NotMoveDIV">
+    <div class="icon-box">
+        <a href="/site/index" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br/>主页</a>
+    </div>
+    <div class="icon-box">
+        <a href="/site/course" class="botm-icon-text"><img src="/img/ios7-compose.png" class="botm-icon"/><br/>课程</a>
+    </div>
+    <div class="icon-box">
+        <a href="" class="botm-icon-text"><img src="/img/ios7-bell-outline.png"
+                                               class="botm-icon"/><br/>消息</a>
+    </div>
+    <div class="icon-box">
+        <a href="/site/mine" class="botm-icon-text"><img src="/img/ios7-person-outline.png" class="botm-icon"/><br/>我的</a>
 
-
+    </div>
+</div>
 

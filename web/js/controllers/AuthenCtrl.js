@@ -9,7 +9,6 @@ tutorApp = angular.module('tutorApp', []);
 storage = window.localStorage;
 
 tutorApp.controller('AuthenCtrl', function ($scope, $http) {
-
     if (localStorage.getItem(storage) !== void 0) {
         $scope.token = localStorage.getItem(storage);
         console.log($scope.token);

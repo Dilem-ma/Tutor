@@ -32,10 +32,9 @@ class Student extends ActiveRecord
     public function rules()
     {
         return [
-            [['u_id', 'grade', 'school'], 'integer'],
+            [['u_id'], 'integer'],
+            [['grade'], 'integer'],
             [['describe'], 'string', 'max' => 200],
-            [['stu_id'], 'string'],
-            [['u_id', 'grade', 'school', 'stu_id', 'describe'], 'required'],
         ];
     }
 
@@ -46,7 +45,6 @@ class Student extends ActiveRecord
             'u_id' => 'User ID',
             'grade' => 'Grade',
             'describe' => 'Describe',
-            'stu_id' => 'Student ID',
         ];
     }
 

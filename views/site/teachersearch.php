@@ -18,7 +18,6 @@ $this->title = 'teachersearch';
                 <div class="message">
                     <form class="search"><input type="text" placeholder="请输入搜索内容"></form>
                 </div>
-                <div class="btn-box"><a href="filterteacher" target="_self" class="select">筛选</a></div>
             </div>
             <div class="select-content" ng-hide="(gender==undefined || gender == '') && (tech==undefined || tech == '') &&(price==undefined || price == '') &&(area==undefined || area == '')"><a>{{gender}}</a><span class="pipe">|</span><a>{{tech}}</a><span
                     class="pipe">|</span><a>{{price}}</a><span class="pipe">|</span><a>{{area}}</a></div>

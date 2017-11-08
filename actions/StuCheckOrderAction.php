@@ -16,10 +16,10 @@ class StuCheckOrderAction extends Action
 {
     public function run(){
 
-        $o_id = \Yii::$app->request->post('o_id');
+        $id = \Yii::$app->request->post('id');
         $t_id = \Yii::$app->request->post('t_id');
 
-        $order = Order::findOne(['id' => $o_id]);
+        $order = Order::findOne(['id' => $id]);
 
         if (is_null($order)){
             return [

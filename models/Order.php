@@ -34,25 +34,31 @@ class Order extends ActiveRecord
             },
             'teach_time',
             'is_urgent',
+//            'status' => function($model){
+//                if ($model->status == -1){
+//                    return "等待接单";
+//                } else {
+//                    return "已有".$model->status."人接单";
+//                }
+//            },
             'status',
             't_id' => function($model){
                 return explode(',', $model->t_id);
-            },
-            'address',
+            }
         ];
     }
 
     public function rules()
     {
         return [
-            [['s_id', 'technique', 'area', 'title', 'description', 'is_urgent', 'teach_time', 'price', 'address', ], 'required', 'on' => 'stu_add_order'],
+            [['s_id', 'technique', 'area', 'title', 'description', 'is_urgent', 'teach_time', 'price'], 'required', 'on' => 'stu_add_order'],
             [['s_id', 'price'], 'integer'],
             [['technique'], 'string', 'max' => 20],
             [['area'], 'string', 'max' => 20],
             [['title'], 'string', 'max' => 20],
             [['description'], 'string', 'max' => 100],
-            [['gender'], 'integer', 'on' => 'stu_add_order'],
-            [['teach_time', 'address'], 'string'],
+            [['gender'], 'integer'],
+            [['teach_time'], 'string'],
             [['is_urgent'], 'boolean'],
         ];
     }

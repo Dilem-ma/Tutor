@@ -10,16 +10,11 @@ namespace app\controllers;
 
 use app\actions\AddCommentAction;
 use app\actions\AddToMyFavourite;
-use app\actions\CompleteOrderAction;
 use app\actions\DeleteOrderAction;
-use app\actions\FastLoginAction;
 use app\actions\GetCommentsAction;
 use app\actions\GetCurrentOrderAction;
 use app\actions\GetMyFavourite;
 use app\actions\GetNotPickedOrdersAction;
-use app\actions\GetOrderStatusAction;
-use app\actions\GetPickTeachersAction;
-use app\actions\GetStuDataAction;
 use app\actions\GetTeacherDataAction;
 use app\actions\GetUserDataAction;
 use app\actions\GetUserOrdersAction;
@@ -66,7 +61,7 @@ class ApiController extends Controller
                 ],
                 [
                     'allow' => true,
-                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite', 'pick_up_order', 'stu_check_order', 'add_comment', 'get_comments', 'complete_order', 'fast_login', 'get_stu_data', 'get_order_status', 'get_pick_teachers', ],
+                    'actions' => ['register', 'change_password', 'get_user_orders', 'get_teacher_data', 'get_current_order', 'delete_order', 'get_favourite', 'add_to_favourite', 'pick_up_order', 'stu_check_order', 'add_comment', 'get_comments', ],
                     'verbs' => ['POST'],
                 ],
 //                [
@@ -117,11 +112,6 @@ class ApiController extends Controller
             'stu_check_order' => StuCheckOrderAction::className(),
             'add_comment' => AddCommentAction::className(),
             'get_comments' => GetCommentsAction::className(),
-            'complete_order' => CompleteOrderAction::className(),
-            'fast_login' => FastLoginAction::className(),
-            'get_stu_data' => GetStuDataAction::className(),
-            'get_order_status' => GetOrderStatusAction::className(),
-            'get_pick_teachers' => GetPickTeachersAction::className(),
         ];
     }
 

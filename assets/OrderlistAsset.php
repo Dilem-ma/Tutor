@@ -20,7 +20,7 @@ class OrderlistAsset extends  AssetBundle
         'css/common.css'
     ];
     public $js = [
-        'js/controllers/OrderListCtrl.js'
+        'js/controllers/OrderlistCtrl.js'
 
     ];
     public $depends = [
