@@ -33,25 +33,25 @@ body{
     overflow: auto;
 }
 
- .order{
+.order{
     width: 100%;
     height: 35.21%;
     background-color: #fafafa;
-     margin-top: 2em;
+    margin-top: 2em;
 }
 
- .message{
-     background: none;
-     position: relative;
-     width:100%;
- }
- .lastborder{
-     width: 92%;
-     padding: .7em 4%;
-     overflow: auto;
-     height: 100%;
+.message{
+    background: none;
+    position: relative;
+    width:100%;
+}
+.lastborder{
+    width: 92%;
+    padding: .7em 4%;
+    overflow: auto;
+    height: 100%;
 
- }
+}
 .border{
     border-bottom: 1px solid rgba(160, 160, 160, 0.3);
     width: 92%;
@@ -161,7 +161,3 @@ select{
 .teacher .button{
     width: 40px;
 }
-
-
-
-
