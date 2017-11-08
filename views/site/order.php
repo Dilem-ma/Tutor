@@ -70,7 +70,7 @@ $this->title = 'order';
             <div class="title">申请教师列表</div>
             <div class="border teacher"  ng-repeat="teacher in teacherList">
                 <div class="wrap">
-                    <div class="avaster"{{teacher.url}}</div>
+                    <img class="avatar" ng-src="{{teacher.url}}">
                     <div class="intro"><span>{{teacher.name}}</span><span>{{teacher.describe}}</span></div>
                 </div>
                 <div class="button" ng-click="onSelect(teacher.t_id)">选择</div>
