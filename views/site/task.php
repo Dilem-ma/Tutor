@@ -5,13 +5,13 @@
 $this->title = 'TaskPage';
 \app\assets\TaskAsset::register($this);
 ?>
-<form ng-controller="TaskCtrl">
+<form ng-controller="TaskCtrl" ng-cloak class="ng-cloak">
     <div class="scTop">
         <span class="title">学生任务详情</span>
         <a href="search" target="_self"><img src="/img/back.png" class="back"/></a>
         <button class="login_btn" type="submit" ng-click="postRequirement()" ng-hide="!isTeacher">申请教学</button>
     </div>
-    <div class="content">
+    <div class="content" >
             <div class="sec">
                 <div class="message">
                         <div class="name"><span>标题</span></div>

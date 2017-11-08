@@ -74,7 +74,7 @@ $this->title = 'Login';
 
 </style>
 <div id="login"></div>
-<div class="login_bg" ng-controller="LoginCtrl">
+<div class="login_bg" ng-controller="LoginCtrl" >
     <div id="logo">
         <!--<img src="/img/logo.png" alt=""/>-->
         <a style="color: #fff; font-family: 'Microsoft YaHei'; font-size: 4em; width: 3em;">

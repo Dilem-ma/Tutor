@@ -10,7 +10,7 @@
 $this->title = 'teachersearch';
 \app\assets\TeachersearchAsset::register($this);
 ?>
-<div ng-controller="TeachersearchCtrl">
+<div ng-controller="TeachersearchCtrl" ng-cloak class="ng-cloak">
     <div class="shortcut1">
         <div class="srchTop">
             <div class="srchSpan">

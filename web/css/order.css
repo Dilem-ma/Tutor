@@ -163,3 +163,4 @@ select{
 .login_btn{
     color: #ffffff;
 }
+.ng-cloak{display:none;}

@@ -98,3 +98,4 @@
     width: 98%;
     text-decoration: none;
 }
+.ng-cloak{display:none !important;}

@@ -8,6 +8,7 @@ $this->title = 'OrderlistPage';
 <div class="scTop">
     <span class="title">我的订单</span>
 </div>
+<form  ng-cloak class="ng-cloak" >
 <div class="pane2" ng-controller="OrderListCtrl">
     <div class="pane2-1" ng-repeat="x in orders" ng-click="toOrder(x.id)">
         <div class="pane2-1-1">
@@ -20,6 +21,7 @@ $this->title = 'OrderlistPage';
         </div>
     </div>
 </div>
+</form>
 <div id="NotMoveDIV">
     <div class="icon-box">
         <a href="/site/index" class="botm-icon-text"><img src="/img/ios7-home-outline.png" class="botm-icon"/><br />主页</a>

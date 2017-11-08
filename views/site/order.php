@@ -10,7 +10,7 @@ $this->title = 'order';
 \app\assets\OrderAsset::register($this);
 ?>
 
-<form ng-controller="OrderCtrl">
+<form ng-controller="OrderCtrl" ng-cloak class="ng-cloak">
     <div class="shortcut1">
         <div class="scTop">
             <span class="title">订单详情</span>

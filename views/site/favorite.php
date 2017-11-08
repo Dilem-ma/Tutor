@@ -18,7 +18,7 @@ $this->title = 'order';
     </div>
 </div>
 
-<div class="content" ng-controller="FavoriteCtrl">
+<div class="content" ng-controller="FavoriteCtrl" ng-cloak class="ng-cloak">
     <div class="favorite" ng-repeat="x in orders">
         <div class="portrait"><a class="user"><img src={{x.url}} ></a></div>
         <div class="info"><h1>{{x.name}}</h1><p1>{{x.describe}}</p1></div>

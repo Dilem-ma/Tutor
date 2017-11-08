@@ -5,7 +5,7 @@
 $this->title = 'MainPage';
 \app\assets\MainAsset::register($this);
 ?>
-<div class="index2" ng-controller="MainCtrl">
+<div class="index2" ng-controller="MainCtrl" ng-cloak class="ng-cloak">
     <div class="shortcut1">
     <div class="thehead">
         <div class="text">

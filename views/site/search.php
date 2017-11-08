@@ -10,7 +10,7 @@
 $this->title = 'search';
 \app\assets\SearchAsset::register($this);
 ?>
-<div ng-controller="SearchCtrl">
+<div ng-controller="SearchCtrl" ng-cloak class="ng-cloak">
     <div class="shortcut1">
         <div class="srchTop">
             <div class="srchSpan">
