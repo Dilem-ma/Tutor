@@ -54,6 +54,7 @@ class Order extends ActiveRecord
             [['gender'], 'integer', 'on' => 'stu_add_order'],
             [['teach_time', 'address'], 'string'],
             [['is_urgent'], 'boolean'],
+            [['address'], 'string', 'max' => 100],
         ];
     }
 
@@ -71,6 +72,7 @@ class Order extends ActiveRecord
             'teach_time' => 'Teach Time',
             'is_urgent' => 'Is Urgent',
             'price' => 'Price',
+            'address' => 'Address',
         ];
     }
 }
