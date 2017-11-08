@@ -34,13 +34,6 @@ class Order extends ActiveRecord
             },
             'teach_time',
             'is_urgent',
-//            'status' => function($model){
-//                if ($model->status == -1){
-//                    return "等待接单";
-//                } else {
-//                    return "已有".$model->status."人接单";
-//                }
-//            },
             'status',
             't_id' => function($model){
                 return explode(',', $model->t_id);
