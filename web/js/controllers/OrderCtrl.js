@@ -38,6 +38,7 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
             $scope.t_id = d.data.t_id;
             $scope.address = d.data.address
             var status = $scope.status = d.data.status;
+            $scope.t_id = d.data.t_id[0]
 
 
             switch (d.data.status) {
@@ -52,14 +53,11 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                         method: 'post',
                         url: '/api/get_teacher_data',
                         data: {
-                            "t_id": d.data.t_id[0],
+                            "t_id": $scope.t_id,
                         }
                     };
                     $http(c).then(function (e) {
-                        $scope.teacher = e.data.name
-                        console.log(e.data)
-                        console.log($scope.teacher+e.data.name)
-
+                        $scope.teacher = e.data[0].name
                     });
                     break
                 case -2:
@@ -68,11 +66,11 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                         method: 'post',
                         url: '/api/get_teacher_data',
                         data: {
-                            "t_id": d.data.t_id[0],
+                            "t_id": $scope.t_id,
                         }
                     };
                     $http(c).then(function (e) {
-                        $scope.teacher = e.data.name
+                        $scope.teacher = e.data[0].name
                     });
                     break
                 case -3:
@@ -81,11 +79,11 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                         method: 'post',
                         url: '/api/get_teacher_data',
                         data: {
-                            "t_id": d.data.t_id[0],
+                            "t_id": $scope.t_id,
                         }
                     };
                     $http(c).then(function (e) {
-                        $scope.teacher = e.data.name
+                        $scope.teacher = e.data[0].name
                     });
                     break
                 default:
@@ -111,6 +109,7 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                 }
             };
             $http(q).then(function (d) {
+
                 if (d.data.student != null) {
                     isstudent = true;
                     $scope.isStudent = isstudent;
@@ -128,7 +127,7 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                             }
                         };
                         $http(c).then(function (e) {
-                            $scope.teacherList = e.data
+                            $scope.teacher = e.data[0].name
                             console.log(e.data)
                         });
                     }
@@ -155,31 +154,26 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                                     method: 'post',
                                     url: '/api/get_teacher_data',
                                     data: {
-                                        "t_id": d.data.t_id[0],
+                                        "t_id": $scope.t_id,
                                     }
                                 };
                                 $http(c).then(function (e) {
-                                    $scope.teacher = e.data.name
-                                    console.log(e.data)
-                                    console.log($scope.teacher+e.data.name)
-
+                                    $scope.teacher = e.data[0].name
                                 });
 
                                 break
                             case -2:
                                 $scope.status = "等待评价";
+                                console.log($scope.t_id)
                                 var c = {
                                     method: 'post',
                                     url: '/api/get_teacher_data',
                                     data: {
-                                        "t_id": d.data.t_id[0],
+                                        "t_id": $scope.t_id,
                                     }
                                 };
                                 $http(c).then(function (e) {
-                                    $scope.teacher = e.data.name
-                                    console.log(e.data)
-                                    console.log($scope.teacher+e.data.name)
-
+                                    $scope.teacher = e.data[0].name
                                 });
 
                                 break
@@ -189,17 +183,25 @@ tutorApp.controller('OrderCtrl', function ($scope, $location, $http, $window) { 
                                     method: 'post',
                                     url: '/api/get_teacher_data',
                                     data: {
-                                        "t_id": d.data.t_id[0],
+                                        "t_id": $scope.t_id,
                                     }
                                 };
                                 $http(c).then(function (e) {
-                                    $scope.teacher = e.data.name
-                                    console.log(e.data)
-                                    console.log($scope.teacher+e.data.name)
-
+                                    $scope.teacher = e.data[0].name
                                 });
                                 break
                             default:
+                                console.log($scope.t_id)
+                                var c = {
+                                    method: 'post',
+                                    url: '/api/get_teacher_data',
+                                    data: {
+                                        "t_id": $scope.t_id,
+                                    }
+                                };
+                                $http(c).then(function (e) {
+                                    $scope.teacher = e.data[0].name
+                                });
                                 if (e.data.success == false) {
                                     $scope.status = "已被拒"
                                     $scope.teacher = "保密"
