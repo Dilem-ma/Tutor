@@ -24,7 +24,10 @@ tutorApp.controller('PersonalsetCtrl', function ($scope, $http, $window, $locati
     };
     $http(q).then(function (d) {
         $scope.current_id = d.data.id;
-        $scope.current_url = d.data.url;
+        if(d.data.birthday==null)
+            $scope.current_url="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1033329440,3258066026&fm=27&gp=0.jpg";
+        else
+            $scope.current_url=d.data.url;
         $scope.current_num = d.data.username;
         $scope.current_name = d.data.name;
         $scope.current_area = d.data.area;

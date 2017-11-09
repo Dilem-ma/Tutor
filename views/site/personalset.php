@@ -98,26 +98,7 @@ $this->title = 'PersonalsetPage';
                 </div>
             </div>
         </div>
-        <div class="pane2-2" >
-            <div class="pane2-3" >
-                <div class="text3">
-                    <span class="text4">擅长领域</span>
-                </div>
-                <div class="text5">
-                    <input class="text4" ng-model="text" placeholder="java,c++"></input>
-                </div>
-            </div>
-        </div>
-        <div class="pane2-2" >
-            <div class="pane2-3" >
-                <div class="text3">
-                    <span class="text4">个人描述</span>
-                </div>
-                <div class="text5">
-                    <input class="text4" ng-model="text" placeholder="java,c++"></input>
-                </div>
-            </div>
-        </div>
+
     </div>
     <div class="pane2-1">
         <a ng-click="postTask(name,gender,area,birthday)">
